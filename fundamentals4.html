@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Fundamentals Part 4</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <h1 class="title">The Odin Project</h1>
+  <h2 class="title">Web Developement 101</h2>
+  <h3 class="title">Fundamentals Part 4</h4>
+    <div class="container">
+      <h4>Javascript Arrays</h4>
+      <hr>
+      <p>Javascript arrays are used to store multipe values in a single variable.</p>
+      <pre>
+    <code>
+      var cars = ["Saab", "Volvo", "BMW"];
+    </code>
+  </pre>
+      <script>
+        var cars = ["Saab", "Volvo", "BMW"];
+        console.log(cars);
+      </script>
+      <hr>
+      <h4>What is an Array?</h4>
+      <p>An array is a special vairable, which can hold more than one value at time.</p>
+      <p>If you have alist of itmes (a list of car names, for example), storing the cars in single variables could look
+        like this:</p>
+      <pre>
+        <code>
+          var car1 = "Saab";
+          var car2 = "Volvo"; 
+          var car3 = "BMW";
+        </code> 
+      </pre>
+      <p>However, what if you want to loop through the cars and find a specific one? And what if you had not 3 cars, but
+        300?</p>
+      <p>The solutoin is an array!</p>
+      <p>An array can hold many values under a single name, and you can access he values by referring to an index
+        number.</p>
+      <hr>
+      <h4>Creating an Array</h4>
+      <p>Using an array literal is the easiset way to creawte a JavaScript Array.</p>
+      <p>Syntax:</p>
+      <code>var <em>array_name</em> = [<em>item1</em>, <em>item2</em>, ...];</code>
+      <p>Spaces and line breaks are not important. A declaration can span multiple lines:</p>
+      <pre>
+        <code>
+          var cars = [
+          "Saab",
+          "Volvo",
+          "BMW"
+          ];
+        </code>
+      </pre>
+      <div class="note">
+        <p>Putting a comma after the last element (like "BMW",) is inconsistent across browsers.</p>
+        <p>IE 8 and earlier will fail.</p>
+      </div>
+      <hr>
+      <h4>Using the Javascript Keyword new</h4>
+      <p>The following example also creates an Array, and assigns values to it:</p>
+      <code>var cars = new Array("Saab", "Volvo", "BMW");</code>
+      <script>
+        var carsA = new Array("Toyota", "Nissan", "Honda");
+        console.log(carsA);
+      </script>
+      <div class="note">
+        <p>The two examples above do exactly the same. Ther is no need to use <code>new Array()</code>.</p>
+        <p>For simplicity, and readability and execution speed, use the first one (the array literal method).</p>
+      </div>
+      <hr>
+      <h4>Acces the Elements of an Array</h4>
+      <p>You access an array element by referring to the index number.</p>
+      <p>This statement accesses the value of the first element in <code>cars</code>:</p>
+      <code>var name = cars[0];</code>
+      <h6>Example</h6>
+      <pre>
+        <code>
+          var cars = ["Chevy", "Ford", "Dodge"];
+          document.getElementById("demo").innerHTML = cars[0];
+        </code>
+      </pre>
+      <script>
+        var carsB = ["Chevy", "Ford", "Dodge"];
+        console.log(carsB[0]);
+      </script>
+      <div class="note">
+        <p><strong>Note:</strong> Array indexes start with 0.</p>
+        <p>[0] is the first element. [1] is the second element.</p>
+      </div>
+      <hr>
+      <h4>Changing an Array Element</h4>
+      <p>This statement changes the value of the first element in <code>cars</code>: </p>
+      <code>cars[0] = "Opel";</code>
+      <p></p>
+      <h6>Example</h6>
+      <pre>
+        <code>
+          var cars = ["Lincoln", "Cadillac", "Buick"]
+          cars[0] = "Jeep"
+          document.getElementById("demo").innerHTML = cars[0];
+        </code>
+      </pre>
+      <script>
+        var carsC = ["Lincoln", "Cadillac", "Buick"];
+        console.log(carsC);
+        carsC[0] = "Jeep";
+        console.log(carsC);
+      </script>
+      <hr>
+      <h4>Access the Full Array</h4>
+      <p>With Javascript, the full array can be accesssed by referring to the array name:</p>
+      <h6>Example</h6>
+      <pre>
+        <code>
+          var fruit = ["Orange", "Banana", "Apple"];
+          document.getElementById("demo").innerHTML = fruit;
+        </code>
+      </pre>
+
+      <script>
+        var fruit = ["Orange", "Banana", "Apple", "Berry"];
+        console.log(fruit);
+      </script>
+
+      <hr>
+      <h4>Arrays are Objects</h4>
+      <p>Arrays are special type of objects. The <code>typeof</code> operator in JavaScript returns "object" for arrays.
+      </p>
+      <p>But, Javascript arrays are best describedas arrays.</p>
+      <p>Arrays use <strong>numbers</strong> to access its "elements". In this exammple, <code>person[0]</code> returns
+        John:</p>
+      <h6>Array:</h6>
+      <code>var person = ["John", "Doe", 46];</code>
+
+      <script>
+        var person = ["John", "Doe", 46];
+        console.log(person[0]);
+      </script>
+
+      <p>Obects use <strong>names</strong> to access its "members". In this example, <code>person.firstName</code>
+        returns John:</p>
+      <h6>Object:</h6>
+      <code>var person = {firstName:"Juan", lastName:"Dough", age:46};</code>
+      <script>
+        var person = { firstName: "Juan", lastName: "Dough", age: 46 };
+        console.log(person.firstName);
+      </script>
+      <hr>
+      <h4>Array Elements Can Be Objects</h4>
+      <p>JavaScript variables can be objects. Arrays are special kinds of objects.</p>
+      <p>Becuase of this, you can have variables of different types in the same Array.</p>
+      <p>You can have objects in an Array. You can have functions in an Array. You can have arrays in an Array:</p>
+      <div class="note">
+        myArray[0] = Date.now;<br>
+        myArray[1] = myFunction;<br>
+        myArray[2] = myCars;
+      </div>
+      <br>
+      <h4>Array Properties and Methods</h4>
+      <p>The real strength of JavaScript arrays are the built-in array properties and methods:</p>
+      <h6>Examples</h6>
+      <pre>
+        <code>
+          var x = cars.length;  // The length property returns the number of elements
+          var y = cars.sort();  // The sort() mehtod sorts array
+        </code>
+      </pre>
+      <hr>
+      <h4>The length Property</h4>
+      <p>The <code>length</code> property of an array returns the length of an array (the number of array elements).</p>
+      <pre>
+        <code>
+          var veggies = ["Carrots", "Peas", "Broccoli", "Peas"];
+          veggies.length; // the length of veggies is 4
+        </code>
+      </pre>
+      <script>
+        var veggies = ["Carrots", "Peas", "Broccoli", "Peas"];
+        console.log(veggies.length); // the length of veggies is 4
+      </script>
+      <div class="note">
+        <p>The <code>length</code> property is always one more than the highest array index.</p>
+      </div>
+      <hr>
+      <h4>Accessing the First Array Element</h4>
+      <h6>Example</h6>
+      <pre>
+        <code>
+          fruits = ["Banana", "Orange", "Apple", "Mango"];
+          var first = fruits[0];
+        </code>
+      </pre>
+      <script>
+        fruits = ["Banana", "Orange", "Apple", "Mango"];
+        var first = fruits[0];
+        console.log(first);
+      </script>
+      <hr>
+      <h4>Accessing the Last Array Element</h4>
+      <h6>Example</h6>
+      <pre>
+        <code>
+          fruits = ["Banana", "Orange", "Apple", "Mango"];
+          var last = fruits[fruits.length -1];
+        </code>
+      </pre>
+
+      <script>
+        fruits1 = ["Banana", "Orange", "Apple", "Berry"];
+        var last = fruits1[fruits1.length - 1];
+        console.log(last);
+      </script>
+
+      <hr>
+      <h4>Looping Array Elements</h4>
+      <p>The safest way to loop through an array, is using a <code>for</code> loop:</p>
+      <h6>Example</h6>
+      <pre>
+        <code>
+            fruits = ["Banana, "Orange", "Apple", "Mango"];
+            for(let i= 0; i < fruits.length; i++) {
+              console.log(fruits[i]);
+            }
+        </code>
+      </pre>
+
+      <script>
+        let fruits2 = ["Banana", "Orange", "Apple", "Mango"];
+        for (let i = 0; i < fruits2.length; i++) {
+          console.log(fruits2[i]);
+        }
+      </script>
+
+      <p>You can also use the <code>Array.forEach()</code>function:</p>
+      <h6>Example</h6>
+      <pre>
+        <code>
+          var fruity;
+          fruity = ["Platano,", "Naranja", "Manzana", "Mango"];
+          
+          fruity.forEach(myFunction1);
+          function myFunction1(value1) {
+            cosnole.log(value1);
+          }
+        </code>
+      </pre>
+      <script>
+        let fruity = ["Platano,", "Naranja", "Manzana", "Coco"];
+
+        fruity.forEach(myFunction1);
+        function myFunction1(value1) {
+          console.log(value1);
+        }
+      </script>
+      <hr>
+
+      <h4>Adding Array Elements</h4>
+      <p>The easiset way to add a nwe element to an array is using the <code>push()</code> method:</p>
+      <h6>Example</h6>
+      <pre>
+        <code>
+          var fruits3 = ["Pepino", "Limon", "Lima", "Kabumsha"];
+          fruits3.push("Papaya");
+        </code>
+      </pre>
+      <script>
+        var fruits3 = ["Pepino", "Lima", "Limon", "Kambusha"];
+        fruits3.push("Papaya");
+        console.log(fruits3);
+          for(let i = 0; i < fruits3.length; i++){
+            console.log(fruits3[i]);
+          }
+      </script>
+      <p>New element can slo be added to an array using the <code>length</code> property:</p>
+      <h6>Example</h6>
+      <pre>
+        <code>
+          var fruits = ["Banana", "Orange", "Apple", "Mango"];
+          fruits[fruits.length]= "Cherry";
+        </code>
+      </pre>
+      <script>
+        fruits3[fruits3.length] = "Cherry";
+        console.log(fruits3);
+      </script>
+      <div class="note">
+        <p><strong>WARNING !</strong></p>
+        <p>Adding elements with high indexes can create undefinded "holes" in an array:</p>
+      </div>
+      <h6>Example 6</h6>
+      <pre>
+        <code>
+          var fruits = ["Banana", "Orange", "Apple", "Mango"];
+          fruits[6] = "Lemon"
+        </code>
+      </pre>
+      <script>
+        var fruits4 = ["Banana", "Orange", "Apple", "Mango"];
+        fruits4[5] = "Papaya";
+        console.log(fruits4);
+      </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
+</body>
+
+</html>

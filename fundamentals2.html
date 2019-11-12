@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JS Fundamentals</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+
+  <body>
+    <div class="mozilla_Docs">
+      <h1 class="title">Web Development 101</h1>
+      <h3 class="title">FUNDAMENTALS PART 2</h3>
+      <div class="container">
+        <h3>Handling Text- Strings in Javascript</h3>
+        <h4>MDN web docs</h4>
+        <br />
+        <h3>Open console for lesson output</h3>
+        <br />
+        <button>Press me</button>
+        <p>script context on line 60</p>
+        <br />
+        <!--
+            <script>
+
+                console.log("*****STRINGS - THE BASICS*****");
+
+                console.log("**Creating a string**");
+                let string = 'The revolution will not be televised.';
+                console.log(string);
+                let badString = string;
+                console.log(badString);
+
+                console.log("***Single quotes vs. Double quotes***");
+                let sgl = 'Single quotes.';
+                let dbl = "Doule quotes.";
+                console.log(sgl);
+                console.log(dbl);
+
+
+                console.log("***Escaping charactes in a string***");
+                let bigmouth = 'I\'ve got no right to make my place..';
+                console.log(bigmouth);
+
+                console.log("*****CONCATENATING STRINGS*****")
+                let one = 'Hello, ';
+                let two = 'how are you?';
+                let joined = one + two;
+                console.log(joined);
+
+                let multiple = one + one + one + one + two;
+                console.log(multiple);
+
+                let respone = one + 'I am fine - ' + two;
+                console.log(respone);
+
+                console.log("When you enter an actual string in your code, enclosed in single or double quotes, it is called a string literal.");
+
+                console.log("***Concatenation in context***");
+                const button = document.querySelector('button');
+                button.onclick = function () {
+                    let name = prompt('Hey hotshot! Wwhat is your name?');
+                    alert('Hello ' + name + ', nice to see you!, Learn to Code!');
+                }
+
+                console.log("***Numbers vs. strings***");
+                let combo = 'Front' + 242;
+                console.log(combo);
+
+                let myDate = '19' + '67';
+                console.log(typeof myDate);
+
+                let myString = '123';
+                console.log(typeof myString); //displaying a string of numbers
+                let myNum = Number(myString);
+                console.log(typeof myNum); // converted to numbers using the "Number object"
+
+                let myNum1 = 123;
+                let myString1 = myNum1.toString();
+                console.log(typeof myString1);
+                console.log(myString1);
+            </script>
+        -->
+      </div>
+    </div>
+    <br />
+    <div class="container">
+      <div class="w3schools">
+        <h3>JavaScript String and Methods</h3>
+        <h4>w3schools.com</h4>
+        <br />
+        <h3>Open console for lesson output</h3>
+        <br />
+        <!--
+            <script>
+
+                console.log("***String Length***");
+                let txt = "ABCDEFGHIJKLMNO0QRSTUVWXYZ";
+                let sln = txt.length;
+                console.log(txt);
+                console.log(sln);
+
+                console.log("***Finding a String in a String***");
+                console.log("The indexOf() method returns the index of (the position of) the first occurrence of a specified text in a string.");
+                var str = "Please locate where 'locate' occurs!";
+                var pos = str.indexOf("locate");
+                console.log(pos);
+                console.log("The lastIndexOf() method returns the index of the last occurrence of a specified text in a string.");
+                var pos1 = str.lastIndexOf("locate");
+                console.log(pos1);
+                console.log("Both indexOf(), and lastIndexOf() return -1 if the text is not found.");
+                var pos2 = str.indexOf("John");
+                console.log(pos2);
+                var pos3 = str.lastIndexOf("locate", 15); // confused as to why it doesn't start count at zero
+                console.log(pos3);
+                console.log("***Searching for String in a String***");
+                console.log("The search() method searches a string for a specified value and returns the position of the match.");
+                var pos4 = str.search("locate");
+                console.log(pos4);
+                console.log("The search() canot take a start position argument.");
+                console.log("***Extracting String Parts***");
+                console.log(" * slice(start, end), * substring(start, end), * substr(start, lenght)");
+                var str1 = "Apple, Banana, Kiwi";
+                var res = str1.slice(7, 13);
+                console.log(res);
+                var res2 = str1.slice(-12, -6);
+                console.log(res2);
+                var res3 = str1.slice(7);
+                console.log(res3);
+                var res4 = str1.slice(-12);
+                console.log(res4);
+                console.log("***The substring() Method***");
+                console.log("substring() is similar to slice(). The difference is that substring() cannot accept negative indexes.");
+                var res5 = str1.substring(7, 13);
+                console.log(res5);
+                var res6 = str1.substring(7);
+                console.log(res6);
+                console.log("***The substr() Method***");
+                console.log("The substr() is similiar to slice(). The difference is that the second parameter specifies the lenght of the extracted part.");
+                var res7 = str1.substr(7, 6);
+                console.log(res7);
+                console.log("If you omit the second parameter, substr() will slice out the rest of the string.");
+                var res8 = str1.substr(7);
+                console.log(res8);
+                console.log("If the first parameter is negtive, the position counts from the end of the string.");
+                var res9 = str1.substr(-4);
+                console.log(res9);
+                console.log("***Replacing String Content***");
+                console.log("The replace() method replaces a specifed value with another value in a string:");
+                var str10 = "Please visit Microsoft!";
+                var n = str10.replace("Microsoft", "W3Schools");
+                console.log(n);
+                console.log("By default, the replace() method replaces only the first match.");
+                var str11 = "Please visit Microsoft and Microsoft!";
+                var n1 = str11.replace("Microsoft", "W3Schools");
+                console.log(n1);
+                var n2 = str10.replace("MICROSOFT", "W3Schools");
+                console.log(n2);
+                console.log("To replace case insensitive, use a regular expression with an /i flag (insensitve).");
+                var n3 = str10.replace(/MICROSOFT/i, "W3Schools");
+                console.log(n3);
+                console.log("*Note that regular expressions are written without quotes.");
+                console.log("***Converting to Upper and Lower Case***");
+                var text1 = "Hello World!";
+                var text2 = text1.toUpperCase(); //text2 is text1 converted to upper case
+                console.log(text2);
+                var text3 = text1.toLowerCase();  //text3 is text1 converted to lower case 
+                console.log(text3);
+                console.log("***The concat() Method***");
+                console.log("concat() joins two or more strings");
+                var textA = "Hello";
+                var textB = "World!";
+                var textC = textA.concat(" ", textB);
+                console.log(textC);
+                console.log("The concat() method can be used instead of the plus operator. The two lines do the same");
+                var textD = "Hello" + " " + "World!";
+                var textE = "Hello".concat(" ", "World!");
+                console.log(textD);
+                console.log(textE);
+                console.log("***String.trim()***");
+                console.log("The trim() method removes whitspace from bothsides of a string.");
+                var str12 = "       Hello World!         ";
+                alert(str12.trim()); //This should be first pop up of this lesson
+                console.log("The trim() method is not supported y IE 8 or lower"); // duh..
+                console.log("***Extrcting String Characters****");
+                console.log("There are 3 methods for extrracting string characters.");
+                console.log("*charAt(position)");
+                console.log("*charCodeAt(position)");
+                console.log("*Property access []");
+                console.log("***Etracting String Characters***");
+                console.log("**There are 3 methods fo rextracting string characters:**");
+                console.log("* charAt(position)");
+                console.log("* charChodeAt(position");
+                console.log("* Property access []");
+                console.log("*The charAt() Method*");
+                console.log("The charAt() method returns the character at the specified index (position) in a string.");
+                var str13 = "HELLO WORLD";
+                console.log(str13.charAt(0)); //returns H
+                console.log("*The charCodeAt() Method*");
+                console.log("The charCodeAt() method returns the unicode of the character at a specified index in a string:");
+                console.log("The method returns a UTF -16 code (an integer between 0 and 65535)");
+                console.log(str13.charCodeAt(0)); //returns 72
+                console.log("*Property Access*");
+                console.log("ECMAScript 5 (2009) allows property access[] on strings.");
+                console.log("!!! Property access might be a little unpredictable:");
+                console.log("* It does not work on IE 7 or earlier.");
+                console.log("* it makes strings look like arrays (but they are not).");
+                console.log("* If no character is found, [] returns undefined, while charAt() returns an empty string.");
+                console.log(str13[0] = "A");    // Gives no error, but does not work
+                console.log(str13[0]);          // returns H
+                console.log("***Converting a String to an Array***");
+                console.log("A string can be converted to an array with the split() method");
+                var txt4 = "a,b,c,d,e";         // String
+                var textF = txt4.split(",");    // Split on commas
+                console.log(textF);
+                var textG = txt4.split(" ");    // Split on spaces
+                console.log(textG);
+                var textH = txt4.split("|");    // Split on pipe
+                console.log(textH);
+                console.log("If the separator is omitted, the returned array will contain the whole string in index [0].");
+                console.log("If the sepertor is \"\", the returned array will be an array of single characters.");
+            </script>
+        -->
+      </div>
+    </div>
+    <br />
+    <div class="container">
+      <div class="javascriptInfo">
+        <h3>Comparisons</h3>
+        <h4>The Modern Javascript Tutorial</h4>
+        <br />
+        <h3>Open Console for lesson output</h3>
+        <!--
+            <script>
+                console.log("*****Comparisons*****");
+                //	alert(2 > 1); 	//true(correct)
+                //	alert(2 == 1);	//false(wrong)
+                //	alert(2 != 1);	//true(correct)
+                console.log("***Boolean is the result***");
+                //	alert result = 5 > 4;  //assign the result of the comparisons
+                //	alert(result);	//true
+                console.log("***String comparison***");
+                //	alert('Z' > 'A');	//true
+                //	alert('Glow' > 'Glee');	//true
+                //	alert('Bee' > 'Be'); //true
+                console.log("***Comparison of different types***");
+                console.log("When comparing values of different types, JavaScript converts the values to numbers.");
+                // alert('2' > 1);	//true, string '2' becomes a number 2	
+                //alert('01' == 1);	//true, string '01' becomes a number 1
+                console.log("For boolean values, true becomes 1 and false becomes 0.");
+                //alert(true == 1);	//true
+                //alert(false == 0); 	//true
+                console.log("***Strict equality***");
+                console.log("A regular equality check == has a problem. It cannot differentiate 0 from false.");
+                //  alert(0 == false);      //true
+                //alert('' == false);         //true
+                console.log("This happens because operands of different types are converted to numbers by the equality operator ==. An empty string, just like false, becomes a zero.");
+                console.log("!!!!***A strict equality operator === checks the equality without type coversion.***!!!");
+                // alert(0 === false); // false, because the types are different. Returns in error.
+                console.log("There is also \"a strict non-equality\" operator !++ analogous to !=.");
+                console.log("The strict equality operator is a bit longer to write, but makes it obvious what's going on and leaves less room for errors.");
+                console.log("***Comparison with null and undefined***");
+                console.log("For a strick equality check ==")
+                //  alert( null === undefined);     //false
+                console.log("For a non-strick check ==");
+                //  alert(null == undefined);       //true
+                console.log("For maths and other comparisons < > <= >=");
+                console.log("null/undefined are  converted to nubers: null becmoes 0, while undefined becomes NaN.")
+                console.log("compare null with a zero")
+                //  alert(null > 0);    //  (1) false
+                // alert(null == 0);    //  (2) false
+                // alert(null >= 0);       //  (3) true
+                console.log("*Avoid problems*")
+                console.log("To avoid problems, use strict equality === when dealing with undefeined/null comparisons.");
+                console.log("Don't use >= > < <= with a variable that may be undefined unless you reallly know what you are doing.");
+                console.log("***Summary***");
+                console.log("*  Comparison operators return a boolean value.");
+                console.log("*  Strings are compared letter-by-letter in the \"dictionary\" order.");
+                console.log("*  When values of different values of different types are compared, they get converted to numbers (with the exclusion of a strict equality check.");
+                console.log("*  The values null and undefinded equal == each other and do not equal any other value.");
+                console.log("*  Be careful when using comparison like > or < with variables that can occasionally be null/undefined. Checking for null/undefined seperately is a good idea.");
+                console.log("***Comparisons Tasks***");
+                console.log("What will be the results for these expressions?");
+                //  alert(5 > 4)                    //  true
+                //  alert("apple" > "pineapple");   //  false
+                //  alert("2" > "12");              //  true 
+                //  alert(undefined == null);       //  true
+                //  alert(undefined === null);      //  false
+                //  alert(null == "\n0\n");          //  false
+                //  alert(null === +"\n0n\n");      //  false
+            </script>
+        -->
+      </div>
+    </div>
+    <br />
+    <div class="container">
+      <div class="logicalOperators">
+        <h3>Logical Operators</h3>
+        <h4>The Modern Javascript Tutorial</h4>
+        <br />
+        <h3>Open Console for lesson output</h3>
+        <!--
+            <script>
+                console.log("There are three logical operators in Javascript: || (OR), && (AND), ! (NOT).");
+                console.log("Although the are called \"logical\", they can be applied to values of any type, not only boolean. Their result can be of any type.");
+                console.log("*** || (OR) ***");
+                console.log("The \"OR\" operator is represented with two vertical line symbols.");
+                console.log("example... result = a || b;");
+                console.log("*  In classical programming, the logical OR is meant to manipulate boolean values only. If any of its arguments are true, it returns true, otherwise it returns fasle.");
+                console.log("*  In JAVASCRIPT, the operator is alittble bit tricker and more powerful.");
+                console.log("*  in Javascript, the result is always true except for the case when both operands are false.");
+                //  alert( true || true );      // true
+                //  alert( false || true );     // true
+                //  alert( true || false );     // true
+                //  alert( false || false );    // true
+                console.log("*  If an operand is not boolean, it's converted to boolean for the evaluation.");
+                console.log(" For instance, the number 1 is treated as true, whereas the number 0 as false");
+                /*
+                if(1 || 0) {    // works just like (true || false)
+                    alert("truthy!");
+                }
+                */
+                console.log("Most of the time, OR || is used in an if statement to test if any of the conditions is true.");
+                /*
+                let hour = 9;
+                if (hour < 10 || hour > 18) {
+                    alert("The office is closed.");
+                }
+                */
+                //We can pass more conditions
+                /*
+                let hour = 12;
+                let isWeekend = true;
+                if (hour < 10 || hour > 18 || isWeekend) {
+                    alert("The office is open between 10am-6pm. The office is closed on weekedns.");
+                }
+                */
+                console.log("*** OR \"||\" finds the first truthy value.***");
+                console.log("Take for example:");
+                console.log("result = value1 || value2 || value3");
+                console.log("The OR || operator does the following:");
+                console.log("*  Evaluates the operands from left to right.");
+                console.log("*  For each operand, converts it to boolean. If the result is true, stops and returns the original value of the operand.");
+                console.log("*  If all operands have been evaluated(i.e. all were false), returns the last operand.");
+                console.log("A value is return in its original form, without the conversion.");
+                console.log("In other words, a chain of OR \"||\" returns the first truthy value or the last one if not truthy value is found.");
+                //  alert( 1 || 0);     // 1(1 is truthy)
+                //  alert( true || "no matter what");       //true is truthy
+                //  alert( null || 1);      //1 (1 is the first truthy value)
+                //  alert(null || 0 || 1);      //1 (the first truthy value)
+                //  alert(undefined || null || 0);      //0 (all falsy, returns the last value)
+                console.log("1. Getting the first truthy value froma list of variables or expressions.");
+                console.log(".  We can use OR || to find the first variable with data in a list of variables which can either contains data or be null/undefined.");
+                /*
+                let currentUser = null;
+                let defaultUser = "John";
+                let name = currentUser || defaultUser || "unnamed";
+                alert(name);    //selects "john" - the first truthy value
+                */
+
+                console.log("2. Short Circuit evaluation.");
+                console.log(".  Operands can be not only values, but arbitrary expressions. OR evaluates and test them from left to right. The evaluation stops when a truthy value is reached, and the value is returned. This process is called \"a short-circuit evaluation\" ecause it oges as short as possible from left to right.");
+                console.log("This is clearly seen when the expression given as the second argument has a side effect like a variable assignemnt. In the following example, x does not get assigned.");
+                /*
+                let x;
+                true || (x=1);
+                alert(x);   //undefined, because (x=1) not evaluated
+                */
+                console.log("If, instead, the first argument is false, || evaluates the second one, thus running the assignment.");
+                /*
+                let x;
+                false || (x=1);
+                alert(x);   //1
+                */
+                console.log("***&& (AND)");
+                console.log("The AND operator is represented by two ampersands &&.");
+                console.log("In classical programming, AND returs ture if both operans are truthy and false otherwise.");
+                //  alert(true && true);    //  true
+                //  alert(false && true);   //  false
+                //  alert(true && false);   //  false
+                //  alert(false && false);  //  false
+                console.log("An example with if:");
+                let hour = 12;
+                let minute = 30;
+                /*
+                if(hour == 12 && minute == 30) {
+                    alert("\'The time is 12:30\'");
+                }
+                */
+                console.log("Just as with OR, any value is allowed as an operand of AND.");
+                /* 
+                if (1 && 0) {   // evaluated as true && false
+                    alert("won't work, becuase the result is falsy");
+                }
+                */
+                console.log("***AND \"&&\" finds the first falsey value***");
+                console.log("The AND && operator does the following:");
+                console.log("*  Evaluates operands from left to right.");
+                console.log("*  For each operand, converts it to a boolean. If the result is false, stops and returns the original value of that operand.");
+                console.log("*  If all operands have been evaluated (i.e. all were trhuthy), returns the last operand.");
+                console.log("In other words, AND returns the first falsy value or the last value if none were found.");
+                console.log("The rules above are similar to OR. The difference is that AND returns the first falsy value while OR retruns the first truthy one.");
+                //  alert(1 && 2 && null && 3);     //null
+                //  alert(1 && 2 && 3);     // 3, the last one
+                console.log("##### Precedence of AND && is higher than OR || #####");
+                console.log("So the code a && b || c && d is essentially the same as if the && expressios were in parentheses: (a && b) || (c && d).");
+                console.log("Just like OR, the AND && operator can sometimes replace if.");
+                /*
+                let x = 1;
+                (x > 0) && alert("Greater than zero!");
+                */
+                console.log("The action in the right part of && would execute only in the evaluation reaches it. That is only if (x > o) is true.");
+                console.log("So we basically have an analouge for:")
+                /*
+                let x = 1;
+                
+                if (x>0) {
+                    alert("Greater than zero!");
+                }
+                */
+                console.log("The variant with && appears to be shorter. But if is more obvious and tends to be alittle bit more readable. So we recommend using every construct for its purpose: use \'if\' if we want if and use && if we AND.");
+                console.log("***!(NOT)***");
+                console.log("The boolean NOT operator is represented with an exclamation sign !");
+                console.log("The syntax is pretty simple:");
+                console.log("result = !value");
+                console.log("The operator accepts a single arguement and does the following:");
+                console.log("1. Converts the oprerand to boolean type: true/false.");
+                console.log("2. Returns the inverse value.");
+                //  alert( !true );     //false
+                // alert(!0);  //true
+                console.log("A double NOT !! is sometimes used for conversing a value to boolean type:")
+                //  alert(!!"non-empty string");    //  true
+                //  alert(!!null);  //  false
+                console.log("Tha is, the first NOT converts the value to boolean and returns the inverse, and the second NOT inverses it again. In the end, we have a plain value-to-bolean conversion.");
+                console.log("There is a little more verbose way to do the same thing - a built-in Boolean function:");
+                // alert(Boolean("non-empty string")); //  true
+                // alert(Boolean(null));   //  false
+                console.log("The precedence of NOT ! is the highest of all logical operators, so it always executes first, before && or ||.");
+                console.log("*****TASKS*****");
+                console.log("*Whats the result of OR?*");
+                console.log("Whats the code below going to output?");
+                console.log("alert( null || 2 || undefinded );");
+                //  alert( null || 2 || undefined );    // my guess is 2
+                console.log("*What's the result of OR'ed alerts?");
+                console.log("Whats the code below going to output?");
+                console.log("alert(alert(1) || 2 || alert(3))");
+                // alert( alert(1) || 2 || alert(3) ); // my guess is is 1, it alerted 1 and then 2 (first truthy value)
+                console.log("*What is the result of AND?*");
+                console.log("Whats the code below going to output?");
+                console.log("alert( 1 && null && 2 )");
+                //  alert (1 && null && 2 );    // my guess is null. It is the first falsey value.
+                console.log("*What is the rsult of AND'ed alerts?*");
+                console.log("Whats the code below going to output?");
+                //  alert( alert(1) && alert(2) );  // no alert, I don't see a falsey value. I was wrong. It returned a 1 and then an undefined.
+                console.log("*The result of OR AND OR*");
+                console.log("Whats the code below going to output?");
+                // alert( null || 2 && 3 || 4 );   // I'm guessing 2 && 3 because they are undefined and a falsey value.  The OR does not return falsey, but the operation should stop after the first falsey for the &&. So I don't think that the 4 will be executed. So I was half right. It only returned a 3. it turns out a 2 && 3 becomes 2 && 3 = 3. so we end up with null || 3 || 4 and 3 is the first truthy value.
+                console.log("*Check the range between*");
+                console.log("Write an \"if\" condition to check that age is between 14 and 90 inclusively.");
+                /*
+                let age = 43;
+                if (age >= 14 && age <= 90){
+                    alert("Hey " + age + " falls between 14 and 90.");
+                }
+                */
+                console.log("*Chec the range outside*");
+                console.log("Write an \"if\" condition to check that age is NOT between 14 and 90 inclusively.");
+                console.log("Create two variants: the first one usint NOT !, the second one -without it");
+                /*
+                let age = 14;
+                if (!( age >= 14 && age <= 90)) {
+                    alert("Hey " + age + " falls between 14 and 90.");
+                }
+                */
+                /*
+                let age = 14;
+                if (age > 14 && age < 90) {
+                    alert("Hey " + age + " falls within the 14 to 90 range.");
+                } else {
+                    alert("You must be 14 or younger or 90 or older");
+                }
+                */
+                console.log("*A question about \"if\"");
+                console.log("Which of these alerts are going to execute?");
+                /*
+                if( -1 || 0 )  {
+                    alert('first');
+                }
+                */
+                /*
+                if ( -1 && 0 ) {
+                    alert("second");
+                }
+                */
+                /*
+                if(null || -1 && 1) {
+                    alert("third");
+                }
+                */
+                let userName = prompt("Who's there!", '');
+                if (userName == "Admin") {
+                    let pass = prompt("Password?", '');
+                    if (pass == "TheMaster") {
+                        alert("Welcome!");
+                    } else if (pass == '' || pass == null) {
+                        alert("Cancelled");
+                    } else {
+                        alert("Wrong password");
+                    }
+                } else if (userName == '' || userName == null) {
+                    alert("Cancelled");
+                } else {
+                    alert("I don't know you");
+                }
+
+
+
+
+
+
+
+
+
+            </script>
+        -->
+      </div>
+    </div>
+    <br />
+    <div class="container">
+      <div class="w3Schhools">
+        <h3>Javascript if else and else if</h3>
+        <h4>w3Schools.com</h4>
+        <br />
+        <h3>Open console for lesson output</h3>
+        <br />
+        <!--
+            <script>
+                console.log("*****Conditional Statements*****");
+                console.log("In JavaScript we have the following conditional statements:");
+                console.log("*  Use \'if\' to specify a block of code to be executed, if a specified condition is true.");
+                console.log("*  Use \'else\' to specify a block of code to be executed, if the same condition is false");
+                console.log("*  Use \'else if\' to specify a new condition to test, if the first condition is true.");
+                console.log("Use \'switch\' to specify many alternative blocks of code to be executed.");
+                console.log("*The if Statement*");
+                console.log("Note that \'if\' is in lowercase letters. Uppercase letters (If or IF) will generate a JavaScript error.");
+                console.log("Make a \"Good day\" greeting if the hour is less than 18:00.");
+                /*
+                let hour = 12;
+                if( hour < 18) {
+                    alert("Good day");
+                }
+                */
+                console.log("*The else Statement*");
+                console.log("Use the else statement to specify a block of code to be executed if the condition is false.")
+                console.log("If the hour is less than 18, create a \"Good day\" greeting, otherwise \"Good evening\"");
+                /*
+                let hour = 17;
+                if ( hour < 18 ) {
+                    alert("Good day");
+                } else {
+                    alert("Good evening");
+                }
+                */
+                console.log("*The else if Statement*");
+                console.log("Use the else if statement to specify a new condition if the first condition is false.");
+                console.log("If time is less thatn 10:00, create a \"Good morning\" greeting, if not, but time is less than 20:00, create a \"Good day\" greeting, owtherwise a \"Good evening\".");
+                /*
+                let hour = 22;
+                if ( hour < 10 ) {
+                    alert("Good morning");
+                } else if ( hour < 20) {
+                    alert("Good day");
+                } else {
+                    alert("Good evening");
+                }
+                */
+
+            </script>
+        -->
+      </div>
+    </div>
+    <br />
+    <div class="container">
+      <div class="javascriptInfo">
+        <h3>Conditional operators: if '?'</h3>
+        <h4>The Modern Javascript Tutorial</h4>
+        <br />
+        <h3>Open Console for lesson output</h3>
+        <!--
+            <script>
+                console.log("***The \"if\" satement***");
+                console.log("The if(...) satement evaluates a condition in paraentheses and, if the results is true, then it executes a block of code.");
+                // let year = prompt("In which year was ECMAScirpt-2015 specification published?", '');
+                /*
+                if (year == 2015) {
+                    alert("You are right!");
+                } else {
+                    alert("You are wrong!");
+                }
+                */
+                console.log("***Boolean Conversion***");
+                console.log("The if(...) statement evaluates the expressio in its parentheses and convertes the result ot a boolean.");
+                console.log("Let's recall the conversion rules:");
+                console.log("*  A number 0, an empty string \"\", null, undefined and NaN all become false. So they are called falsey values.");
+                console.log("*  Other values become true, so they are called \"truthy\".");
+                /*
+                if (0) {
+                    alert("this will not execute, duh!"); // This will not execute since it's falsey
+                }
+                */
+                /*
+                if(1){
+                    alert("This will execute!");    // This will execute since it's truthy.
+                }
+                */
+                /*
+                let year = 2015;
+                let cond = (year == 2015); // equality evaluates to true or false.
+                if (cond) {
+                    alert("Truthy condition will execute while a falsy will not.");
+                }
+                */
+                console.log("***The \"else\" clause***");
+                console.log("The if statement may contain an optional \"else\" block. The else block executes when the condition is false.");
+                /*
+                if(year == 2015) {
+                    alert('You guessed right!');
+                } else {
+                    alert('How can you be so wrong?'); //any value except 2015
+                }
+                */
+                console.log("Several conditions: \"else if\"***");
+                console.log("Sometimes we\'d like to test several variations of a condition. The else if clause lets us do that.");
+                /*
+                if (year < 2015) {
+                    alert("Too early...");
+                } else if (year > 2015) {
+                    alert("Too late");
+                } else {
+                    alert("Exactly!");
+                }
+                */
+                console.log("***Conditional operator***");
+                console.log("Sometimes, we need to assign a variable depending on a condition.");
+                console.log("for example:");
+                /*
+                let accessAllowed;
+                let age = prompt("How old are you?", '');
+
+                if( age > 18) {
+                    accessAllowed = true;
+                } else {
+                    accessAllowed = false;
+                }
+
+                if (accessAllowed) {
+                    alert("Welcome!")
+                } else {
+                    alert("Sorry kid, access denied!");
+                }
+
+                alert(accessAllowed);
+                */
+                console.log("The so-called \"conditonal\" or \"question mark\" operator leets us do that in a shorter and simpler way.");
+                console.log("The operator is represendted by a question mark \'?\'. Sometimes it\'s called \"ternary\", because the operator has three operands. It is actually the one and only operator in JavaScript which has that many.");
+                console.log("The syntax is:")
+                console.log("let result = condition ? value1 : value2;");
+                console.log("The condition is evaluated: if it's truty then value1 is returned, otherwise - value2.");
+                /*
+                let age = prompt("How old are you?", '');
+                let accessAllowed = (age > 18) ? true : false;
+                if (accessAllowed) {
+                    alert("Welcome!")
+                } else {
+                    alert("Sorry kid, access denied!");
+                }
+                */
+                console.log("Technically, you CAN omit the parentheses around age > 18. But parentheses makes the code more readable, so it is recomended.");
+                /*
+                if (accessAllowed) {
+                    alert("Welcome!")
+                } else {
+                    alert("Sorry kid, access denied!");
+                }
+                */
+                console.log("You can still avoid using the question mark in the example above since it returns true/false.");
+                console.log("***Multiple \'?\'");
+                console.log("A sequence of question mark operators ? can return a value that depends on more than one condition.");
+
+                // let age = prompt('age?', '');
+                /*
+                let message = (age < 3) ? 'Hi, baby!' :
+                    (age < 18) ? 'Hello!' :
+                        (age < 100) ? 'Greetings!' :
+                            'What an unusual age!';
+
+                alert(message);
+                */
+                /*
+                console.log("Here\'s an example using if..else");
+                if(age < 3) {
+                    message = "Hi baby!";
+                } else if (age < 18){
+                    message = "Hello";
+                } else if (age < 100){
+                    message = "Greetings!";
+                } else {
+                    message = "What an unusal age!";
+                }
+                alert(message);
+                */
+                console.log("***Non-traditional use of \'?\'***");
+                console.log("Sometimes the questoin mark \'?\' is used as a replacement for \'if\'.");
+                /*
+                let company = prompt("Which company created JavaScript?", '');
+                (company == 'Netscape') ?
+                alert('Right!') : alert('Wrong.');
+                */
+                console.log("**It's not recommended to use the quesion mark operator this way.***");
+                console.log("The notation is shorter than the equivalent \'if\' statement. But is is less readable.")
+                console.log("Here is the same thing using an if statemnt.");
+                /*
+                let company = prompt("Which company created JavaScript?", '');
+                if(company == "Netscape") {
+                    alert("Right!");
+                } else {
+                    alert("Wrong!");
+                }
+                */
+                console.log("***TASKS***");
+                console.log("if(a sring with zero)")
+                /*
+                if("0") {
+                    alert("Hello");         //  I say yes. for zero is a string because it's in quotes
+                }
+                */
+                console.log("Show the sign");
+                console.log("Using \'if..else\', write the code which gets a numberr via prompt and then shows in alert:");
+                console.log("*  1, if the value is greater than zero");
+                console.log("*  -1, if less than zero");
+                console.log("*  0, if equals zero");
+                /*
+                let number = prompt("Type in a number!", '');
+                if ( number > 0 ) {
+                    alert("1");
+                } else if( number < 0 ) {
+                    alert("-1");
+                } else {
+                    alert("0");
+                }
+                */
+                console.log("***Rewrite \'if\' into \'?\'***");
+                console.log("Rewrite the following \'if\' statement using the operator \'?\'");
+                //  let a = 1;
+                //  let b = 2;
+                // let guess = prompt("Give me a number from 1-5", '');
+
+                /*
+                if (guess < 4) {
+                    alert("Below");
+                } else {
+                    alert("Over;");
+                }
+                */
+                /*
+                (guess < 4) ?
+                    alert("Below") : alert("Over");
+                */
+                console.log("***Rewrite \'if...else\' into \'?\'***")
+                console.log("Rewrite using multiple ternary operators \'?\.")
+                //  let message = prompt("Please log in:", '');
+                /*
+                if(message == "Employee") {
+                    alert("Hello");
+                } else if (message == "Director") {
+                    alert("Greetings");
+                } else if (message == '') {
+                    alert("No login for you!");
+                } else {
+                    alert("You must be a visitor! Feel free to browse.");
+                }
+                */
+                /*
+                  (message == "Employee") ?  alert("Hello") :
+                    (message == "Director") ? alert("Greetings") :
+                    (message == '') ? alert("No login for you!") :
+                    alert("You must be a visitor! Feel free to browse.");
+                    */
+
+
+            </script>
+        -->
+      </div>
+    </div>
+    <br />
+    <div class="container">
+      <div class="howToCodeInJavascript">
+        <h3>How to use the Switch Statement</h3>
+        <h4>Digital Ocean Community</h4>
+        <br />
+        <h3>Open Console for lesson output</h3>
+        <script>
+          console.log("**Introduction***");
+          console.log(
+            'A "switch" is a type of conditional stawtement that will evaluate an expression against multiple possible cases and execute one or more blocks of code based on matching cases.'
+          );
+          console.log("***Switch***");
+          console.log("Syntax:");
+          console.log("switch(expression)  {");
+          console.log("    case x:");
+          console.log("        // execute case x code block");
+          console.log("        break;");
+          console.log("    case y:");
+          console.log("        // execute case y code block");
+          console.log("        break;");
+          console.log("    default:");
+          console.log("        // execute default code block");
+          console.log("{");
+          console.log(
+            "If the case x matches the condition being tested, the code will execute and the word break will end the switch block."
+          );
+          console.log(
+            "If it does not match x, it will test agains case y.  If case y meets the expression, then it will execute the code and the word break will exit out of the switch block."
+          );
+          console.log(
+            "if none of the cases match, the default code will execute"
+          );
+          console.log("Example:");
+          console.log(
+            "Set the current day of the week to a variable, with 1 being Monday and 7 being Sunday."
+          );
+          /*
+                let day = prompt("Enter the day of the week.", '');
+                switch(day) {
+                    case "Monday":
+                    alert("Happy Monday!");
+                    break;
+                    case "Tuesday":
+                    alert("It's Tuesday. You got this!");
+                    break;
+                    case "Wednesday":
+                    alert("Hump day already!");
+                    break;
+                    case "Thursday":
+                    alert("Just one more day \'till the weekend!");
+                    break;
+                    case "Friday":
+                    alert("Happy Friday!");
+                    break;
+                    case "Saturday":
+                    alert("Have a wonderful Saturday!");
+                    break;
+                    case "Sunday":
+                    alert("It\'s Sunday, time to relax!");
+                    break;
+                    default:
+                    alert("Something went horibly worng...");
+                }
+                */
+          console.log(
+            "If the \"break\" is ommited, the program will continue to evaluate. To make the program faster, you include the 'break'."
+          );
+          console.log("***Switch Ranges***");
+          console.log(
+            "To use 'switch' ranges, you set the expressoin to true and doing an operation within each 'case' statement."
+          );
+          console.log("*  Grade of 90 and above is an A");
+          console.log("*  Grade of 80 to 89 is a B");
+          console.log("*  Grade of 70 to 79 is a C");
+          console.log("*  Grade of 60 to 69 is a D");
+          console.log("Grade of 59 or below is an F");
+          /*
+                let grade = prompt("What % did you score on your final?", '');
+                switch(true) {
+                    case grade >= 90:
+                    alert("You earned an A!");
+                    break;
+                    case grade >= 80:
+                    alert("Not bad, you earned a B.");
+                    break;
+                    case grade >= 70: 
+                    alert("You can do better, you earned a C.");
+                    break;
+                    case grade >= 60:
+                    alert("Unacceptable, you can do better than a D.");
+                    break;
+                    default:
+                    alert("You are not even trying! F!");
+                }
+                */
+          console.log(
+            "The expression in parentheses will be evaluated to be true.  If any case evalutates to true, it will be a match and it will execute."
+          );
+          console.log("***Multiple Cases***");
+          console.log("You can have more than one case for each block of code");
+          console.log(
+            "Make an Applicatoin that will output the one of the four seasons."
+          );
+          console.log("*  Winter: January, February, and March");
+          console.log("*  Spring: April, May, and June");
+          console.log("*  Summer: July, August, and September");
+          console.log("Autum: October, November and December");
+          /*
+                let month = prompt("Plese enter your birth month: ", '');
+                switch(month){
+                    case "January":
+                    case "February":
+                    case "March":
+                    alert("You were born in the Winter.");
+                    break;
+                    case "April":
+                    case "May":
+                    case "June":
+                    alert("You were born in the Spring");
+                    break;
+                    case "July":
+                    case "August":
+                    case "September":
+                    alert("You were born in the Summer");
+                    break;
+                    case "October":
+                    case "November":
+                    case "December":
+                    alert("You were born in the Fall");
+                    break;
+                    default:
+                    alert("Are you feeling OK?");
+                }
+                */
+          console.log("***Conclusion***");
+          console.log(
+            "In this excercise, we reviewed the 'switch' statement, a type of conditional statement which evaluates an expression and outputs different values based on the matching results. We reviewed 'switch' statements using a range and multiple case statements."
+          );
+        </script>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

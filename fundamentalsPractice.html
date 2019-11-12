@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Fundamentals Pracice</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <h1 class="title">The Odin Project</h1>
+    <h2 class="title">Web Developement 101</h2>
+    <h3 class="title">Fundamentals Practice</h3>
+    <div class="container">
+      <h3>Practice</h3>
+      <p>
+        For now, just write a function and test the output with
+        <code>console.log</code>.
+      </p>
+      <pre>
+    <code>
+        function test(x) {
+          console.log(x);
+        }
+        test(32);
+    </code>
+    </pre>
+      <script>
+        function test(x) {
+          console.log(x);
+        }
+        test(32);
+      </script>
+      <ol>
+        <li>
+          <p>
+            Write a function called <code>add7</code> that takes one number and
+            returns that number + 7.
+          </p>
+          <pre>
+        <code>
+          function add7(a) {
+            let b = a + 7;
+            return console.log(b);
+          }
+          add7(32);
+        </code>
+        </pre>
+          <script>
+            function add7(a) {
+              let b = a + 7;
+              return console.log(b);
+            }
+            add7(32);
+          </script>
+        </li>
+
+        <li>
+          <p>
+            Write a function called <code>multiply</code> that takes 2 numbers
+            and returns their product.
+          </p>
+          <pre>
+          <code>
+            function multiply(b, c) {
+              let d = b * c;
+              return console.log(d);
+            }
+            multiply(5,7);
+          </code>
+        </pre>
+          <script>
+            function multiply(b, c) {
+              let d = b * c;
+              return console.log(d);
+            }
+            multiply(5, 7);
+          </script>
+        </li>
+        <li>
+          <p>
+            Write a function called <code>capitalize</code> that takes a string
+            and returns that string with <em>only</em> the first letter
+            capitalized. Make sure that it can take string that are lowercae,
+            UPPERCASE or Both.
+          </p>
+          <pre>
+            <code>
+              function capitalize(string) {
+                let x = string.charAt(0).toUpperCase() + string.slice(1);
+                console.log(x);
+              }
+              capitalize("cARLOS"); // Carlos
+            </code>
+          </pre>
+          <script>
+            function capitalize(string) {
+              let x =
+                string.charAt(0).toUpperCase() + string.toLowerCase().slice(1);
+              console.log(x);
+            }
+            capitalize("cARLOS");
+          </script>
+        </li>
+        <li>
+          <p>
+            Write a function called <code>lastLetter</code> that takes a string
+            and returns the very last leter of that string:
+          </p>
+          <ol>
+            <li>
+              <code>lastLetter("abcd")</code> should return <code>"d"</code>
+            </li>
+          </ol>
+          <br />
+          <pre>
+            <code>
+              function lastLetter(str) {
+                let z = str.charAt(str.length -1);
+                console.log(z);
+              }
+              lastLetter("dork"); // k
+            </code>
+          </pre>
+          <script>
+            function lastLetter(str) {
+              let z = str.charAt(str.length - 1);
+              console.log(z);
+            }
+            lastLetter("dork");
+          </script>
+        </li>
+      </ol>
+      <!--
+
+
+
+      -->
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
