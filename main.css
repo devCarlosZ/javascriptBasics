@@ -1,22 +1,38 @@
 .title {
 	text-align: center;
 	margin-bottom: 20px;
+	color: #ce973e;
 }
 
 body {
-	background-color: #7395AE;
+	background-color: #FFFFFF;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h4, h6 {
+	color: #ce973e;
+}
+
+
+p {
+	color: rgba(74,74,74,0.7);
+	font-size: 1.125em;
+}
+h5 {
+	color: black;
 }
 
 .container {
-	background-color: #E9ECEF;
+	background-color: #FFFFFF;
 	padding: 50px;
 	border-radius: 10px;
 	margin-bottom: 10px;
+	box-shadow: 0 5px 16px 0 rgba(0,0,0,0.1);
 }
 
 pre {
-	background: white;
-	border-radius: 15px;
+	background: #f7f5f3;
+	border-radius: 10px;
 	font-size: 1em;
 }
 
@@ -26,16 +42,16 @@ pre {
 	padding: 10px, 10px, 10px, 25px;
 	border-left-width: 5px;
 	border-left-style: solid;
-	background: #FFF3D4;
-	border-color: #f6b73c;
+	background: #FFFF99;
+	border-color: #f0e18e;
 }
 
 code {
 	font-family: 'Courier New', Courier, monospace;
 	color: black;
-	background-color: white;
+	background-color: #f7f5f3;
 	font-size: 1em;
-	padding: .25em;
+	 
 }
 
 .activity {
