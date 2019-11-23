@@ -389,7 +389,7 @@
           </li>
         </ul>
         <hr>
-        <h4>Avoidd new Array()</h4>
+        <h4>Avoid new Array()</h4>
         <p>There is no need to usethe JavaScript's built-in array constructor <code>new</code> Array().</p>
         <p><strong>Use</strong> <code>[]</code> <strong>instead</strong>.</p>
         <pre>
@@ -485,12 +485,162 @@
       </div>
 
       <hr>
+      <hr>
+      <hr>
       <h4>2. Arrays</h4>
       <a href="https://www.w3schools.com/js/js_array_methods.asp" target="_blank">
         <h5>w3schools.com, JavaScript Array Methods</h5>
       </a>
       <hr>
-      
+      <h4>Converting Arrays to Strings</h4>
+      <p>The JavaScript method <code>toString()</code> converts an array to a string of (comma seperated) array values.
+      </p>
+      <h6>Example</h6>
+      <pre>
+        <code>
+          var fruits = ["Banana", "Orange", "Apple", "Mango"];
+          console.log(fruits.toString());
+        </code>
+      </pre>
+      <p>Result:</p>
+      <code>Banana,Orange,Apple,Mango</code>
+      <script>
+        var fruits6 = ["Banana", "orange", "Apple", "Mango"];
+        console.log(fruits6.toString());
+      </script>
+      <p>The <code>join()</code> method also joins all array elements into a string.</p>
+      <p>It behaves just like <code>toString</code>, but in addition you can specify the seperator:</p>
+      <h6>Example</h6>
+      <pre>
+        <code>
+          var fruits = ["Banana", "orange", "Apple", "Mango"];
+          console.log(fruits7.join(" * "));
+        </code>
+      </pre>
+      <p>Result:</p>
+      <code>Banana * Orange * Apple * Mango</code>
+      <script>
+        var fruits7 = ["Banana", "Orange", "Apple", "Mango"];
+        console.log(fruits7.join(" * "));
+      </script>
+      <hr>
+      <h4>Popping and Pushing</h4>
+      <p>When you work with arrays, it is easy to remove elements and add new elements.</p>
+      <h4>Popping and Pushing</h4>
+      <p>When you work with arrays, it is easy to remove elements and add new elements.</p>
+      <p>This is what popping and pushing is:</p>
+      <p>Popping items out of an array, or pushing items into an array.</p>
+      <hr>
+      <h4>Popping</h4>
+      <p>The <code>pop()</code> method removes the last element from an array:</p>
+      <h6>Example</h5>
+        <pre>
+        <code>
+          var fruits = ["Banana", "Orange", "Apple", "Mango"];
+          fruit.pop();  //Removes the last element ("Mango") from fruits
+        </code>
+      </pre>
+        <script>
+          var fruits = ["Banana", "Orange", "Apple", "Kiwi"];
+          console.log(fruits.pop());
+        </script>
+        <p>The <code>pop()</code> method returns the value that was "opped out":</p>
+        <h6>Example</h6>
+        <pre>
+        <code>
+          var fruits = ["Banana", "Orange", "Apple", "Mango"];
+          var x = fruits.pop(); the value of x is "Mango"
+        </code>
+      </pre>
+        <script>
+          var fruits = ["Banana", "Orange", "Apple", "Mango"];
+          var x = fruits.pop();
+          console.log(x);
+        </script>
+        <hr>
+        <h4>Pushing</h4>
+        <p>The <code>push()</code> method adds a new element to an array (at the end):</p>
+        <h6>Example</h6>
+        <pre>
+        <code>
+            var fruits = ["Banana", "Orange", "Apple", "Mango"];
+            fruits.push("Kiwi");  // Adds a new eleemnt("Kiwi") to fruits
+        </code>
+      </pre>
+        <script>
+          var fruits = ["Banana", "Orange", "Apple", "Mango"];
+          console.log(fruits.push("Kiwi"));
+        </script>
+        <p>the <code>push()</code> method returns the new array length:</p>
+        <h6>Example</h6>
+        <pre>
+        <code>
+            var fruits = ["Banana", "Orange", "Apple", "Mango"];
+            var x = fruits.push("Kiwi", "Watermelon");  // the value of x is 6
+        </code>
+      </pre>
+        <script>
+          var fruits = ["Banana", "Orange", "Apple", "Mango"];
+          var x = fruits.push("Kiwi", "Watermelon");
+          console.log(x);
+        </script>
+        <hr>
+        <h4>Shifting Elements</h4>
+        <p>Shifting is equivalent to popping, working on the first element instead of the last.</p>
+        <p>The <code>shift()</code> method removes the first array element and "shifts" all other elements to a lower
+          index and retuns the string that was "shifted out":</p>
+        <h6>Example</h6>
+        <pre>
+        <code>
+            var fruits = ["Banana", "Orange", "Apple", "Mango"];
+            fruits.shift();   // Removes the first elment "Banana" from fruits
+        </code>
+      </pre>
+        <script>
+          var fruits = ["Banana", "Orange", "Apple", "Mango"];
+          var x = fruits.shift();
+          console.log(x);
+        </script>
+        <p>The <code>unshift()</code> method adds a new element to an array (at the beggining), and "unshifts" older
+          elements:</p>
+        <h6>Example</h6>
+        <pre>
+        <code>
+            var fruits = ["Banana", "Orange", "Apple", "Mango"];
+            fruits.unshift("Lemon");    //  Adds a new element "Lemon" to fruits
+        </code>
+      </pre>
+        <script>
+          var fruits = ["Banana", "Orange", "Apple", "Mango"];
+          var x = fruits.unshift("Lemon");
+          console.log(x);
+          console.log(fruits);
+        </script>
+        <hr>
+        <h4>Changing Elements</h4>
+        <p>Array elements are accessed using their <strong>index number</strong>:</p>
+        <div class="note">
+          <p>Array <strong>indexes</strong> start with 0. [0] is the first array element, [1] is the seconds, [2] is the
+            third...</p>
+        </div>
+        <h6>Example</h6>
+        <pre>
+        <code>
+            var fruits = ["Banana", "Orange", "Apple", "Mango"];
+            fruits[0] = "Kiwi"  //  changes the first element of fruits to "Kiwi"
+        </code>
+      </pre>
+        <script>
+          var fruits = ["Banana", "Orange", "Apple", "Mango"];
+          fruits[0] = "Kiwi"
+          console.log(fruits[0]);
+          console.log(fruits);
+        </script>
+        <p>The <code>length</code></p>
+
+
+
+
 
 
 
