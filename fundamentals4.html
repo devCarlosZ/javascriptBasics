@@ -226,8 +226,8 @@
       </pre>
 
         <script>
-          fruits1 = ["Banana", "Orange", "Apple", "Berry"];
-          var last = fruits1[fruits1.length - 1];
+          fruits = ["Banana", "Orange", "Apple", "Berry"];
+          var last = fruits[fruits.length - 1];
           console.log(last);
         </script>
 
@@ -245,9 +245,9 @@
       </pre>
 
         <script>
-          let fruits2 = ["Banana", "Orange", "Apple", "Mango"];
-          for (let i = 0; i < fruits2.length; i++) {
-            console.log(fruits2[i]);
+          let fruits = ["Banana", "Orange", "Apple", "Mango"];
+          for (let i = 0; i < fruits.length; i++) {
+            console.log(fruits[i]);
           }
         </script>
 
@@ -275,23 +275,20 @@
         <hr>
 
         <h4>Adding Array Elements</h4>
-        <p>The easiset way to add a nwe element to an array is using the <code>push()</code> method:</p>
+        <p>The easiset way to add a new element to an array is using the <code>push()</code> method:</p>
         <h6>Example</h6>
         <pre>
         <code>
-          var fruits3 = ["Pepino", "Limon", "Lima", "Kabumsha"];
-          fruits3.push("Papaya");
+          var fruits = ["Pepino", "Limon", "Lima", "Kabumsha"];
+          fruits.push("Papaya");
         </code>
       </pre>
         <script>
-          var fruits3 = ["Pepino", "Lima", "Limon", "Kambusha"];
-          fruits3.push("Papaya");
-          console.log(fruits3);
-          for (let i = 0; i < fruits3.length; i++) {
-            console.log(fruits3[i]);
-          }
+          var fruits1 = ["Pepino", "Lima", "Limon", "Kambusha"];
+          fruits1.push("Papaya");
+          console.log(fruits1);
         </script>
-        <p>New element can slo be added to an array using the <code>length</code> property:</p>
+        <p>New element can also be added to an array using the <code>length</code> property:</p>
         <h6>Example</h6>
         <pre>
         <code>
@@ -300,8 +297,8 @@
         </code>
       </pre>
         <script>
-          fruits3[fruits3.length] = "Cherry";
-          console.log(fruits3);
+          fruits[fruits.length] = "Cherry";
+          console.log(fruits);
         </script>
         <div class="note">
           <p><strong>WARNING !</strong></p>
@@ -315,9 +312,9 @@
         </code>
       </pre>
         <script>
-          var fruits4 = ["Banana", "Orange", "Apple", "Mango"];
-          fruits4[5] = "Papaya";
-          console.log(fruits4);
+          var fruits2 = ["Banana", "Orange", "Apple", "Mango"];
+          fruits2[5] = "Papaya";
+          console.log(fruits2);
         </script>
         <br>
         <h4>Associative Arrays</h4>
@@ -370,7 +367,7 @@
           var x1 = person.length;     // person.length will return 0
           var y1 = person[0];
           console.log(x1);
-          console.log(x2);
+          console.log(y1);
         </script>
         <hr>
         <h4>The Difference Between Arrays and Objects</h4>
@@ -436,8 +433,8 @@
         </code>
       </pre>
         <script>
-          var fruits5 = ["Banana", "Orange", "Apple", "Mango"];
-          console.log(typeof fruits5);
+          var fruits3 = ["Banana", "Orange", "Apple", "Mango"];
+          console.log(typeof fruits3);
         </script>
         <p>The typeof operator returns object because a JavaScript array is an object.</p>
         <h5>Solution 1:</h5>
@@ -448,7 +445,7 @@
         </code>
       </pre>
         <script>
-          console.log(Array.isArray(fruits5));
+          console.log(Array.isArray(fruits));
         </script>
         <p>The problem with this solutionis that ECMAScirpt 5 is not supported in older browsers.</p>
         <h5>Solution 2:</h5>
@@ -505,8 +502,8 @@
       <p>Result:</p>
       <code>Banana,Orange,Apple,Mango</code>
       <script>
-        var fruits6 = ["Banana", "orange", "Apple", "Mango"];
-        console.log(fruits6.toString());
+        var fruits5 = ["Banana", "orange", "Apple", "Mango"];
+        console.log(fruits5.toString());
       </script>
       <p>The <code>join()</code> method also joins all array elements into a string.</p>
       <p>It behaves just like <code>toString</code>, but in addition you can specify the seperator:</p>
@@ -514,14 +511,14 @@
       <pre>
         <code>
           var fruits = ["Banana", "orange", "Apple", "Mango"];
-          console.log(fruits7.join(" * "));
+          console.log(fruits.join(" * "));
         </code>
       </pre>
       <p>Result:</p>
       <code>Banana * Orange * Apple * Mango</code>
       <script>
-        var fruits7 = ["Banana", "Orange", "Apple", "Mango"];
-        console.log(fruits7.join(" * "));
+        var fruits6 = ["Banana", "Orange", "Apple", "Mango"];
+        console.log(fruits6.join(" * "));
       </script>
       <hr>
       <h4>Popping and Pushing</h4>
@@ -541,8 +538,8 @@
         </code>
       </pre>
         <script>
-          var fruits = ["Banana", "Orange", "Apple", "Kiwi"];
-          console.log(fruits.pop());
+          var fruits7 = ["Banana", "Orange", "Apple", "Kiwi"];
+          console.log(fruits7.pop());
         </script>
         <p>The <code>pop()</code> method returns the value that was "opped out":</p>
         <h6>Example</h6>
@@ -553,8 +550,8 @@
         </code>
       </pre>
         <script>
-          var fruits = ["Banana", "Orange", "Apple", "Mango"];
-          var x = fruits.pop();
+          var fruits8 = ["Banana", "Orange", "Apple", "Mango"];
+          var x = fruits8.pop();
           console.log(x);
         </script>
         <hr>
@@ -568,8 +565,8 @@
         </code>
       </pre>
         <script>
-          var fruits = ["Banana", "Orange", "Apple", "Mango"];
-          console.log(fruits.push("Kiwi"));
+          var fruits9 = ["Banana", "Orange", "Apple", "Mango"];
+          console.log(fruits9.push("Kiwi"));
         </script>
         <p>the <code>push()</code> method returns the new array length:</p>
         <h6>Example</h6>
@@ -580,8 +577,8 @@
         </code>
       </pre>
         <script>
-          var fruits = ["Banana", "Orange", "Apple", "Mango"];
-          var x = fruits.push("Kiwi", "Watermelon");
+          var fruity1 = ["Banana", "Orange", "Apple", "Mango"];
+          var x = fruity1.push("Kiwi", "Watermelon");
           console.log(x);
         </script>
         <hr>
@@ -597,8 +594,8 @@
         </code>
       </pre>
         <script>
-          var fruits = ["Banana", "Orange", "Apple", "Mango"];
-          var x = fruits.shift();
+          var fruity2 = ["Banana", "Orange", "Apple", "Mango"];
+          var x = fruity2.shift();
           console.log(x);
         </script>
         <p>The <code>unshift()</code> method adds a new element to an array (at the beggining), and "unshifts" older
@@ -611,10 +608,10 @@
         </code>
       </pre>
         <script>
-          var fruits = ["Banana", "Orange", "Apple", "Mango"];
-          var x = fruits.unshift("Lemon");
+          var fruity3 = ["Banana", "Orange", "Apple", "Mango"];
+          var x = fruity3.unshift("Lemon");
           console.log(x);
-          console.log(fruits);
+          console.log(fruity3);
         </script>
         <hr>
         <h4>Changing Elements</h4>
@@ -631,12 +628,38 @@
         </code>
       </pre>
         <script>
-          var fruits = ["Banana", "Orange", "Apple", "Mango"];
-          fruits[0] = "Kiwi"
-          console.log(fruits[0]);
-          console.log(fruits);
+          var fruity4 = ["Banana", "Orange", "Apple", "Mango"];
+          fruity4[0] = "Kiwi"
+          console.log(fruity4[0]);
+          console.log(fruity4);
         </script>
-        <p>The <code>length</code></p>
+        <p>The <code>length</code> property provides an easy way to append a new element to an array:</p>
+        <h6>Example</h6>
+        <pre><code>
+          var fruits = ["Banana", "Orange", "Apple", "Mango"];
+          fruits[fruits.length] = "Berry";    // Appends "Berry" to fruits
+        </code></pre>
+        <script>
+          var fruity5 = ["Banana", "Orange", "Apple", "Mango"];
+          fruits[fruity5.length] = "Berry";
+          console.log(fruity5);
+        </script>
+        <hr>
+        <h4>Deleting Elements</h4>
+        <p>Since JavaScript arrays are objects, elements can be deleted by using the JavaScript operator
+          <code>delete</code>:</p>
+        <h6>Example</h6>
+        <pre><code>
+          var fruits = ["Banana", "Orange", "Apple", "Mango"];
+          delete fruits[0];   // Changes the first element in fruit to undefinded
+        </code></pre>
+        <script>
+          var fruity6 = ["Banana", "Orange", "Apple", "Mango"];
+          delete fruity6[0];
+          console.log(fruity6[0]);
+          console.log(fruity6);
+        </script>
+
 
 
 
