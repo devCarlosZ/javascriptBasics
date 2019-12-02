@@ -845,6 +845,275 @@
 
 
     </div>
+
+    <div class="container">
+      <div class="Loops">
+        <hr>
+        <h4>1. Loops</h4>
+        <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code"
+          target="_blank">
+          <h5>MDN web docs, Looping Code</h5>
+        </a>
+        <hr>
+        <h4>Keep me in the loop</h4>
+        <p>Programming loops are all to do with doing the same thing over and over again - which is termed
+          <strong>iteration</strong> in programming speak.</p>
+        <p>A loop usually has one or more of the following features:</p>
+        <ul>
+          <li>A <strong>counter</strong>, which is initialized with a certain value - this is the starting poing of the
+            loop.</li>
+          <li>An <strong>exit condition</strong>, which is the criteria under which the loop stops - usually the counter
+            reaching a certain value.</li>
+          <li>An <strong>iterator</strong>, which is generally increments the counter by a small amount on each
+            successive loop, until it reaches the exit condition.</li>
+        </ul>
+        <p>In <a href="https://developer.mozilla.org/en-US/docs/Glossary/pseudocode" target="_blank">pseudocode</a>,
+          this would look something like the following:</p>
+        <pre><code>
+          loop(food = 0; foodNeeded = 10) {
+            if(food >=foodNeeded) {
+              exit loop;
+              // We have enough food; let's go home
+            } else {
+              food += 2;  // Spend an hour collecting 2 more food
+              //  loop will then run again
+            }
+          }
+        </code></pre>
+        <hr>
+        <h4>The standard for loop</h4>
+        <p>Start exploring specific construcs. The first, is the <strong>for loop</strong>:</p>
+        <pre><code>
+          for(initializer; exit-condition; final-expression) {
+            // code to run
+          }
+        </code></pre>
+        <p>Further explained:</p>
+        <ol>
+          <li>The keyword <code>for</code>, followed by some parentheses.</li>
+          <li>Inside the parentheses we have three items, sperated by semi-colons:
+            <ol>
+              <li>An <strong>initializer</strong> - this is usally a variable set to a number, which is incremented to
+                count the number of itmes the loop has run. It is also sometimes referred to as a <strong>counter
+                  variable</strong>.</li>
+              <li>An <strong>exit-condition</strong> - as mentioned before, this defines when the loop should stop
+                looping. This is generally an expression featuring a comparison operator, a test to see if the exit
+                condition has been met.</li>
+              <li>A <strong>final-expression</strong> - this is always evaluated (or run) each time the loop has gone
+                through a full iteration. It usually served to increment (or in some cases decrement) the counter
+                variable, to bring it closer to the exit dondition value.</li>
+            </ol>
+          </li>
+          <li>Some curly braces that contain a block of cod - this code will be run each time the loop iterates.</li>
+        </ol>
+        <h6>Example</h6>
+        <pre><code>
+          const cats = ["Bill", "Jeff", "Pete", "Biggles", "Jasmin"];
+          let info = "My cats are called ";
+          
+          for (let i = 0; i < cats.length; i++) {
+            info += cats[i] + ', ';
+          }
+          console.log(info);
+          
+        </code></pre>
+        <script>
+          const cats = ["Bill", "Jeff", "Pete", "Biggles", "Jasmin"];
+          let info = "My cats are called ";
+
+          for (let i = 0; i < cats.length; i++) {
+            info += cats[i] + ', ';
+          }
+          console.log(info);
+        </script>
+        <p>This gives us the following output:</p>
+        <pre><code>
+          My cats are called Bill, Jeff, Pete, Biggles, Jasmin,
+        </code></pre>
+        <div class="note">
+          <p><strong>Note</strong>: You can find this <a
+              href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for.html"
+              target="_blank"> example code on GitHub</a> too (also <a
+              href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for.html" target="_blank">
+              see it running live</a>).</p>
+        </div>
+        <p>This shows a loop is used to iterate over the items in an array and do something with each of them - a very
+          common pattern in JavaScript. Here:</p>
+        <ol>
+          <li>The counter variable (sometimes known as an initializer or an iteration variable), <code>i</code>, starts
+            at <code>0</code>(<code>let i = 0</code>).</li>
+          <li>The loop as been told to run until <code>i</code> is no longer smaller than the length of the
+            <code>cats</code> array. This is important - the exit condition shows the condition under which the loop
+            will still run. So in this case, while <code>i < cats.length</code> is still true, the loop will still run.
+          </li>
+          <li>Inside the loop, we concatenate the current loop item (<code>cats[i]</code>, which is
+            <code>cats[whatever i is at the time]</code>) along with a comma and space onto the end of <code>info</code>
+            variable. So:
+            <ol>
+              <li>During the first run, <code>i = 0</code>, therefore <code>cats[0] + ', '</code> (which is equal to
+                <code>Bill, </code>) will be concatenated onto <code>info</code>.</li>
+              <li>During the second run, <code>i = 0</code>, so <code>cats[1] + ', '</code> (which is equal to
+                <code>Jeff, </code>) will be concated onto <code>info</code>.</li>
+              <li>And so on. After each time the loop has run, 1 will be added to <code>i</code> (<code>i++</code>),
+                then the process will start again.</li>
+            </ol>
+          </li>
+          <li>When code <code>i</code> becomes equal to <code>cats.length</code> (in this case, 5), the loop will stop,
+            and the browser will move on the next bit of code below the loop.</li>
+        </ol>
+        <div class="note">
+          <p>
+            <strong>Note</strong>: We have made the exit condition <code>i < cats.length</code>, not
+            <code>i <= cats.length</code>, because computers count from 0, not 1 - we are starting <code>i</code> at
+            <code>0</code>, and going up to <code>i = 4</code> (the index of the last array item).
+            <code>cats.length</code> returns 5, as there are 5 itmes in the array, but we dont' want to get up to
+            <code>i = 5</code>, as that would return <code>undefined</code> for the last item (there is no arrray item
+            with an index of 5). So, therefore, we want to go up to 1 less than <code>cats.length</code>
+            (<code>i <</code>), not the same as <code>cats.length</code> (<code>i <=</code>).
+          </p>
+        </div>
+        <div class="note">
+          <p>
+            <strong>Note</strong>: A common mistake with exit conditions is making them use "equal to"
+            (<code>===</code>) rather than say "less than or equal to" (<code><=</code>). If we wanted to run our loop
+            up to <code>i = 5</code>, the exit condition would need to be <code>i <= cats.length</code>. If we set it to
+            <code>i === cats.length</code>, the loop would not run at all because <code>i</code> is not equal to
+            <code>5</code> on the first loop iteration, so it would stop immediately.
+          </p>
+        </div>
+        <p>One smallproblem, we are left with is that the final output sentence isn't very well-formed:</p>
+        <hr>
+        <h5>My cats are called Bill, Jeff, Pete, Biggles, Jasmin,</h5>
+        <hr>
+        <p>We want to change the concatenation on the final loop so that we do not have a comma on the end of the
+          sentence. We can insert a conditional inside our foor loop to handle this special case:</p>
+        <pre><code>
+          const cats1 = ["Bill", "Jeff", "Pete", "Biggles", "Jasmin"];
+          let info1 = "My cats are called ";
+          
+          for (let i = 0; i < cats1.length; i++) {
+            if (i === cats1.length - 1) {
+              info1 += 'and ' + cats1[i] + '.';
+            } else {
+              info1 += cats1[i] + ', ';
+            }
+          }
+          console.log(info1);
+        </code></pre>
+        <script>
+          const cats1 = ["Bill", "Jeff", "Pete", "Biggles", "Jasmin"];
+          let info1 = "My cats are called ";
+
+          for (let i = 0; i < cats1.length; i++) {
+            if (i === cats1.length - 1) {
+              info1 += 'and ' + cats1[i] + '.';
+            } else {
+              info1 += cats1[i] + ', ';
+            }
+          }
+          console.log(info1);
+        </script>
+        <div class="note">
+          <p><strong>Note</strong>: You can find this <a
+              href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for-improved.html"
+              target="_blank">example code on GitHub</a> too (also see <a
+              href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for-improved.html">see it
+              running live</a>).</p>
+        </div>
+        <div class="noteRed">
+          <p><strong>Important</strong>: With for - as with all loops - you must make sure that the initializer is
+            incremented or, depending on the case, decremented, so that it eventually reaches the exit condition. If
+            not, the loop will go on foreever, and either the browser will force it to stop, or it will crash. This is
+            called an <strong>infinite loop</strong>.</p>
+        </div>
+        <h4>Exiting loops with break</h4>
+        <p>If you want to exit a loop before the iterations have been completed, you can use the <a
+            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/break"
+            target="_blank">break</a> statement. Please review <a
+            href="https://www.digitalocean.com/community/tutorials/how-to-use-the-switch-statement-in-javascript"
+            target="_blank">switch statements</a>- the <code>break</code> statement immediately exists the switch
+          statement and moves onto the code after it.</p>
+        <p>It's the ssame with loops - a <code>break</code> statement will immediately exit the loop and make the
+          browser move on to any code that follows it.</p>
+        <p>Say we wanted to search through an array of contacts and telephone numbers and return just the number we
+          wanted to find? First, some simple HTML - a text <code>&lt;input&gt;</code> allowing us to enter a nme to
+          search for, a <code>&lt;button&gt;</code> element to submit a search, and a <code>&lt;p&gt;</code> element to
+          display the results in:</p>
+        <pre>
+          <code>
+            &lt;label for="search"&gt;Search by contact name: &lt;/label&gt;
+            &lt;input id="search" type="text"&gt;
+            &lt;button&gt;Search&lt;/button&gt;
+
+            &lt;p&gt;&lt;/p&gt;
+          </code>
+        </pre>
+        <p>Now on to the JavaScript:</p>
+        <pre>
+          <code>
+            const contacts = ['Chris:2232322', 'Sarah:3453456', 'Bill:7654322', 'Mary:9998769', 'Dianne:9384975'];
+            const para = document.querySelector('p');
+            const input = document.querySelector('input');
+            const btn = document.querySelector('button');
+
+            btn.addEventListener('click', function() {
+              let searchName = input.value.toLowerCase();
+              input.value = '';
+              input.focus();
+              for (let i = 0; i < contacts.length; i++) {
+                let splitContact = contacts[i].split(':');
+                if (splitContact[0].toLowerCase() === searchName) {
+                  para.textContent = splitContact[0] + '\'s number is ' + splitContact[1] + '.';
+                  break;
+                } else {
+                  para.textContent = 'Contact not found.';
+                }
+              }
+            });
+          </code>
+        </pre>
+
+        <label for="search">Search by contact name: </label>
+        <input id="search" type="text">
+        <button>Search</button>
+
+        <p class="phone"></p>
+        <script>
+          const contacts = ['Chris:2232322', 'Sarah:3453456', 'Bill:7654322', 'Mary:9998769', 'Dianne:9384975'];
+          const para = document.querySelector('.phone');
+          const input = document.querySelector('input');
+          const btn = document.querySelector('button');
+
+          btn.addEventListener('click', function () {
+            let searchName = input.value.toLowerCase();
+            input.value = '';
+            input.focus();
+            for (let i = 0; i < contacts.length; i++) {
+              let splitContact = contacts[i].split(':');
+              if (splitContact[0].toLowerCase() === searchName) {
+                para.textContent = splitContact[0] + '\'s number is ' + splitContact[1] + '.';
+                break;
+              } else {
+                para.textContent = 'Contact not found.';
+              }
+            }
+          });
+        </script>
+        <script>
+        
+        </script>
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
       crossorigin="anonymous"></script>

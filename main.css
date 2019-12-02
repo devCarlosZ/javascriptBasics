@@ -13,11 +13,11 @@ h4, h6 {
 	color: #ce973e;
 }
 
-
 p {
-	color: rgba(74,74,74,0.7);
+	color: rgba(74, 74, 74, 0.7);
 	font-size: 1.125em;
 }
+
 h5 {
 	color: black;
 }
@@ -27,7 +27,7 @@ h5 {
 	padding: 50px;
 	border-radius: 10px;
 	margin-bottom: 10px;
-	box-shadow: 0 5px 16px 0 rgba(0,0,0,0.1);
+	box-shadow: 0 5px 16px 0 rgba(0, 0, 0, 0.1);
 }
 
 pre {
@@ -46,12 +46,21 @@ pre {
 	border-color: #f0e18e;
 }
 
+.noteRed {
+	margin: -15px, 0, 20px, 0;
+	border: 0, 0, 0, 5px;
+	padding: 10px, 10px, 10px, 25px;
+	border-left-width: 5px;
+	border-left-style: solid;
+	background: #FFE7E8;
+	border-color: #E66465;
+}
+
 code {
 	font-family: 'Courier New', Courier, monospace;
 	color: black;
 	background-color: #f7f5f3;
 	font-size: 1em;
-	 
 }
 
 .activity {
