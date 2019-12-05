@@ -1119,19 +1119,29 @@
                 number is and use <code>break</code> to end the loop.</li>
             </ol>
           </li>
-          <li>After <code>(contacts.lenght-1)</code>iterations, if the contact name does not match the entered search, the paragraph text is set to "Contact not found.", and the loop continues iterating.</li>
+          <li>After <code>(contacts.lenght-1)</code>iterations, if the contact name does not match the entered search,
+            the paragraph text is set to "Contact not found.", and the loop continues iterating.</li>
         </ol>
         <div class="note">
-          <p>Note: You can view the <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/contact-search.html" target="_blank">full source on GitHub</a> too (also <a href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html" target="_blank">see it running live</a>).</p>
+          <p>Note: You can view the <a
+              href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/contact-search.html"
+              target="_blank">full source on GitHub</a> too (also <a
+              href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html"
+              target="_blank">see it running live</a>).</p>
         </div>
 
         <hr>
         <h4>Skipping iterations with continue</h4>
-        <p>The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/continue" target="_blank">continue</a> statement works in a similar manner to <code>break</code>, but instead of breaking out of the loop entirely, it skips to the next iteration of the loop. Let's look at another example that takes a number as an input, and returns only the numbers that are squares of integers (whole numbers).</p>
-        <p>The HTML is basically the same as the last example - a simple text inpu, and a paragraph for the output. The JavaScript is mostly the same too, although the loop iself is a bit different.:</p>
+        <p>The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/continue"
+            target="_blank">continue</a> statement works in a similar manner to <code>break</code>, but instead of
+          breaking out of the loop entirely, it skips to the next iteration of the loop. Let's look at another example
+          that takes a number as an input, and returns only the numbers that are squares of integers (whole numbers).
+        </p>
+        <p>The HTML is basically the same as the last example - a simple text inpu, and a paragraph for the output. The
+          JavaScript is mostly the same too, although the loop iself is a bit different.:</p>
         <pre>
           <code>
-            let num = inpu.value;
+            let num = input.value;
 
             for (let i= 1; i <= num; i++) {
               let sqRoot = Math.sqrt(i);
@@ -1143,6 +1153,41 @@
           </code>
         </pre>
         
+        <label for="number">Enter number:</label>
+        <input id="number" type="text">
+        <button id="btnA">Generate Integer Squares</button>
+
+        <p id="pp">Output: </p>
+
+        <script>
+          const para1 = document.querySelector('#pp');
+          const input1 = document.querySelector('#number');
+          const btn1 = document.querySelector('#btnA');
+
+          btn1.addEventListener('click', function () {
+            para1.textContent = 'Output: ';
+            let num = input1.value;
+            input1.value = '';
+            input1.focus();
+            for (let i = 1; i <= num; i++) {
+              let sqRoot = Math.sqrt(i);
+              if (Math.floor(sqRoot) !== sqRoot) {
+                continue;
+              }
+
+              para1.textContent += i + ' ';
+            }
+          });  
+        </script>
+        <ol>
+          <li>In this case, the input should be a number (<code>num</code>). The <code>for</code> loop is given a counter starting at 1 (as we are not interested in 0 in this case), an exit condition that aays the loop will stop when the counter becomes bigger than the input <code>num</code>, and an iterator that adds 1 to the counter each time.</li>
+          <li>Inside the loop, we find the sqaure root of each number using <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt" target="_blank">Math.sqrt(i)</a>, then check wheter the square root is an integer by testing wheter it is the same as itself when it has been rounded to the nearest integer (this is what <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor" target="_blank">Math.floor()</a> does to the number it is passed).</li>
+          <li>If the square root and the rounded down square root do not equal one another (<code>!==</code>), it means that the squre root is not an integer, so we are not interested in it. In such case, we use the <code>continue</code> satement to skip on the next loop iteration without recording the number anywhere.</li>
+        </ol>
+        <div class="note">
+          <p><strong>Note</strong>: You can view the full <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/integer-squares.html" target="_blank">full source code on GitHub</a> too (also see <a href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html" target="_blank">it running live</a>).</p>
+        </div>
+        <hr>
 
 
 
