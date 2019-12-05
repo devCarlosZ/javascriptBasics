@@ -1100,12 +1100,49 @@
           });
         </script>
         <ol>
-          <li>First of all we have some variable definitions - we have an array of contact information, with each item being a string containing a name and phone number seperated bya colon.</li>
-          <li>Next, we attach an event listener to the button (<code>btn</code>), so that when it is pressed, some code is run to perform the earch and return the results.</li>
-          <li></li>
+          <li>First of all we have some variable definitions - we have an array of contact information, with each item
+            being a string containing a name and phone number seperated bya colon.</li>
+          <li>Next, we attach an event listener to the button (<code>btn</code>), so that when it is pressed, some code
+            is run to perform the earch and return the results.</li>
+          <li>We store the value enterd into the text input int he variable called <code>searchName</code>, before then
+            emptying the text input and focusing it again, ready for the next search. Note that we also run the
+            <code>toLowerCase()</code> method on the string, so that searches will base-sensitive.</li>
+          <li>Now onto the interesting part, the for loop:
+            <ol>
+              <li>We start the counter at <code>0</code>, run the loop until the counter is no longer less than
+                <code>contacts.length</code>, and increment <code>i</code> by 1 after eachh iteration of the loop.</li>
+              <li>Inside the loop, we first split the current contact (<code>contacts[i]</code>) at the colon character,
+                and store teh resulting two values in an array called <code>splitContact</code>.</li>
+              <li>We then use the conditional statement to test whether <code>splitContact[0]</code> (the contact's
+                anme, again lower-cased with <code>toLowerCase()</code>) is equal to the inputted
+                <code>searchName</code>. If it is, we enter a string into the paragraph to report what the contact's
+                number is and use <code>break</code> to end the loop.</li>
+            </ol>
+          </li>
+          <li>After <code>(contacts.lenght-1)</code>iterations, if the contact name does not match the entered search, the paragraph text is set to "Contact not found.", and the loop continues iterating.</li>
         </ol>
+        <div class="note">
+          <p>Note: You can view the <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/contact-search.html" target="_blank">full source on GitHub</a> too (also <a href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html" target="_blank">see it running live</a>).</p>
+        </div>
 
+        <hr>
+        <h4>Skipping iterations with continue</h4>
+        <p>The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/continue" target="_blank">continue</a> statement works in a similar manner to <code>break</code>, but instead of breaking out of the loop entirely, it skips to the next iteration of the loop. Let's look at another example that takes a number as an input, and returns only the numbers that are squares of integers (whole numbers).</p>
+        <p>The HTML is basically the same as the last example - a simple text inpu, and a paragraph for the output. The JavaScript is mostly the same too, although the loop iself is a bit different.:</p>
+        <pre>
+          <code>
+            let num = inpu.value;
 
+            for (let i= 1; i <= num; i++) {
+              let sqRoot = Math.sqrt(i);
+              if(Math.floor(sqRoot) !== sqRoot) {
+                coninue;
+              }
+              para.textContent += i + ' ';
+            }
+          </code>
+        </pre>
+        
 
 
 
