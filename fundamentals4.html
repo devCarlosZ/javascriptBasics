@@ -14,7 +14,7 @@
 
 <body>
   <h1 class="title">The Odin Project</h1>
-  <h2 class="title">Web Developement 101</h2>
+  <h2 class="title">Web Development 101</h2>
   <h3 class="title">Fundamentals Part 4</h4>
     <div class="container">
       <div class="arrays">
@@ -24,7 +24,7 @@
           <h5>w3schools.com, JavaScript Arrays</h5>
         </a>
         <hr>
-        <p>Javascript arrays are used to store multipe values in a single variable.</p>
+        <p>Javascript arrays are used to store multiple values in a single variable.</p>
         <pre>
     <code>
       var cars = ["Saab", "Volvo", "BMW"];
@@ -36,8 +36,8 @@
         </script>
         <hr>
         <h4>What is an Array?</h4>
-        <p>An array is a special vairable, which can hold more than one value at time.</p>
-        <p>If you have alist of itmes (a list of car names, for example), storing the cars in single variables could
+        <p>An array is a special variable, which can hold more than one value at time.</p>
+        <p>If you have a list of items (a list of car names, for example), storing the cars in single variables could
           look
           like this:</p>
         <pre>
@@ -50,12 +50,12 @@
         <p>However, what if you want to loop through the cars and find a specific one? And what if you had not 3 cars,
           but
           300?</p>
-        <p>The solutoin is an array!</p>
+        <p>The solution is an array!</p>
         <p>An array can hold many values under a single name, and you can access he values by referring to an index
           number.</p>
         <hr>
         <h4>Creating an Array</h4>
-        <p>Using an array literal is the easiset way to creawte a JavaScript Array.</p>
+        <p>Using an array literal is the easiest way to create a JavaScript Array.</p>
         <p>Syntax:</p>
         <code>var <em>array_name</em> = [<em>item1</em>, <em>item2</em>, ...];</code>
         <p>Spaces and line breaks are not important. A declaration can span multiple lines:</p>
@@ -125,7 +125,7 @@
         </script>
         <hr>
         <h4>Access the Full Array</h4>
-        <p>With Javascript, the full array can be accesssed by referring to the array name:</p>
+        <p>With Javascript, the full array can be accessed by referring to the array name:</p>
         <h6>Example</h6>
         <pre>
         <code>
@@ -144,8 +144,8 @@
         <p>Arrays are special type of objects. The <code>typeof</code> operator in JavaScript returns "object" for
           arrays.
         </p>
-        <p>But, Javascript arrays are best describedas arrays.</p>
-        <p>Arrays use <strong>numbers</strong> to access its "elements". In this exammple, <code>person[0]</code>
+        <p>But, Javascript arrays are best described arrays.</p>
+        <p>Arrays use <strong>numbers</strong> to access its "elements". In this example, <code>person[0]</code>
           returns
           John:</p>
         <h6>Array:</h6>
@@ -156,7 +156,7 @@
           console.log(person[0]);
         </script>
 
-        <p>Obects use <strong>names</strong> to access its "members". In this example, <code>person.firstName</code>
+        <p>Objects use <strong>names</strong> to access its "members". In this example, <code>person.firstName</code>
           returns John:</p>
         <h6>Object:</h6>
         <code>var person = {firstName:"Juan", lastName:"Dough", age:46};</code>
@@ -167,7 +167,7 @@
         <hr>
         <h4>Array Elements Can Be Objects</h4>
         <p>JavaScript variables can be objects. Arrays are special kinds of objects.</p>
-        <p>Becuase of this, you can have variables of different types in the same Array.</p>
+        <p>Because of this, you can have variables of different types in the same Array.</p>
         <p>You can have objects in an Array. You can have functions in an Array. You can have arrays in an Array:</p>
         <div class="note">
           myArray[0] = Date.now;<br>
@@ -181,7 +181,7 @@
         <pre>
         <code>
           var x = cars.length;  // The length property returns the number of elements
-          var y = cars.sort();  // The sort() mehtod sorts array
+          var y = cars.sort();  // The sort() method sorts array
         </code>
       </pre>
         <hr>
@@ -260,7 +260,7 @@
           
           fruity.forEach(myFunction1);
           function myFunction1(value1) {
-            cosnole.log(value1);
+            console.log(value1);
           }
         </code>
       </pre>
@@ -275,7 +275,7 @@
         <hr>
 
         <h4>Adding Array Elements</h4>
-        <p>The easiset way to add a new element to an array is using the <code>push()</code> method:</p>
+        <p>The easiest way to add a new element to an array is using the <code>push()</code> method:</p>
         <h6>Example</h6>
         <pre>
         <code>
@@ -302,7 +302,7 @@
         </script>
         <div class="note">
           <p><strong>WARNING !</strong></p>
-          <p>Adding elements with high indexes can create undefinded "holes" in an array:</p>
+          <p>Adding elements with high indexes can create undefined "holes" in an array:</p>
         </div>
         <h6>Example 6</h6>
         <pre>
@@ -318,8 +318,8 @@
         </script>
         <br>
         <h4>Associative Arrays</h4>
-        <p>Many programming lanuguages</p>
-        <p>Arrays with named indexes are called associateive arrays (or hashes).</p>
+        <p>Many programming languages</p>
+        <p>Arrays with named indexes are called associative arrays (or hashes).</p>
         <p>JavaScript does <strong>not</strong> support arrays with named indexes.</p>
         <p>In JavaScript, <strong>arrays</strong> always use <strong>numbered indexes</strong>.</p>
         <h4>Example</h4>
@@ -346,7 +346,7 @@
         <div class="note">
           <p><strong>WARNING !!</strong></p>
           <p>If you use named indexes, JavaScript will redefined the array to a standard object. After that, some array
-            methods andproperties will produce incorrect results.</p>
+            methods and properties will produce incorrect results.</p>
         </div>
         <h4>Example:</h4>
         <pre>
@@ -372,9 +372,9 @@
         <hr>
         <h4>The Difference Between Arrays and Objects</h4>
         <p>In JavaScript, <strong>arrays</strong> use <strong>numbered indexes</strong>.</p>
-        <p>In Javascript, <strong>objects</strong> use <strong>namded indexes</strong>.</p>
+        <p>In Javascript, <strong>objects</strong> use <strong>named indexes</strong>.</p>
         <div class="note">
-          <p>Arrays are special kind of objects, with numered indexes.</p>
+          <p>Arrays are special kind of objects, with numbered indexes.</p>
         </div>
         <hr>
         <h4>When to Use Arrays. When to Use Objects.</h4>
@@ -387,7 +387,7 @@
         </ul>
         <hr>
         <h4>Avoid new Array()</h4>
-        <p>There is no need to usethe JavaScript's built-in array constructor <code>new</code> Array().</p>
+        <p>There is no need to use the JavaScript's built-in array constructor <code>new</code> Array().</p>
         <p><strong>Use</strong> <code>[]</code> <strong>instead</strong>.</p>
         <pre>
         <code>
@@ -395,7 +395,7 @@
           var points = [];          // Good
         </code>
       </pre>
-        <p>These two different statements both create a new array cotaining 6 numbers:</p>
+        <p>These two different statements both create a new array containing 6 numbers:</p>
         <pre>
         <code>
           var points = new Array(40, 100, 1, 5, 25, 10); // Bad
@@ -415,7 +415,7 @@
         <p>What if I remove one of the elements?</p>
         <pre>
         <code>
-          var points = new Array(40); // Create an arraywith 40 undefined elements !!!
+          var points = new Array(40); // Create an array with 40 undefined elements !!!
         </code>
       </pre>
         <script>
@@ -447,7 +447,7 @@
         <script>
           console.log(Array.isArray(fruits));
         </script>
-        <p>The problem with this solutionis that ECMAScirpt 5 is not supported in older browsers.</p>
+        <p>The problem with this solution is that ECMAScript 5 is not supported in older browsers.</p>
         <h5>Solution 2:</h5>
         <!--I do not understand this solution -->
         <p>to solve this problem you can create your own <code>isArray()</code>function:</p>
@@ -465,7 +465,7 @@
           }
           console.log(isArray(fruits));
         </script>
-        <p>The function above always returns ture if the argument is an array.</p>
+        <p>The function above always returns true if the argument is an array.</p>
         <p> Or more precisely: it returns true if the object prototype contains the word "Array". </p>
         <h5>Solution 3:</h5>
         <p>The <code>instanceof</code> operator returns true if an object is created by a given constructor:</p>
@@ -506,7 +506,7 @@
         console.log(fruits5.toString());
       </script>
       <p>The <code>join()</code> method also joins all array elements into a string.</p>
-      <p>It behaves just like <code>toString</code>, but in addition you can specify the seperator:</p>
+      <p>It behaves just like <code>toString</code>, but in addition you can specify the separator:</p>
       <h6>Example</h6>
       <pre>
         <code>
@@ -1200,8 +1200,8 @@
           }
         </code></pre>
         <p>This works similir to a for loop, except the initializer variable is set before the loop, and the final expression is included inside the loop to run - rather than these two beign inside the parentheses. The exit-condition is included inside the parentheses, which are precedded by the <code>while</code> keyword rather than <code>for</code>.</p>
-        <p></p>
-
+        <p>The same three items are still present, and they are still defiend in the ame order as they are in the loop - this makes snse, as you still have to have an initializer defined bofre you can check wheter it has reached the exit-codition; the final-condition is then run after the code inside the loop has run (an iteration has benn copeted), which will only happen if the exit-condition has still not beeen reached.</p>
+        
 
 
 
