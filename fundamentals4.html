@@ -1152,7 +1152,7 @@
             }
           </code>
         </pre>
-        
+
         <label for="number">Enter number:</label>
         <input id="number" type="text">
         <button id="btnA">Generate Integer Squares</button>
@@ -1180,17 +1180,33 @@
           });  
         </script>
         <ol>
-          <li>In this case, the input should be a number (<code>num</code>). The <code>for</code> loop is given a counter starting at 1 (as we are not interested in 0 in this case), an exit condition that aays the loop will stop when the counter becomes bigger than the input <code>num</code>, and an iterator that adds 1 to the counter each time.</li>
-          <li>Inside the loop, we find the sqaure root of each number using <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt" target="_blank">Math.sqrt(i)</a>, then check wheter the square root is an integer by testing wheter it is the same as itself when it has been rounded to the nearest integer (this is what <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor" target="_blank">Math.floor()</a> does to the number it is passed).</li>
-          <li>If the square root and the rounded down square root do not equal one another (<code>!==</code>), it means that the squre root is not an integer, so we are not interested in it. In such case, we use the <code>continue</code> satement to skip on the next loop iteration without recording the number anywhere.</li>
+          <li>In this case, the input should be a number (<code>num</code>). The <code>for</code> loop is given a
+            counter starting at 1 (as we are not interested in 0 in this case), an exit condition that aays the loop
+            will stop when the counter becomes bigger than the input <code>num</code>, and an iterator that adds 1 to
+            the counter each time.</li>
+          <li>Inside the loop, we find the sqaure root of each number using <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt"
+              target="_blank">Math.sqrt(i)</a>, then check wheter the square root is an integer by testing wheter it is
+            the same as itself when it has been rounded to the nearest integer (this is what <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor"
+              target="_blank">Math.floor()</a> does to the number it is passed).</li>
+          <li>If the square root and the rounded down square root do not equal one another (<code>!==</code>), it means
+            that the squre root is not an integer, so we are not interested in it. In such case, we use the
+            <code>continue</code> satement to skip on the next loop iteration without recording the number anywhere.
+          </li>
         </ol>
         <div class="note">
-          <p><strong>Note</strong>: You can view the full <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/integer-squares.html" target="_blank">full source code on GitHub</a> too (also see <a href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html" target="_blank">it running live</a>).</p>
+          <p><strong>Note</strong>: You can view the full <a
+              href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/integer-squares.html"
+              target="_blank">full source code on GitHub</a> too (also see <a
+              href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html"
+              target="_blank">it running live</a>).</p>
         </div>
         <hr>
         <h4>while and do ... while</h4>
         <p><code>for</code> is not the ony type of loop available in JavaScript.</p>
-        <p>First, the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while" target="_blank">while</a> loop:</p>
+        <p>First, the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while"
+            target="_blank">while</a> loop:</p>
         <pre><code>
           initializer
           while (exit-condition) {
@@ -1199,13 +1215,89 @@
             final-expression
           }
         </code></pre>
-        <p>This works similir to a for loop, except the initializer variable is set before the loop, and the final expression is included inside the loop to run - rather than these two beign inside the parentheses. The exit-condition is included inside the parentheses, which are precedded by the <code>while</code> keyword rather than <code>for</code>.</p>
-        <p>The same three items are still present, and they are still defiend in the ame order as they are in the loop - this makes snse, as you still have to have an initializer defined bofre you can check wheter it has reached the exit-codition; the final-condition is then run after the code inside the loop has run (an iteration has benn copeted), which will only happen if the exit-condition has still not beeen reached.</p>
-        
+        <p>This works similir to a for loop, except the initializer variable is set before the loop, and the final
+          expression is included inside the loop to run - rather than these two beign inside the parentheses. The
+          exit-condition is included inside the parentheses, which are preceded by the <code>while</code> keyword
+          rather than <code>for</code>.</p>
+        <p>The same three items are still present, and they are still defiend in the ame order as they are in the loop -
+          this makes snse, as you still have to have an initializer defined bofre you can check wheter it has reached
+          the exit-condition; the final-condition is then run after the code inside the loop has run (an iteration has
+          benn copeted), which will only happen if the exit-condition has still not beeen reached.</p>
+        <pre><code>
+          let i = 0;
 
+          while (i < cats.length){
+            if (i === cats.length -1) {
+              info += 'and' + cats[i] + '.';
+            } else {
+              info += cats[i] + ', ';
+            }
+            i++
+          }
+        </code></pre>
+        <script>
+          const cats2 = ['Ringo', 'Bingo', 'Dingo', 'Bango', 'Dango'];
+          var info2 = "My cats are "
+          let i = 0;
 
+          while (i < cats2.length) {
+            if (i === cats2.length - 1) {
+              info2 += 'and ' + cats2[i] + '.';
+            } else {
+              info2 += cats2[i] + ', ';
+            }
+            i++
+          }
+          console.log(info2);
+        </script>
 
+        <div class="note">
+          <p><strong>Note:</strong> This still works just he same as expected - have a look at it <a href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html" target="_blank">running live on GitHub</a> (also view the <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/while.html" target="_blank">full source code</a>).</p>
+        </div>
 
+        <p>The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/do...while" target="_blank">do...while</a> loop is very similar, but provides a variation on the while structure:</p>
+        <pre><code>
+          initializer
+          do {
+            // code to run
+
+            final-expression
+          } while (exit-condition)
+        </code></pre>
+        <p>In this case, the initizlizer again comes first, before the loo starts. The keyword directlly precedes the curly braces containig the code to run and the final expression.</p>
+        <p>The differentiator here is that the exit-condition comes after everything else, wrapped in the parentheses and preceded by a <code>while</code> keyword. In a <code>do...while</code> loop, hte coe inside the curly braces is always run before the check is made to see if it shld be executed again (in while and for, the check comes first, so the code might never be executed).</p>
+        <pre><code>
+          let i = 0;
+
+          do {
+            if (if i === cats.length -1) {
+              info += 'and ' + cats[i] + '.';
+            }
+          }
+        </code></pre>
+
+        <script>
+          const cats3 = ['Moana', 'Ariel', 'Snow', 'Cinderella'];
+          var info3 = 'My kittens are ';
+          let b = 0;
+          do {
+            if (b === cats3.length - 1) {
+              info3 += 'and ' + cats3[b] + '.';
+            } else {
+              info3 += cats3[b] + ', ';
+            }
+            b++;
+            
+          } while (b < cats3.length);
+          console.log(info3);
+
+        </script>
+        <div class="note">
+          <p><strong>Note:</strong>Again, this works just the same as expected - have a look at it <a href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html" target="_blank">running live on GitHUb</a> (also view the <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/do-while.html">full source code</a>).</p>
+        </div>
+        <div class="noteRed">
+          <p><strong>Important:</strong> With while and do..while - as with all loops - you must make sure that the initializer is incremented or depending on the case, decremented so that it evntually reaches the exit condition. If not, the loop will go on forever, and either the browser will force it to stop, or it will crash. This is called an <strong>infinite loop</strong>.</p>
+        </div>        
 
 
 
