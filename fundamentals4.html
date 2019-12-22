@@ -81,11 +81,11 @@
           console.log(carsA);
         </script>
         <div class="note">
-          <p>The two examples above do exactly the same. Ther is no need to use <code>new Array()</code>.</p>
+          <p>The two examples above do exactly the same. There is no need to use <code>new Array()</code>.</p>
           <p>For simplicity, and readability and execution speed, use the first one (the array literal method).</p>
         </div>
         <hr>
-        <h4>Acces the Elements of an Array</h4>
+        <h4>Access the Elements of an Array</h4>
         <p>You access an array element by referring to the index number.</p>
         <p>This statement accesses the value of the first element in <code>cars</code>:</p>
         <code>var name = cars[0];</code>
@@ -490,7 +490,7 @@
       </a>
       <hr>
       <h4>Converting Arrays to Strings</h4>
-      <p>The JavaScript method <code>toString()</code> converts an array to a string of (comma seperated) array values.
+      <p>The JavaScript method <code>toString()</code> converts an array to a string of (comma separated) array values.
       </p>
       <h6>Example</h6>
       <pre>
@@ -541,7 +541,7 @@
           var fruits7 = ["Banana", "Orange", "Apple", "Kiwi"];
           console.log(fruits7.pop());
         </script>
-        <p>The <code>pop()</code> method returns the value that was "opped out":</p>
+        <p>The <code>pop()</code> method returns the value that was "opted out":</p>
         <h6>Example</h6>
         <pre>
         <code>
@@ -561,7 +561,7 @@
         <pre>
         <code>
             var fruits = ["Banana", "Orange", "Apple", "Mango"];
-            fruits.push("Kiwi");  // Adds a new eleemnt("Kiwi") to fruits
+            fruits.push("Kiwi");  // Adds a new element("Kiwi") to fruits
         </code>
       </pre>
         <script>
@@ -585,12 +585,12 @@
         <h4>Shifting Elements</h4>
         <p>Shifting is equivalent to popping, working on the first element instead of the last.</p>
         <p>The <code>shift()</code> method removes the first array element and "shifts" all other elements to a lower
-          index and retuns the string that was "shifted out":</p>
+          index and returns the string that was "shifted out":</p>
         <h6>Example</h6>
         <pre>
         <code>
             var fruits = ["Banana", "Orange", "Apple", "Mango"];
-            fruits.shift();   // Removes the first elment "Banana" from fruits
+            fruits.shift();   // Removes the first element "Banana" from fruits
         </code>
       </pre>
         <script>
@@ -598,7 +598,7 @@
           var x = fruity2.shift();
           console.log(x);
         </script>
-        <p>The <code>unshift()</code> method adds a new element to an array (at the beggining), and "unshifts" older
+        <p>The <code>unshift()</code> method adds a new element to an array (at the beginning), and "unshifts" older
           elements:</p>
         <h6>Example</h6>
         <pre>
@@ -664,7 +664,7 @@
             <code>shift()</code> instead.</p>
         </div>
         <h4>Splicing an Array</h4>
-        <p>The <code>splice()</code> method can be used to add new itmes to an array:</p>
+        <p>The <code>splice()</code> method can be used to add new items to an array:</p>
         <h4>Example</h4>
         <pre><code>
           var fruits = ["Banana", "Orange", "Apple", "Mango"];
@@ -677,7 +677,7 @@
         </script>
         <p>The first parameter (2) defines the position <strong>where</strong> new elements should be
           <strong>added</strong> (spliced in.</p>
-        <p>The Second parameter(0) defines <strong> how many</strong> elements hould be <strong>removed</strong>.</p>
+        <p>The Second parameter(0) defines <strong> how many</strong> elements should be <strong>removed</strong>.</p>
         <p>The rest of the parameters ("Lemon", "Kiwi") define the new elements to be <strong>added</strong>.</p>
         <p>The <code>splice()</code> method returns an array with the deleted items.</p>
         <h6>Example</h6>
@@ -708,7 +708,7 @@
         <p>The first parameter (0) defines the position where new elements should be <strong>added</strong> (spliced
           in).</p>
         <p>The second parameter (1) defines <strong>how many</strong> elements should be <strong>removed</strong>.</p>
-        <p>The rest of the parameters are omitted. No new eleemtns will be added.</p>
+        <p>The rest of the parameters are omitted. No new elements will be added.</p>
         <h4>Merging (Concatenating) Arrays</h4>
         <p>The <code>concat()</code>method creates a new array by merging (concatenating) existing arrays:</p>
         <h6>Example (Merging Two Arrays)</h6>
@@ -727,15 +727,15 @@
           <p>The <code>concat()</code> method does not change the existing arrays. It always returns a new array.</p>
         </note>
         <p>The <code>concat()</code> method can take any number of array arguments:</p>
-        <h6>Example (Mergin Three Arrays)</h6>
+        <h6>Example (Merging Three Arrays)</h6>
         <pre><code>
-          var arr1 = ["Cecilie", "Lone"];
+          var arr1 = ["Cecile", "Lone"];
           var arr2 = ["Emil", "Tobias", "Linus"];
           var arr3 = ["Robin", "Morgan"];
           var myChildren = arr1.concat(arr2, arr3); //  Concatenates arr1 with arr2 and arr3
         </code></pre>
         <script>
-          var arr1 = ["Cecilie", "Lone"];
+          var arr1 = ["Cecile", "Lone"];
           var arr2 = ["Emil", "Tobias", "Linus"];
           var arr3 = ["Robin", "Morgan"];
           var myChildren1 = arr1.concat(arr2, arr3);
@@ -744,11 +744,11 @@
         <p>The <code>concat()</code> method can also take values as arguments:</p>
         <h6>Example (Margin an Array with Values)</h6>
         <pre><code>
-          var arr1 = ["Cecilie", "Lone"];
+          var arr1 = ["Cecile", "Lone"];
           var myChildren = arr1.concat(["Emil", "Tobias", "Linus"]);
         </code></pre>
         <script>
-          var arr1 = ["Cecilie", "Lone"];
+          var arr1 = ["Cecile", "Lone"];
           var myChildren2 = arr1.concat(["Emil", "Tobias", "Linus"]);
           console.log(myChildren2);
         </script>
@@ -781,7 +781,7 @@
           var citrus2 = fruits14.slice(3);
           console.log(citrus2);
         </script>
-        <p>The <code>slice()</code> method can take two argument slike <code>sclie(1,3)</code>.</p>
+        <p>The <code>slice()</code> method can take two argument slice <code>slice(1,3)</code>.</p>
         <p>The method then selects elements from the start argument, and upt to (but not including) the end argument.
         </p>
         <h6>Example</h6>
@@ -794,7 +794,7 @@
           var citrus3 = fruits15.slice(1, 3);
           console.log(citrus3);
         </script>
-        <p>If the end argument is omitted, like in the first examples, the <code>slice()</code> method slicesout the
+        <p>If the end argument is omitted, like in the first examples, the <code>slice()</code> method slices out the
           rest of the array.</p>
         <h6>Example</h6>
         <pre><code>
@@ -808,7 +808,7 @@
         </script>
         <hr>
         <h4>Automatic toString()</h4>
-        <p>JavaScript automatically converts an array to a comma seperated string when a primitive value is expected.
+        <p>JavaScript automatically converts an array to a comma separated string when a primitive value is expected.
         </p>
         <p>This is always the case when you try to output an array.</p>
         <!--Is this only for DOM output and not for console.log?-->
@@ -860,7 +860,7 @@
           <strong>iteration</strong> in programming speak.</p>
         <p>A loop usually has one or more of the following features:</p>
         <ul>
-          <li>A <strong>counter</strong>, which is initialized with a certain value - this is the starting poing of the
+          <li>A <strong>counter</strong>, which is initialized with a certain value - this is the starting point of the
             loop.</li>
           <li>An <strong>exit condition</strong>, which is the criteria under which the loop stops - usually the counter
             reaching a certain value.</li>
@@ -882,7 +882,7 @@
         </code></pre>
         <hr>
         <h4>The standard for loop</h4>
-        <p>Start exploring specific construcs. The first, is the <strong>for loop</strong>:</p>
+        <p>Start exploring specific constructs. The first, is the <strong>for loop</strong>:</p>
         <pre><code>
           for(initializer; exit-condition; final-expression) {
             // code to run
@@ -891,17 +891,17 @@
         <p>Further explained:</p>
         <ol>
           <li>The keyword <code>for</code>, followed by some parentheses.</li>
-          <li>Inside the parentheses we have three items, sperated by semi-colons:
+          <li>Inside the parentheses we have three items, separated by semi-colons:
             <ol>
-              <li>An <strong>initializer</strong> - this is usally a variable set to a number, which is incremented to
-                count the number of itmes the loop has run. It is also sometimes referred to as a <strong>counter
+              <li>An <strong>initializer</strong> - this is usually a variable set to a number, which is incremented to
+                count the number of items the loop has run. It is also sometimes referred to as a <strong>counter
                   variable</strong>.</li>
               <li>An <strong>exit-condition</strong> - as mentioned before, this defines when the loop should stop
                 looping. This is generally an expression featuring a comparison operator, a test to see if the exit
                 condition has been met.</li>
               <li>A <strong>final-expression</strong> - this is always evaluated (or run) each time the loop has gone
                 through a full iteration. It usually served to increment (or in some cases decrement) the counter
-                variable, to bring it closer to the exit dondition value.</li>
+                variable, to bring it closer to the exit condition value.</li>
             </ol>
           </li>
           <li>Some curly braces that contain a block of cod - this code will be run each time the loop iterates.</li>
@@ -953,7 +953,7 @@
               <li>During the first run, <code>i = 0</code>, therefore <code>cats[0] + ', '</code> (which is equal to
                 <code>Bill, </code>) will be concatenated onto <code>info</code>.</li>
               <li>During the second run, <code>i = 0</code>, so <code>cats[1] + ', '</code> (which is equal to
-                <code>Jeff, </code>) will be concated onto <code>info</code>.</li>
+                <code>Jeff, </code>) will be concatenated onto <code>info</code>.</li>
               <li>And so on. After each time the loop has run, 1 will be added to <code>i</code> (<code>i++</code>),
                 then the process will start again.</li>
             </ol>
@@ -966,8 +966,8 @@
             <strong>Note</strong>: We have made the exit condition <code>i < cats.length</code>, not
             <code>i <= cats.length</code>, because computers count from 0, not 1 - we are starting <code>i</code> at
             <code>0</code>, and going up to <code>i = 4</code> (the index of the last array item).
-            <code>cats.length</code> returns 5, as there are 5 itmes in the array, but we dont' want to get up to
-            <code>i = 5</code>, as that would return <code>undefined</code> for the last item (there is no arrray item
+            <code>cats.length</code> returns 5, as there are 5 items in the array, but we don't want to get up to
+            <code>i = 5</code>, as that would return <code>undefined</code> for the last item (there is no array item
             with an index of 5). So, therefore, we want to go up to 1 less than <code>cats.length</code>
             (<code>i <</code>), not the same as <code>cats.length</code> (<code>i <=</code>).
           </p>
@@ -981,12 +981,12 @@
             <code>5</code> on the first loop iteration, so it would stop immediately.
           </p>
         </div>
-        <p>One smallproblem, we are left with is that the final output sentence isn't very well-formed:</p>
+        <p>One small problem, we are left with is that the final output sentence isn't very well-formed:</p>
         <hr>
         <h5>My cats are called Bill, Jeff, Pete, Biggles, Jasmin,</h5>
         <hr>
         <p>We want to change the concatenation on the final loop so that we do not have a comma on the end of the
-          sentence. We can insert a conditional inside our foor loop to handle this special case:</p>
+          sentence. We can insert a conditional inside our for loop to handle this special case:</p>
         <pre><code>
           const cats1 = ["Bill", "Jeff", "Pete", "Biggles", "Jasmin"];
           let info1 = "My cats are called ";
@@ -1023,7 +1023,7 @@
         <div class="noteRed">
           <p><strong>Important</strong>: With for - as with all loops - you must make sure that the initializer is
             incremented or, depending on the case, decremented, so that it eventually reaches the exit condition. If
-            not, the loop will go on foreever, and either the browser will force it to stop, or it will crash. This is
+            not, the loop will go on forever, and either the browser will force it to stop, or it will crash. This is
             called an <strong>infinite loop</strong>.</p>
         </div>
         <h4>Exiting loops with break</h4>
@@ -1033,7 +1033,7 @@
             href="https://www.digitalocean.com/community/tutorials/how-to-use-the-switch-statement-in-javascript"
             target="_blank">switch statements</a>- the <code>break</code> statement immediately exists the switch
           statement and moves onto the code after it.</p>
-        <p>It's the ssame with loops - a <code>break</code> statement will immediately exit the loop and make the
+        <p>It's the same with loops - a <code>break</code> statement will immediately exit the loop and make the
           browser move on to any code that follows it.</p>
         <p>Say we wanted to search through an array of contacts and telephone numbers and return just the number we
           wanted to find? First, some simple HTML - a text <code>&lt;input&gt;</code> allowing us to enter a nme to
@@ -1101,25 +1101,25 @@
         </script>
         <ol>
           <li>First of all we have some variable definitions - we have an array of contact information, with each item
-            being a string containing a name and phone number seperated bya colon.</li>
+            being a string containing a name and phone number separated bya colon.</li>
           <li>Next, we attach an event listener to the button (<code>btn</code>), so that when it is pressed, some code
-            is run to perform the earch and return the results.</li>
-          <li>We store the value enterd into the text input int he variable called <code>searchName</code>, before then
+            is run to perform the each and return the results.</li>
+          <li>We store the value entered into the text input int he variable called <code>searchName</code>, before then
             emptying the text input and focusing it again, ready for the next search. Note that we also run the
             <code>toLowerCase()</code> method on the string, so that searches will base-sensitive.</li>
           <li>Now onto the interesting part, the for loop:
             <ol>
               <li>We start the counter at <code>0</code>, run the loop until the counter is no longer less than
-                <code>contacts.length</code>, and increment <code>i</code> by 1 after eachh iteration of the loop.</li>
+                <code>contacts.length</code>, and increment <code>i</code> by 1 after each iteration of the loop.</li>
               <li>Inside the loop, we first split the current contact (<code>contacts[i]</code>) at the colon character,
                 and store teh resulting two values in an array called <code>splitContact</code>.</li>
               <li>We then use the conditional statement to test whether <code>splitContact[0]</code> (the contact's
-                anme, again lower-cased with <code>toLowerCase()</code>) is equal to the inputted
+                name, again lower-cased with <code>toLowerCase()</code>) is equal to the inputted
                 <code>searchName</code>. If it is, we enter a string into the paragraph to report what the contact's
                 number is and use <code>break</code> to end the loop.</li>
             </ol>
           </li>
-          <li>After <code>(contacts.lenght-1)</code>iterations, if the contact name does not match the entered search,
+          <li>After <code>(contacts.length-1)</code>iterations, if the contact name does not match the entered search,
             the paragraph text is set to "Contact not found.", and the loop continues iterating.</li>
         </ol>
         <div class="note">
@@ -1137,8 +1137,8 @@
           breaking out of the loop entirely, it skips to the next iteration of the loop. Let's look at another example
           that takes a number as an input, and returns only the numbers that are squares of integers (whole numbers).
         </p>
-        <p>The HTML is basically the same as the last example - a simple text inpu, and a paragraph for the output. The
-          JavaScript is mostly the same too, although the loop iself is a bit different.:</p>
+        <p>The HTML is basically the same as the last example - a simple text input, and a paragraph for the output. The
+          JavaScript is mostly the same too, although the loop itself is a bit different.:</p>
         <pre>
           <code>
             let num = input.value;
@@ -1146,13 +1146,13 @@
             for (let i= 1; i <= num; i++) {
               let sqRoot = Math.sqrt(i);
               if(Math.floor(sqRoot) !== sqRoot) {
-                coninue;
+                continue;
               }
               para.textContent += i + ' ';
             }
           </code>
         </pre>
-        
+
         <label for="number">Enter number:</label>
         <input id="number" type="text">
         <button id="btnA">Generate Integer Squares</button>
@@ -1180,17 +1180,33 @@
           });  
         </script>
         <ol>
-          <li>In this case, the input should be a number (<code>num</code>). The <code>for</code> loop is given a counter starting at 1 (as we are not interested in 0 in this case), an exit condition that aays the loop will stop when the counter becomes bigger than the input <code>num</code>, and an iterator that adds 1 to the counter each time.</li>
-          <li>Inside the loop, we find the sqaure root of each number using <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt" target="_blank">Math.sqrt(i)</a>, then check wheter the square root is an integer by testing wheter it is the same as itself when it has been rounded to the nearest integer (this is what <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor" target="_blank">Math.floor()</a> does to the number it is passed).</li>
-          <li>If the square root and the rounded down square root do not equal one another (<code>!==</code>), it means that the squre root is not an integer, so we are not interested in it. In such case, we use the <code>continue</code> satement to skip on the next loop iteration without recording the number anywhere.</li>
+          <li>In this case, the input should be a number (<code>num</code>). The <code>for</code> loop is given a
+            counter starting at 1 (as we are not interested in 0 in this case), an exit condition that arrays the loop
+            will stop when the counter becomes bigger than the input <code>num</code>, and an iterator that adds 1 to
+            the counter each time.</li>
+          <li>Inside the loop, we find the square root of each number using <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt"
+              target="_blank">Math.sqrt(i)</a>, then check whether the square root is an integer by testing whether it is
+            the same as itself when it has been rounded to the nearest integer (this is what <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor"
+              target="_blank">Math.floor()</a> does to the number it is passed).</li>
+          <li>If the square root and the rounded down square root do not equal one another (<code>!==</code>), it means
+            that the square root is not an integer, so we are not interested in it. In such case, we use the
+            <code>continue</code> statement to skip on the next loop iteration without recording the number anywhere.
+          </li>
         </ol>
         <div class="note">
-          <p><strong>Note</strong>: You can view the full <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/integer-squares.html" target="_blank">full source code on GitHub</a> too (also see <a href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html" target="_blank">it running live</a>).</p>
+          <p><strong>Note</strong>: You can view the full <a
+              href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/integer-squares.html"
+              target="_blank">full source code on GitHub</a> too (also see <a
+              href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html"
+              target="_blank">it running live</a>).</p>
         </div>
         <hr>
         <h4>while and do ... while</h4>
         <p><code>for</code> is not the ony type of loop available in JavaScript.</p>
-        <p>First, the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while" target="_blank">while</a> loop:</p>
+        <p>First, the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while"
+            target="_blank">while</a> loop:</p>
         <pre><code>
           initializer
           while (exit-condition) {
@@ -1199,9 +1215,15 @@
             final-expression
           }
         </code></pre>
-        <p>This works similir to a for loop, except the initializer variable is set before the loop, and the final expression is included inside the loop to run - rather than these two beign inside the parentheses. The exit-condition is included inside the parentheses, which are precedded by the <code>while</code> keyword rather than <code>for</code>.</p>
-        <p>The same three items are still present, and they are still defiend in the ame order as they are in the loop - this makes snse, as you still have to have an initializer defined bofre you can check wheter it has reached the exit-codition; the final-condition is then run after the code inside the loop has run (an iteration has benn copeted), which will only happen if the exit-condition has still not beeen reached.</p>
-        
+        <p>This works similar to a for loop, except the initializer variable is set before the loop, and the final
+          expression is included inside the loop to run - rather than these two being inside the parentheses. The
+          exit-condition is included inside the parentheses, which are preceded by the <code>while</code> keyword
+          rather than <code>for</code>.</p>
+        <p>The same three items are still present, and they are still defined in the ame order as they are in the loop -
+          this makes sense, as you still have to have an initializer defined before you can check whether it has reached
+          the exit-condition; the final-condition is then run after the code inside the loop has run (an iteration has
+          ben completed), which will only happen if the exit-condition has still not been reached.</p>
+
 
 
 
