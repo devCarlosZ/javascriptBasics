@@ -1225,9 +1225,49 @@
           ben completed), which will only happen if the exit-condition has still not been reached.</p>
 
 
+        <p>The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/do...while" target="_blank">do...while</a> loop is very similar, but provides a variation on the while structure:</p>
+        <pre><code>
+          initializer
+          do {
+            // code to run
 
+            final-expression
+          } while (exit-condition)
+        </code></pre>
+        <p>In this case, the initializer again comes first, before the loo starts. The keyword directly precedes the curly braces containing the code to run and the final expression.</p>
+        <p>The differentiator here is that the exit-condition comes after everything else, wrapped in the parentheses and preceded by a <code>while</code> keyword. In a <code>do...while</code> loop, hte coe inside the curly braces is always run before the check is made to see if it shld be executed again (in while and for, the check comes first, so the code might never be executed).</p>
+        <pre><code>
+          let i = 0;
 
+          do {
+            if (if i === cats.length -1) {
+              info += 'and ' + cats[i] + '.';
+            }
+          }
+        </code></pre>
 
+        <script>
+          const cats3 = ['Moana', 'Ariel', 'Snow', 'Cinderella'];
+          var info3 = 'My kittens are ';
+          let b = 0;
+          do {
+            if (b === cats3.length - 1) {
+              info3 += 'and ' + cats3[b] + '.';
+            } else {
+              info3 += cats3[b] + ', ';
+            }
+            b++;
+            
+          } while (b < cats3.length);
+          console.log(info3);
+
+        </script>
+        <div class="note">
+          <p><strong>Note:</strong>Again, this works just the same as expected - have a look at it <a href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html" target="_blank">running live on GitHUb</a> (also view the <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/do-while.html">full source code</a>).</p>
+        </div>
+        <div class="noteRed">
+          <p><strong>Important:</strong> With while and do..while - as with all loops - you must make sure that the initializer is incremented or depending on the case, decremented so that it eventually reaches the exit condition. If not, the loop will go on forever, and either the browser will force it to stop, or it will crash. This is called an <strong>infinite loop</strong>.</p>
+        </div>        
 
 
 
