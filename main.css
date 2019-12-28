@@ -76,6 +76,6 @@ input {
 }
 
 .card {
-	background: rgb(194, 222, 243);
-	border-radius: 10px;
+	padding: 10px;
+	border-radius: 5px;
 }
