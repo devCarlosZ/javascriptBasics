@@ -13,53 +13,56 @@
 </head>
 
 <body>
-  <h1 class="title">The Odin Project</h1>
-  <h2 class="title">Web Development 101</h2>
-  <h3 class="title">Fundamentals Part 4</h4>
-    <div class="container">
-      <div class="arrays">
-        <hr>
-        <h4>1. Arrays</h4>
-        <a href="https://www.w3schools.com/js/js_arrays.asp" target="_blank">
-          <h5>w3schools.com, JavaScript Arrays</h5>
-        </a>
-        <hr>
-        <p>Javascript arrays are used to store multiple values in a single variable.</p>
-        <pre>
+  <h1 class="title">The Odin Project</h2>
+    <h2 class="title">Web Development 101</h2>
+    <h3 class="title">Fundamentals Part 4</h4>
+    <h4 class="title">These are my notes:</h4>
+    <h4 class="title">Open console for output. Some exercises were completed on <a href="https://repl.it/languages/javascript" target="_blank">Repl.it</a></h4>
+
+      <div class="container">
+        <div class="arrays">
+          <hr>
+          <h4>1. Arrays</h4>
+          <a href="https://www.w3schools.com/js/js_arrays.asp" target="_blank">
+            <h5>w3schools.com, JavaScript Arrays</h5>
+          </a>
+          <hr>
+          <p>Javascript arrays are used to store multiple values in a single variable.</p>
+          <pre>
     <code>
       var cars = ["Saab", "Volvo", "BMW"];
     </code>
   </pre>
-        <script>
-          var cars = ["Saab", "Volvo", "BMW"];
-          console.log(cars);
-        </script>
-        <hr>
-        <h4>What is an Array?</h4>
-        <p>An array is a special variable, which can hold more than one value at time.</p>
-        <p>If you have a list of items (a list of car names, for example), storing the cars in single variables could
-          look
-          like this:</p>
-        <pre>
+          <script>
+            var cars = ["Saab", "Volvo", "BMW"];
+            console.log(cars);
+          </script>
+          <hr>
+          <h4>What is an Array?</h4>
+          <p>An array is a special variable, which can hold more than one value at time.</p>
+          <p>If you have a list of items (a list of car names, for example), storing the cars in single variables could
+            look
+            like this:</p>
+          <pre>
         <code>
           var car1 = "Saab";
           var car2 = "Volvo"; 
           var car3 = "BMW";
         </code> 
       </pre>
-        <p>However, what if you want to loop through the cars and find a specific one? And what if you had not 3 cars,
-          but
-          300?</p>
-        <p>The solution is an array!</p>
-        <p>An array can hold many values under a single name, and you can access he values by referring to an index
-          number.</p>
-        <hr>
-        <h4>Creating an Array</h4>
-        <p>Using an array literal is the easiest way to create a JavaScript Array.</p>
-        <p>Syntax:</p>
-        <code>var <em>array_name</em> = [<em>item1</em>, <em>item2</em>, ...];</code>
-        <p>Spaces and line breaks are not important. A declaration can span multiple lines:</p>
-        <pre>
+          <p>However, what if you want to loop through the cars and find a specific one? And what if you had not 3 cars,
+            but
+            300?</p>
+          <p>The solution is an array!</p>
+          <p>An array can hold many values under a single name, and you can access he values by referring to an index
+            number.</p>
+          <hr>
+          <h4>Creating an Array</h4>
+          <p>Using an array literal is the easiest way to create a JavaScript Array.</p>
+          <p>Syntax:</p>
+          <code>var <em>array_name</em> = [<em>item1</em>, <em>item2</em>, ...];</code>
+          <p>Spaces and line breaks are not important. A declaration can span multiple lines:</p>
+          <pre>
         <code>
           var cars = [
           "Saab",
@@ -68,174 +71,174 @@
           ];
         </code>
       </pre>
-        <div class="note">
-          <p>Putting a comma after the last element (like "BMW",) is inconsistent across browsers.</p>
-          <p>IE 8 and earlier will fail.</p>
-        </div>
-        <hr>
-        <h4>Using the Javascript Keyword new</h4>
-        <p>The following example also creates an Array, and assigns values to it:</p>
-        <code>var cars = new Array("Saab", "Volvo", "BMW");</code>
-        <script>
-          var carsA = new Array("Toyota", "Nissan", "Honda");
-          console.log(carsA);
-        </script>
-        <div class="note">
-          <p>The two examples above do exactly the same. There is no need to use <code>new Array()</code>.</p>
-          <p>For simplicity, and readability and execution speed, use the first one (the array literal method).</p>
-        </div>
-        <hr>
-        <h4>Access the Elements of an Array</h4>
-        <p>You access an array element by referring to the index number.</p>
-        <p>This statement accesses the value of the first element in <code>cars</code>:</p>
-        <code>var name = cars[0];</code>
-        <h6>Example</h6>
-        <pre>
+          <div class="note">
+            <p>Putting a comma after the last element (like "BMW",) is inconsistent across browsers.</p>
+            <p>IE 8 and earlier will fail.</p>
+          </div>
+          <hr>
+          <h4>Using the Javascript Keyword new</h4>
+          <p>The following example also creates an Array, and assigns values to it:</p>
+          <code>var cars = new Array("Saab", "Volvo", "BMW");</code>
+          <script>
+            var carsA = new Array("Toyota", "Nissan", "Honda");
+            console.log(carsA);
+          </script>
+          <div class="note">
+            <p>The two examples above do exactly the same. There is no need to use <code>new Array()</code>.</p>
+            <p>For simplicity, and readability and execution speed, use the first one (the array literal method).</p>
+          </div>
+          <hr>
+          <h4>Access the Elements of an Array</h4>
+          <p>You access an array element by referring to the index number.</p>
+          <p>This statement accesses the value of the first element in <code>cars</code>:</p>
+          <code>var name = cars[0];</code>
+          <h6>Example</h6>
+          <pre>
         <code>
           var cars = ["Chevy", "Ford", "Dodge"];
           document.getElementById("demo").innerHTML = cars[0];
         </code>
       </pre>
-        <script>
-          var carsB = ["Chevy", "Ford", "Dodge"];
-          console.log(carsB[0]);
-        </script>
-        <div class="note">
-          <p><strong>Note:</strong> Array indexes start with 0.</p>
-          <p>[0] is the first element. [1] is the second element.</p>
-        </div>
-        <hr>
-        <h4>Changing an Array Element</h4>
-        <p>This statement changes the value of the first element in <code>cars</code>: </p>
-        <code>cars[0] = "Opel";</code>
-        <p></p>
-        <h6>Example</h6>
-        <pre>
+          <script>
+            var carsB = ["Chevy", "Ford", "Dodge"];
+            console.log(carsB[0]);
+          </script>
+          <div class="note">
+            <p><strong>Note:</strong> Array indexes start with 0.</p>
+            <p>[0] is the first element. [1] is the second element.</p>
+          </div>
+          <hr>
+          <h4>Changing an Array Element</h4>
+          <p>This statement changes the value of the first element in <code>cars</code>: </p>
+          <code>cars[0] = "Opel";</code>
+          <p></p>
+          <h6>Example</h6>
+          <pre>
         <code>
           var cars = ["Lincoln", "Cadillac", "Buick"]
           cars[0] = "Jeep"
           document.getElementById("demo").innerHTML = cars[0];
         </code>
       </pre>
-        <script>
-          var carsC = ["Lincoln", "Cadillac", "Buick"];
-          console.log(carsC);
-          carsC[0] = "Jeep";
-          console.log(carsC);
-        </script>
-        <hr>
-        <h4>Access the Full Array</h4>
-        <p>With Javascript, the full array can be accessed by referring to the array name:</p>
-        <h6>Example</h6>
-        <pre>
+          <script>
+            var carsC = ["Lincoln", "Cadillac", "Buick"];
+            console.log(carsC);
+            carsC[0] = "Jeep";
+            console.log(carsC);
+          </script>
+          <hr>
+          <h4>Access the Full Array</h4>
+          <p>With Javascript, the full array can be accessed by referring to the array name:</p>
+          <h6>Example</h6>
+          <pre>
         <code>
           var fruit = ["Orange", "Banana", "Apple"];
           document.getElementById("demo").innerHTML = fruit;
         </code>
       </pre>
 
-        <script>
-          var fruit = ["Orange", "Banana", "Apple", "Berry"];
-          console.log(fruit);
-        </script>
+          <script>
+            var fruit = ["Orange", "Banana", "Apple", "Berry"];
+            console.log(fruit);
+          </script>
 
-        <hr>
-        <h4>Arrays are Objects</h4>
-        <p>Arrays are special type of objects. The <code>typeof</code> operator in JavaScript returns "object" for
-          arrays.
-        </p>
-        <p>But, Javascript arrays are best described arrays.</p>
-        <p>Arrays use <strong>numbers</strong> to access its "elements". In this example, <code>person[0]</code>
-          returns
-          John:</p>
-        <h6>Array:</h6>
-        <code>var person = ["John", "Doe", 46];</code>
+          <hr>
+          <h4>Arrays are Objects</h4>
+          <p>Arrays are special type of objects. The <code>typeof</code> operator in JavaScript returns "object" for
+            arrays.
+          </p>
+          <p>But, Javascript arrays are best described arrays.</p>
+          <p>Arrays use <strong>numbers</strong> to access its "elements". In this example, <code>person[0]</code>
+            returns
+            John:</p>
+          <h6>Array:</h6>
+          <code>var person = ["John", "Doe", 46];</code>
 
-        <script>
-          var person = ["John", "Doe", 46];
-          console.log(person[0]);
-        </script>
+          <script>
+            var person = ["John", "Doe", 46];
+            console.log(person[0]);
+          </script>
 
-        <p>Objects use <strong>names</strong> to access its "members". In this example, <code>person.firstName</code>
-          returns John:</p>
-        <h6>Object:</h6>
-        <code>var person = {firstName:"Juan", lastName:"Dough", age:46};</code>
-        <script>
-          var person = { firstName: "Juan", lastName: "Dough", age: 46 };
-          console.log(person.firstName);
-        </script>
-        <hr>
-        <h4>Array Elements Can Be Objects</h4>
-        <p>JavaScript variables can be objects. Arrays are special kinds of objects.</p>
-        <p>Because of this, you can have variables of different types in the same Array.</p>
-        <p>You can have objects in an Array. You can have functions in an Array. You can have arrays in an Array:</p>
-        <div class="note">
-          myArray[0] = Date.now;<br>
-          myArray[1] = myFunction;<br>
-          myArray[2] = myCars;
-        </div>
-        <br>
-        <h4>Array Properties and Methods</h4>
-        <p>The real strength of JavaScript arrays are the built-in array properties and methods:</p>
-        <h6>Examples</h6>
-        <pre>
+          <p>Objects use <strong>names</strong> to access its "members". In this example, <code>person.firstName</code>
+            returns John:</p>
+          <h6>Object:</h6>
+          <code>var person = {firstName:"Juan", lastName:"Dough", age:46};</code>
+          <script>
+            var person = { firstName: "Juan", lastName: "Dough", age: 46 };
+            console.log(person.firstName);
+          </script>
+          <hr>
+          <h4>Array Elements Can Be Objects</h4>
+          <p>JavaScript variables can be objects. Arrays are special kinds of objects.</p>
+          <p>Because of this, you can have variables of different types in the same Array.</p>
+          <p>You can have objects in an Array. You can have functions in an Array. You can have arrays in an Array:</p>
+          <div class="note">
+            myArray[0] = Date.now;<br>
+            myArray[1] = myFunction;<br>
+            myArray[2] = myCars;
+          </div>
+          <br>
+          <h4>Array Properties and Methods</h4>
+          <p>The real strength of JavaScript arrays are the built-in array properties and methods:</p>
+          <h6>Examples</h6>
+          <pre>
         <code>
           var x = cars.length;  // The length property returns the number of elements
           var y = cars.sort();  // The sort() method sorts array
         </code>
       </pre>
-        <hr>
-        <h4>The length Property</h4>
-        <p>The <code>length</code> property of an array returns the length of an array (the number of array elements).
-        </p>
-        <pre>
+          <hr>
+          <h4>The length Property</h4>
+          <p>The <code>length</code> property of an array returns the length of an array (the number of array elements).
+          </p>
+          <pre>
         <code>
           var veggies = ["Carrots", "Peas", "Broccoli", "Peas"];
           veggies.length; // the length of veggies is 4
         </code>
       </pre>
-        <script>
-          var veggies = ["Carrots", "Peas", "Broccoli", "Peas"];
-          console.log(veggies.length); // the length of veggies is 4
-        </script>
-        <div class="note">
-          <p>The <code>length</code> property is always one more than the highest array index.</p>
-        </div>
-        <hr>
-        <h4>Accessing the First Array Element</h4>
-        <h6>Example</h6>
-        <pre>
+          <script>
+            var veggies = ["Carrots", "Peas", "Broccoli", "Peas"];
+            console.log(veggies.length); // the length of veggies is 4
+          </script>
+          <div class="note">
+            <p>The <code>length</code> property is always one more than the highest array index.</p>
+          </div>
+          <hr>
+          <h4>Accessing the First Array Element</h4>
+          <h6>Example</h6>
+          <pre>
         <code>
           fruits = ["Banana", "Orange", "Apple", "Mango"];
           var first = fruits[0];
         </code>
       </pre>
-        <script>
-          fruits = ["Banana", "Orange", "Apple", "Mango"];
-          var first = fruits[0];
-          console.log(first);
-        </script>
-        <hr>
-        <h4>Accessing the Last Array Element</h4>
-        <h6>Example</h6>
-        <pre>
+          <script>
+            fruits = ["Banana", "Orange", "Apple", "Mango"];
+            var first = fruits[0];
+            console.log(first);
+          </script>
+          <hr>
+          <h4>Accessing the Last Array Element</h4>
+          <h6>Example</h6>
+          <pre>
         <code>
           fruits = ["Banana", "Orange", "Apple", "Mango"];
           var last = fruits[fruits.length -1];
         </code>
       </pre>
 
-        <script>
-          fruits = ["Banana", "Orange", "Apple", "Berry"];
-          var last = fruits[fruits.length - 1];
-          console.log(last);
-        </script>
+          <script>
+            fruits = ["Banana", "Orange", "Apple", "Berry"];
+            var last = fruits[fruits.length - 1];
+            console.log(last);
+          </script>
 
-        <hr>
-        <h4>Looping Array Elements</h4>
-        <p>The safest way to loop through an array, is using a <code>for</code> loop:</p>
-        <h6>Example</h6>
-        <pre>
+          <hr>
+          <h4>Looping Array Elements</h4>
+          <p>The safest way to loop through an array, is using a <code>for</code> loop:</p>
+          <h6>Example</h6>
+          <pre>
         <code>
             fruits = ["Banana, "Orange", "Apple", "Mango"];
             for(let i= 0; i < fruits.length; i++) {
@@ -244,16 +247,16 @@
         </code>
       </pre>
 
-        <script>
-          let fruits = ["Banana", "Orange", "Apple", "Mango"];
-          for (let i = 0; i < fruits.length; i++) {
-            console.log(fruits[i]);
-          }
-        </script>
+          <script>
+            let fruits = ["Banana", "Orange", "Apple", "Mango"];
+            for (let i = 0; i < fruits.length; i++) {
+              console.log(fruits[i]);
+            }
+          </script>
 
-        <p>You can also use the <code>Array.forEach()</code>function:</p>
-        <h6>Example</h6>
-        <pre>
+          <p>You can also use the <code>Array.forEach()</code>function:</p>
+          <h6>Example</h6>
+          <pre>
         <code>
           var fruity;
           fruity = ["Platano,", "Naranja", "Manzana", "Mango"];
@@ -264,66 +267,66 @@
           }
         </code>
       </pre>
-        <script>
-          let fruity = ["Platano,", "Naranja", "Manzana", "Coco"];
+          <script>
+            let fruity = ["Platano,", "Naranja", "Manzana", "Coco"];
 
-          fruity.forEach(myFunction1);
-          function myFunction1(value1) {
-            console.log(value1);
-          }
-        </script>
-        <hr>
+            fruity.forEach(myFunction1);
+            function myFunction1(value1) {
+              console.log(value1);
+            }
+          </script>
+          <hr>
 
-        <h4>Adding Array Elements</h4>
-        <p>The easiest way to add a new element to an array is using the <code>push()</code> method:</p>
-        <h6>Example</h6>
-        <pre>
+          <h4>Adding Array Elements</h4>
+          <p>The easiest way to add a new element to an array is using the <code>push()</code> method:</p>
+          <h6>Example</h6>
+          <pre>
         <code>
           var fruits = ["Pepino", "Limon", "Lima", "Kabumsha"];
           fruits.push("Papaya");
         </code>
       </pre>
-        <script>
-          var fruits1 = ["Pepino", "Lima", "Limon", "Kambusha"];
-          fruits1.push("Papaya");
-          console.log(fruits1);
-        </script>
-        <p>New element can also be added to an array using the <code>length</code> property:</p>
-        <h6>Example</h6>
-        <pre>
+          <script>
+            var fruits1 = ["Pepino", "Lima", "Limon", "Kambusha"];
+            fruits1.push("Papaya");
+            console.log(fruits1);
+          </script>
+          <p>New element can also be added to an array using the <code>length</code> property:</p>
+          <h6>Example</h6>
+          <pre>
         <code>
           var fruits = ["Banana", "Orange", "Apple", "Mango"];
           fruits[fruits.length]= "Cherry";
         </code>
       </pre>
-        <script>
-          fruits[fruits.length] = "Cherry";
-          console.log(fruits);
-        </script>
-        <div class="note">
-          <p><strong>WARNING !</strong></p>
-          <p>Adding elements with high indexes can create undefined "holes" in an array:</p>
-        </div>
-        <h6>Example 6</h6>
-        <pre>
+          <script>
+            fruits[fruits.length] = "Cherry";
+            console.log(fruits);
+          </script>
+          <div class="note">
+            <p><strong>WARNING !</strong></p>
+            <p>Adding elements with high indexes can create undefined "holes" in an array:</p>
+          </div>
+          <h6>Example 6</h6>
+          <pre>
         <code>
           var fruits = ["Banana", "Orange", "Apple", "Mango"];
           fruits[6] = "Lemon"
         </code>
       </pre>
-        <script>
-          var fruits2 = ["Banana", "Orange", "Apple", "Mango"];
-          fruits2[5] = "Papaya";
-          console.log(fruits2);
-        </script>
-        <br>
-        <h4>Associative Arrays</h4>
-        <p>Many programming languages</p>
-        <p>Arrays with named indexes are called associative arrays (or hashes).</p>
-        <p>JavaScript does <strong>not</strong> support arrays with named indexes.</p>
-        <p>In JavaScript, <strong>arrays</strong> always use <strong>numbered indexes</strong>.</p>
-        <h4>Example</h4>
-        <pre>
+          <script>
+            var fruits2 = ["Banana", "Orange", "Apple", "Mango"];
+            fruits2[5] = "Papaya";
+            console.log(fruits2);
+          </script>
+          <br>
+          <h4>Associative Arrays</h4>
+          <p>Many programming languages</p>
+          <p>Arrays with named indexes are called associative arrays (or hashes).</p>
+          <p>JavaScript does <strong>not</strong> support arrays with named indexes.</p>
+          <p>In JavaScript, <strong>arrays</strong> always use <strong>numbered indexes</strong>.</p>
+          <h4>Example</h4>
+          <pre>
         <code>
           var person = [];
           person[0] = "John";
@@ -333,23 +336,24 @@
           var y = person[0];
         </code>
       </pre>
-        <script>
-          var person = [];
-          person[0] = "John";
-          person[1] = "Doe";
-          person[2] = 46;
-          var x = person.length;
-          var y = person[0];
-          console.log(x);
-          console.log(y);
-        </script>
-        <div class="note">
-          <p><strong>WARNING !!</strong></p>
-          <p>If you use named indexes, JavaScript will redefined the array to a standard object. After that, some array
-            methods and properties will produce incorrect results.</p>
-        </div>
-        <h4>Example:</h4>
-        <pre>
+          <script>
+            var person = [];
+            person[0] = "John";
+            person[1] = "Doe";
+            person[2] = 46;
+            var x = person.length;
+            var y = person[0];
+            console.log(x);
+            console.log(y);
+          </script>
+          <div class="note">
+            <p><strong>WARNING !!</strong></p>
+            <p>If you use named indexes, JavaScript will redefined the array to a standard object. After that, some
+              array
+              methods and properties will produce incorrect results.</p>
+          </div>
+          <h4>Example:</h4>
+          <pre>
         <code>
           var person = [];
           person["firstName"] = "John";
@@ -359,99 +363,99 @@
           var y = person[0];     
         </code>
       </pre>
-        <script>
-          var person = [];
-          person["firstName"] = "John";
-          person["lastName"] = "Doe";
-          person["age"] = 46;
-          var x1 = person.length;     // person.length will return 0
-          var y1 = person[0];
-          console.log(x1);
-          console.log(y1);
-        </script>
-        <hr>
-        <h4>The Difference Between Arrays and Objects</h4>
-        <p>In JavaScript, <strong>arrays</strong> use <strong>numbered indexes</strong>.</p>
-        <p>In Javascript, <strong>objects</strong> use <strong>named indexes</strong>.</p>
-        <div class="note">
-          <p>Arrays are special kind of objects, with numbered indexes.</p>
-        </div>
-        <hr>
-        <h4>When to Use Arrays. When to Use Objects.</h4>
-        <ul>
-          <li>Javascript does not support associative arrays.</li>
-          <li>You should use <strong>objects</strong> when you want the element names to be <strong>strings
-              (text)</strong>.</li>
-          <li>You should use <strong>arrays</strong> when you want the element names to be <strong>numbers</strong>.
-          </li>
-        </ul>
-        <hr>
-        <h4>Avoid new Array()</h4>
-        <p>There is no need to use the JavaScript's built-in array constructor <code>new</code> Array().</p>
-        <p><strong>Use</strong> <code>[]</code> <strong>instead</strong>.</p>
-        <pre>
+          <script>
+            var person = [];
+            person["firstName"] = "John";
+            person["lastName"] = "Doe";
+            person["age"] = 46;
+            var x1 = person.length;     // person.length will return 0
+            var y1 = person[0];
+            console.log(x1);
+            console.log(y1);
+          </script>
+          <hr>
+          <h4>The Difference Between Arrays and Objects</h4>
+          <p>In JavaScript, <strong>arrays</strong> use <strong>numbered indexes</strong>.</p>
+          <p>In Javascript, <strong>objects</strong> use <strong>named indexes</strong>.</p>
+          <div class="note">
+            <p>Arrays are special kind of objects, with numbered indexes.</p>
+          </div>
+          <hr>
+          <h4>When to Use Arrays. When to Use Objects.</h4>
+          <ul>
+            <li>Javascript does not support associative arrays.</li>
+            <li>You should use <strong>objects</strong> when you want the element names to be <strong>strings
+                (text)</strong>.</li>
+            <li>You should use <strong>arrays</strong> when you want the element names to be <strong>numbers</strong>.
+            </li>
+          </ul>
+          <hr>
+          <h4>Avoid new Array()</h4>
+          <p>There is no need to use the JavaScript's built-in array constructor <code>new</code> Array().</p>
+          <p><strong>Use</strong> <code>[]</code> <strong>instead</strong>.</p>
+          <pre>
         <code>
           var points = new Array(); // Bad
           var points = [];          // Good
         </code>
       </pre>
-        <p>These two different statements both create a new array containing 6 numbers:</p>
-        <pre>
+          <p>These two different statements both create a new array containing 6 numbers:</p>
+          <pre>
         <code>
           var points = new Array(40, 100, 1, 5, 25, 10); // Bad
           var points = [40, 100, 1, 5, 25, 10];          // Good
         </code>
       </pre>
-        <script>
-          var points = [40, 100, 1, 5, 25, 10];
-          console.log(points[0]);
-        </script>
-        <p>The <code>new</code> keyword only complicates the code. It can also produce some unexpected results:</p>
-        <code>
+          <script>
+            var points = [40, 100, 1, 5, 25, 10];
+            console.log(points[0]);
+          </script>
+          <p>The <code>new</code> keyword only complicates the code. It can also produce some unexpected results:</p>
+          <code>
         <pre>
           var points = new Array(40,100); // Creates an array with two elements (40 and 100);
         </pre>
       </code>
-        <p>What if I remove one of the elements?</p>
-        <pre>
+          <p>What if I remove one of the elements?</p>
+          <pre>
         <code>
           var points = new Array(40); // Create an array with 40 undefined elements !!!
         </code>
       </pre>
-        <script>
-          var points1 = new Array(40);
-          console.log(points1[0]);  // undefinded
-        </script>
-        <hr>
-        <h4>How to Recognize an Array</h4>
-        <p>A common question is: How do I know if a variable is an array?</p>
-        <p>The problem is that the JavaScript operator <code>typeof</code> returns "<code>object</code>":</p>
-        <pre>
+          <script>
+            var points1 = new Array(40);
+            console.log(points1[0]);  // undefinded
+          </script>
+          <hr>
+          <h4>How to Recognize an Array</h4>
+          <p>A common question is: How do I know if a variable is an array?</p>
+          <p>The problem is that the JavaScript operator <code>typeof</code> returns "<code>object</code>":</p>
+          <pre>
         <code>
           var fruits = ["Banana", "Orange", "Apple", "Mango"];
           typeof fruits;    // returns object
         </code>
       </pre>
-        <script>
-          var fruits3 = ["Banana", "Orange", "Apple", "Mango"];
-          console.log(typeof fruits3);
-        </script>
-        <p>The typeof operator returns object because a JavaScript array is an object.</p>
-        <h5>Solution 1:</h5>
-        <p>To solve this problem ECMAScript 5 defines a new method <code>Array.isArray()</code>.</p>
-        <pre>
+          <script>
+            var fruits3 = ["Banana", "Orange", "Apple", "Mango"];
+            console.log(typeof fruits3);
+          </script>
+          <p>The typeof operator returns object because a JavaScript array is an object.</p>
+          <h5>Solution 1:</h5>
+          <p>To solve this problem ECMAScript 5 defines a new method <code>Array.isArray()</code>.</p>
+          <pre>
         <code>
           Array.isArray(fruits);  // returns true
         </code>
       </pre>
-        <script>
-          console.log(Array.isArray(fruits));
-        </script>
-        <p>The problem with this solution is that ECMAScript 5 is not supported in older browsers.</p>
-        <h5>Solution 2:</h5>
-        <!--I do not understand this solution -->
-        <p>to solve this problem you can create your own <code>isArray()</code>function:</p>
-        <pre>
+          <script>
+            console.log(Array.isArray(fruits));
+          </script>
+          <p>The problem with this solution is that ECMAScript 5 is not supported in older browsers.</p>
+          <h5>Solution 2:</h5>
+          <!--I do not understand this solution -->
+          <p>to solve this problem you can create your own <code>isArray()</code>function:</p>
+          <pre>
         <code>
           var myArray = function isArray(x) {
             return x.fruits
@@ -459,417 +463,422 @@
           console.log(myArray); 
         </code>
       </pre>
-        <script>
-          function isArray(x) {
-            return x.constructor.toString().indexOf("Array") > -1;
-          }
-          console.log(isArray(fruits));
-        </script>
-        <p>The function above always returns true if the argument is an array.</p>
-        <p> Or more precisely: it returns true if the object prototype contains the word "Array". </p>
-        <h5>Solution 3:</h5>
-        <p>The <code>instanceof</code> operator returns true if an object is created by a given constructor:</p>
-        <pre>
+          <script>
+            function isArray(x) {
+              return x.constructor.toString().indexOf("Array") > -1;
+            }
+            console.log(isArray(fruits));
+          </script>
+          <p>The function above always returns true if the argument is an array.</p>
+          <p> Or more precisely: it returns true if the object prototype contains the word "Array". </p>
+          <h5>Solution 3:</h5>
+          <p>The <code>instanceof</code> operator returns true if an object is created by a given constructor:</p>
+          <pre>
         <code>
           var fruits = ["Banana", "Orange", "Apple", "Mango"];
           fruits instanceof Array;  //returns true
         </code>
       </pre>
-        <script>
-          var colors = ["Red", "Blue", "Green"];
-          console.log(colors instanceof Array);
-        </script>
-      </div>
+          <script>
+            var colors = ["Red", "Blue", "Green"];
+            console.log(colors instanceof Array);
+          </script>
+        </div>
 
-      <hr>
-      <hr>
-      <hr>
-      <h4>2. Arrays</h4>
-      <a href="https://www.w3schools.com/js/js_array_methods.asp" target="_blank">
-        <h5>w3schools.com, JavaScript Array Methods</h5>
-      </a>
-      <hr>
-      <h4>Converting Arrays to Strings</h4>
-      <p>The JavaScript method <code>toString()</code> converts an array to a string of (comma separated) array values.
-      </p>
-      <h6>Example</h6>
-      <pre>
+        <hr>
+        <hr>
+        <hr>
+        <h4>2. Arrays</h4>
+        <a href="https://www.w3schools.com/js/js_array_methods.asp" target="_blank">
+          <h5>w3schools.com, JavaScript Array Methods</h5>
+        </a>
+        <hr>
+        <h4>Converting Arrays to Strings</h4>
+        <p>The JavaScript method <code>toString()</code> converts an array to a string of (comma separated) array
+          values.
+        </p>
+        <h6>Example</h6>
+        <pre>
         <code>
           var fruits = ["Banana", "Orange", "Apple", "Mango"];
           console.log(fruits.toString());
         </code>
       </pre>
-      <p>Result:</p>
-      <code>Banana,Orange,Apple,Mango</code>
-      <script>
-        var fruits5 = ["Banana", "orange", "Apple", "Mango"];
-        console.log(fruits5.toString());
-      </script>
-      <p>The <code>join()</code> method also joins all array elements into a string.</p>
-      <p>It behaves just like <code>toString</code>, but in addition you can specify the separator:</p>
-      <h6>Example</h6>
-      <pre>
+        <p>Result:</p>
+        <code>Banana,Orange,Apple,Mango</code>
+        <script>
+          var fruits5 = ["Banana", "orange", "Apple", "Mango"];
+          console.log(fruits5.toString());
+        </script>
+        <p>The <code>join()</code> method also joins all array elements into a string.</p>
+        <p>It behaves just like <code>toString</code>, but in addition you can specify the separator:</p>
+        <h6>Example</h6>
+        <pre>
         <code>
           var fruits = ["Banana", "orange", "Apple", "Mango"];
           console.log(fruits.join(" * "));
         </code>
       </pre>
-      <p>Result:</p>
-      <code>Banana * Orange * Apple * Mango</code>
-      <script>
-        var fruits6 = ["Banana", "Orange", "Apple", "Mango"];
-        console.log(fruits6.join(" * "));
-      </script>
-      <hr>
-      <h4>Popping and Pushing</h4>
-      <p>When you work with arrays, it is easy to remove elements and add new elements.</p>
-      <h4>Popping and Pushing</h4>
-      <p>When you work with arrays, it is easy to remove elements and add new elements.</p>
-      <p>This is what popping and pushing is:</p>
-      <p>Popping items out of an array, or pushing items into an array.</p>
-      <hr>
-      <h4>Popping</h4>
-      <p>The <code>pop()</code> method removes the last element from an array:</p>
-      <h6>Example</h5>
-        <pre>
+        <p>Result:</p>
+        <code>Banana * Orange * Apple * Mango</code>
+        <script>
+          var fruits6 = ["Banana", "Orange", "Apple", "Mango"];
+          console.log(fruits6.join(" * "));
+        </script>
+        <hr>
+        <h4>Popping and Pushing</h4>
+        <p>When you work with arrays, it is easy to remove elements and add new elements.</p>
+        <h4>Popping and Pushing</h4>
+        <p>When you work with arrays, it is easy to remove elements and add new elements.</p>
+        <p>This is what popping and pushing is:</p>
+        <p>Popping items out of an array, or pushing items into an array.</p>
+        <hr>
+        <h4>Popping</h4>
+        <p>The <code>pop()</code> method removes the last element from an array:</p>
+        <h6>Example</h5>
+          <pre>
         <code>
           var fruits = ["Banana", "Orange", "Apple", "Mango"];
           fruit.pop();  //Removes the last element ("Mango") from fruits
         </code>
       </pre>
-        <script>
-          var fruits7 = ["Banana", "Orange", "Apple", "Kiwi"];
-          console.log(fruits7.pop());
-        </script>
-        <p>The <code>pop()</code> method returns the value that was "opted out":</p>
-        <h6>Example</h6>
-        <pre>
+          <script>
+            var fruits7 = ["Banana", "Orange", "Apple", "Kiwi"];
+            console.log(fruits7.pop());
+          </script>
+          <p>The <code>pop()</code> method returns the value that was "opted out":</p>
+          <h6>Example</h6>
+          <pre>
         <code>
           var fruits = ["Banana", "Orange", "Apple", "Mango"];
           var x = fruits.pop(); the value of x is "Mango"
         </code>
       </pre>
-        <script>
-          var fruits8 = ["Banana", "Orange", "Apple", "Mango"];
-          var x = fruits8.pop();
-          console.log(x);
-        </script>
-        <hr>
-        <h4>Pushing</h4>
-        <p>The <code>push()</code> method adds a new element to an array (at the end):</p>
-        <h6>Example</h6>
-        <pre>
+          <script>
+            var fruits8 = ["Banana", "Orange", "Apple", "Mango"];
+            var x = fruits8.pop();
+            console.log(x);
+          </script>
+          <hr>
+          <h4>Pushing</h4>
+          <p>The <code>push()</code> method adds a new element to an array (at the end):</p>
+          <h6>Example</h6>
+          <pre>
         <code>
             var fruits = ["Banana", "Orange", "Apple", "Mango"];
             fruits.push("Kiwi");  // Adds a new element("Kiwi") to fruits
         </code>
       </pre>
-        <script>
-          var fruits9 = ["Banana", "Orange", "Apple", "Mango"];
-          console.log(fruits9.push("Kiwi"));
-        </script>
-        <p>the <code>push()</code> method returns the new array length:</p>
-        <h6>Example</h6>
-        <pre>
+          <script>
+            var fruits9 = ["Banana", "Orange", "Apple", "Mango"];
+            console.log(fruits9.push("Kiwi"));
+          </script>
+          <p>the <code>push()</code> method returns the new array length:</p>
+          <h6>Example</h6>
+          <pre>
         <code>
             var fruits = ["Banana", "Orange", "Apple", "Mango"];
             var x = fruits.push("Kiwi", "Watermelon");  // the value of x is 6
         </code>
       </pre>
-        <script>
-          var fruity1 = ["Banana", "Orange", "Apple", "Mango"];
-          var x = fruity1.push("Kiwi", "Watermelon");
-          console.log(x);
-        </script>
-        <hr>
-        <h4>Shifting Elements</h4>
-        <p>Shifting is equivalent to popping, working on the first element instead of the last.</p>
-        <p>The <code>shift()</code> method removes the first array element and "shifts" all other elements to a lower
-          index and returns the string that was "shifted out":</p>
-        <h6>Example</h6>
-        <pre>
+          <script>
+            var fruity1 = ["Banana", "Orange", "Apple", "Mango"];
+            var x = fruity1.push("Kiwi", "Watermelon");
+            console.log(x);
+          </script>
+          <hr>
+          <h4>Shifting Elements</h4>
+          <p>Shifting is equivalent to popping, working on the first element instead of the last.</p>
+          <p>The <code>shift()</code> method removes the first array element and "shifts" all other elements to a lower
+            index and returns the string that was "shifted out":</p>
+          <h6>Example</h6>
+          <pre>
         <code>
             var fruits = ["Banana", "Orange", "Apple", "Mango"];
             fruits.shift();   // Removes the first element "Banana" from fruits
         </code>
       </pre>
-        <script>
-          var fruity2 = ["Banana", "Orange", "Apple", "Mango"];
-          var x = fruity2.shift();
-          console.log(x);
-        </script>
-        <p>The <code>unshift()</code> method adds a new element to an array (at the beginning), and "unshifts" older
-          elements:</p>
-        <h6>Example</h6>
-        <pre>
+          <script>
+            var fruity2 = ["Banana", "Orange", "Apple", "Mango"];
+            var x = fruity2.shift();
+            console.log(x);
+          </script>
+          <p>The <code>unshift()</code> method adds a new element to an array (at the beginning), and "unshifts" older
+            elements:</p>
+          <h6>Example</h6>
+          <pre>
         <code>
             var fruits = ["Banana", "Orange", "Apple", "Mango"];
             fruits.unshift("Lemon");    //  Adds a new element "Lemon" to fruits
         </code>
       </pre>
-        <script>
-          var fruity3 = ["Banana", "Orange", "Apple", "Mango"];
-          var x = fruity3.unshift("Lemon");
-          console.log(x);
-          console.log(fruity3);
-        </script>
-        <hr>
-        <h4>Changing Elements</h4>
-        <p>Array elements are accessed using their <strong>index number</strong>:</p>
-        <div class="note">
-          <p>Array <strong>indexes</strong> start with 0. [0] is the first array element, [1] is the seconds, [2] is the
-            third...</p>
-        </div>
-        <h6>Example</h6>
-        <pre>
+          <script>
+            var fruity3 = ["Banana", "Orange", "Apple", "Mango"];
+            var x = fruity3.unshift("Lemon");
+            console.log(x);
+            console.log(fruity3);
+          </script>
+          <hr>
+          <h4>Changing Elements</h4>
+          <p>Array elements are accessed using their <strong>index number</strong>:</p>
+          <div class="note">
+            <p>Array <strong>indexes</strong> start with 0. [0] is the first array element, [1] is the seconds, [2] is
+              the
+              third...</p>
+          </div>
+          <h6>Example</h6>
+          <pre>
         <code>
             var fruits = ["Banana", "Orange", "Apple", "Mango"];
             fruits[0] = "Kiwi"  //  changes the first element of fruits to "Kiwi"
         </code>
       </pre>
-        <script>
-          var fruity4 = ["Banana", "Orange", "Apple", "Mango"];
-          fruity4[0] = "Kiwi"
-          console.log(fruity4[0]);
-          console.log(fruity4);
-        </script>
-        <p>The <code>length</code> property provides an easy way to append a new element to an array:</p>
-        <h6>Example</h6>
-        <pre><code>
+          <script>
+            var fruity4 = ["Banana", "Orange", "Apple", "Mango"];
+            fruity4[0] = "Kiwi"
+            console.log(fruity4[0]);
+            console.log(fruity4);
+          </script>
+          <p>The <code>length</code> property provides an easy way to append a new element to an array:</p>
+          <h6>Example</h6>
+          <pre><code>
           var fruits = ["Banana", "Orange", "Apple", "Mango"];
           fruits[fruits.length] = "Berry";    // Appends "Berry" to fruits
         </code></pre>
-        <script>
-          var fruity5 = ["Banana", "Orange", "Apple", "Mango"];
-          fruits[fruity5.length] = "Berry";
-          console.log(fruity5);
-        </script>
-        <hr>
-        <h4>Deleting Elements</h4>
-        <p>Since JavaScript arrays are objects, elements can be deleted by using the JavaScript operator
-          <code>delete</code>:</p>
-        <h6>Example</h6>
-        <pre><code>
+          <script>
+            var fruity5 = ["Banana", "Orange", "Apple", "Mango"];
+            fruits[fruity5.length] = "Berry";
+            console.log(fruity5);
+          </script>
+          <hr>
+          <h4>Deleting Elements</h4>
+          <p>Since JavaScript arrays are objects, elements can be deleted by using the JavaScript operator
+            <code>delete</code>:</p>
+          <h6>Example</h6>
+          <pre><code>
           var fruits = ["Banana", "Orange", "Apple", "Mango"];
           delete fruits[0];   // Changes the first element in fruit to undefinded
         </code></pre>
-        <script>
-          var fruity6 = ["Banana", "Orange", "Apple", "Mango"];
-          delete fruity6[0];
-          console.log(fruity6[0]);
-          console.log(fruity6);
-        </script>
-        <div class="note">
-          <p>Using <strong>delete</strong> may leave undefined holes in the array. Use <code>pop()</code> or
-            <code>shift()</code> instead.</p>
-        </div>
-        <h4>Splicing an Array</h4>
-        <p>The <code>splice()</code> method can be used to add new items to an array:</p>
-        <h4>Example</h4>
-        <pre><code>
+          <script>
+            var fruity6 = ["Banana", "Orange", "Apple", "Mango"];
+            delete fruity6[0];
+            console.log(fruity6[0]);
+            console.log(fruity6);
+          </script>
+          <div class="note">
+            <p>Using <strong>delete</strong> may leave undefined holes in the array. Use <code>pop()</code> or
+              <code>shift()</code> instead.</p>
+          </div>
+          <h4>Splicing an Array</h4>
+          <p>The <code>splice()</code> method can be used to add new items to an array:</p>
+          <h4>Example</h4>
+          <pre><code>
           var fruits = ["Banana", "Orange", "Apple", "Mango"];
           fruits.splice(2, 0, "Lemon", "Kiwi");
         </code></pre>
-        <script>
-          var fruits10 = ["Banana", "Orange", "Apple", "Mango"];
-          fruits10.splice(2, 0, "Lemon", "Kiwi");
-          console.log(fruits10);
-        </script>
-        <p>The first parameter (2) defines the position <strong>where</strong> new elements should be
-          <strong>added</strong> (spliced in.</p>
-        <p>The Second parameter(0) defines <strong> how many</strong> elements should be <strong>removed</strong>.</p>
-        <p>The rest of the parameters ("Lemon", "Kiwi") define the new elements to be <strong>added</strong>.</p>
-        <p>The <code>splice()</code> method returns an array with the deleted items.</p>
-        <h6>Example</h6>
-        <pre><code>
+          <script>
+            var fruits10 = ["Banana", "Orange", "Apple", "Mango"];
+            fruits10.splice(2, 0, "Lemon", "Kiwi");
+            console.log(fruits10);
+          </script>
+          <p>The first parameter (2) defines the position <strong>where</strong> new elements should be
+            <strong>added</strong> (spliced in.</p>
+          <p>The Second parameter(0) defines <strong> how many</strong> elements should be <strong>removed</strong>.</p>
+          <p>The rest of the parameters ("Lemon", "Kiwi") define the new elements to be <strong>added</strong>.</p>
+          <p>The <code>splice()</code> method returns an array with the deleted items.</p>
+          <h6>Example</h6>
+          <pre><code>
             var fruits = ["Banana", "Orange", "Apple", "Mango"];
             fruits.splice(2,2, "Lemon", "Kiwi");
         </code></pre>
-        <script>
-          var fruits11 = ["Banana", "Orange", "Apple", "Mango"];
-          var x2 = fruits11.splice(2, 2, "Lemon", "Kiwi");
-          console.log(x2);
-          console.log(fruits11);
-        </script>
+          <script>
+            var fruits11 = ["Banana", "Orange", "Apple", "Mango"];
+            var x2 = fruits11.splice(2, 2, "Lemon", "Kiwi");
+            console.log(x2);
+            console.log(fruits11);
+          </script>
 
-        <h4>Using splice() to Remove Elements</h4>
-        <p>With clever parameter setting, you can use <code>splice()</code> to remove elements without leaving "holes"
-          in the array:</p>
-        <h6>Example</h6>
-        <pre><code>
+          <h4>Using splice() to Remove Elements</h4>
+          <p>With clever parameter setting, you can use <code>splice()</code> to remove elements without leaving "holes"
+            in the array:</p>
+          <h6>Example</h6>
+          <pre><code>
             var fruits = ["Banana", "Orange", "Apple", "Mango"];
             fruits.splice(0,1); // Removes the first element of fruits
         </code></pre>
-        <script>
-          var fruits12 = ["Banana", "Orange", "Apple", "Mango"];
-          fruits12.splice(0, 1);
-          console.log(fruits12);
-        </script>
-        <p>The first parameter (0) defines the position where new elements should be <strong>added</strong> (spliced
-          in).</p>
-        <p>The second parameter (1) defines <strong>how many</strong> elements should be <strong>removed</strong>.</p>
-        <p>The rest of the parameters are omitted. No new elements will be added.</p>
-        <h4>Merging (Concatenating) Arrays</h4>
-        <p>The <code>concat()</code>method creates a new array by merging (concatenating) existing arrays:</p>
-        <h6>Example (Merging Two Arrays)</h6>
-        <pre><code>
+          <script>
+            var fruits12 = ["Banana", "Orange", "Apple", "Mango"];
+            fruits12.splice(0, 1);
+            console.log(fruits12);
+          </script>
+          <p>The first parameter (0) defines the position where new elements should be <strong>added</strong> (spliced
+            in).</p>
+          <p>The second parameter (1) defines <strong>how many</strong> elements should be <strong>removed</strong>.</p>
+          <p>The rest of the parameters are omitted. No new elements will be added.</p>
+          <h4>Merging (Concatenating) Arrays</h4>
+          <p>The <code>concat()</code>method creates a new array by merging (concatenating) existing arrays:</p>
+          <h6>Example (Merging Two Arrays)</h6>
+          <pre><code>
           var myGirls = ["Cecile", "Lone"];
           var myBoys = ["Emil", "Tobias", "Linus"];
           var myChildren = myGirls.concat(myBoys);  //  Concatenates (joins) my myGirls and myBoys
         </code></pre>
-        <script>
-          var myGirls = ["Cecile", "Lone"];
-          var myBoys = ["Emil", "Tobias", "Linus"];
-          var myChildren = myGirls.concat(myBoys);
-          console.log(myChildren);
-        </script>
-        <note class="div">
-          <p>The <code>concat()</code> method does not change the existing arrays. It always returns a new array.</p>
-        </note>
-        <p>The <code>concat()</code> method can take any number of array arguments:</p>
-        <h6>Example (Merging Three Arrays)</h6>
-        <pre><code>
+          <script>
+            var myGirls = ["Cecile", "Lone"];
+            var myBoys = ["Emil", "Tobias", "Linus"];
+            var myChildren = myGirls.concat(myBoys);
+            console.log(myChildren);
+          </script>
+          <note class="div">
+            <p>The <code>concat()</code> method does not change the existing arrays. It always returns a new array.</p>
+          </note>
+          <p>The <code>concat()</code> method can take any number of array arguments:</p>
+          <h6>Example (Merging Three Arrays)</h6>
+          <pre><code>
           var arr1 = ["Cecile", "Lone"];
           var arr2 = ["Emil", "Tobias", "Linus"];
           var arr3 = ["Robin", "Morgan"];
           var myChildren = arr1.concat(arr2, arr3); //  Concatenates arr1 with arr2 and arr3
         </code></pre>
-        <script>
-          var arr1 = ["Cecile", "Lone"];
-          var arr2 = ["Emil", "Tobias", "Linus"];
-          var arr3 = ["Robin", "Morgan"];
-          var myChildren1 = arr1.concat(arr2, arr3);
-          console.log(myChildren1);
-        </script>
-        <p>The <code>concat()</code> method can also take values as arguments:</p>
-        <h6>Example (Margin an Array with Values)</h6>
-        <pre><code>
+          <script>
+            var arr1 = ["Cecile", "Lone"];
+            var arr2 = ["Emil", "Tobias", "Linus"];
+            var arr3 = ["Robin", "Morgan"];
+            var myChildren1 = arr1.concat(arr2, arr3);
+            console.log(myChildren1);
+          </script>
+          <p>The <code>concat()</code> method can also take values as arguments:</p>
+          <h6>Example (Margin an Array with Values)</h6>
+          <pre><code>
           var arr1 = ["Cecile", "Lone"];
           var myChildren = arr1.concat(["Emil", "Tobias", "Linus"]);
         </code></pre>
-        <script>
-          var arr1 = ["Cecile", "Lone"];
-          var myChildren2 = arr1.concat(["Emil", "Tobias", "Linus"]);
-          console.log(myChildren2);
-        </script>
-        <hr>
-        <h4>Slicing an Array</h4>
-        <p>The <code>slice()</code> method slices out a piece of an array into a new array.</p>
-        <p>The example slices out a part of an arry starting from array element 1 ("Orange"):</p>
-        <h6>Example</h6>
-        <pre><code>
+          <script>
+            var arr1 = ["Cecile", "Lone"];
+            var myChildren2 = arr1.concat(["Emil", "Tobias", "Linus"]);
+            console.log(myChildren2);
+          </script>
+          <hr>
+          <h4>Slicing an Array</h4>
+          <p>The <code>slice()</code> method slices out a piece of an array into a new array.</p>
+          <p>The example slices out a part of an arry starting from array element 1 ("Orange"):</p>
+          <h6>Example</h6>
+          <pre><code>
             var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
             var citrus = fruits.slice(1);
         </code></pre>
-        <script>
-          var fruits13 = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
-          var citrus = fruits13.slice(1);
-          console.log(citrus);
-        </script>
-        <div class="note">
-          <p>The <code>slice()</code> method creates a new array. It does not remove any elements from the source array.
-          </p>
-        </div>
-        <p>This example slices out a part of an array starting from array element 3 ("Apple"):</p>
-        <h6>Example</h6>
-        <pre><code>
+          <script>
+            var fruits13 = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+            var citrus = fruits13.slice(1);
+            console.log(citrus);
+          </script>
+          <div class="note">
+            <p>The <code>slice()</code> method creates a new array. It does not remove any elements from the source
+              array.
+            </p>
+          </div>
+          <p>This example slices out a part of an array starting from array element 3 ("Apple"):</p>
+          <h6>Example</h6>
+          <pre><code>
             var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
             var citrus = fruits.slice(3);
         </code></pre>
-        <script>
-          var fruits14 = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
-          var citrus2 = fruits14.slice(3);
-          console.log(citrus2);
-        </script>
-        <p>The <code>slice()</code> method can take two argument slice <code>slice(1,3)</code>.</p>
-        <p>The method then selects elements from the start argument, and upt to (but not including) the end argument.
-        </p>
-        <h6>Example</h6>
-        <pre><code>
+          <script>
+            var fruits14 = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+            var citrus2 = fruits14.slice(3);
+            console.log(citrus2);
+          </script>
+          <p>The <code>slice()</code> method can take two argument slice <code>slice(1,3)</code>.</p>
+          <p>The method then selects elements from the start argument, and upt to (but not including) the end argument.
+          </p>
+          <h6>Example</h6>
+          <pre><code>
           var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
           var citrus = fruits.slice(1,3);
         </code></pre>
-        <script>
-          var fruits15 = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
-          var citrus3 = fruits15.slice(1, 3);
-          console.log(citrus3);
-        </script>
-        <p>If the end argument is omitted, like in the first examples, the <code>slice()</code> method slices out the
-          rest of the array.</p>
-        <h6>Example</h6>
-        <pre><code>
+          <script>
+            var fruits15 = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+            var citrus3 = fruits15.slice(1, 3);
+            console.log(citrus3);
+          </script>
+          <p>If the end argument is omitted, like in the first examples, the <code>slice()</code> method slices out the
+            rest of the array.</p>
+          <h6>Example</h6>
+          <pre><code>
             var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
             var citrus = fruits.slice(2);
         </code></pre>
-        <script>
-          var fruits16 = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
-          var citrus4 = fruits16.slice(2);
-          console.log(citrus4);
-        </script>
-        <hr>
-        <h4>Automatic toString()</h4>
-        <p>JavaScript automatically converts an array to a comma separated string when a primitive value is expected.
-        </p>
-        <p>This is always the case when you try to output an array.</p>
-        <!--Is this only for DOM output and not for console.log?-->
-        <p>These two example will produce the same result:</p>
-        <h6>Example</h6>
-        <pre><code>
+          <script>
+            var fruits16 = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+            var citrus4 = fruits16.slice(2);
+            console.log(citrus4);
+          </script>
+          <hr>
+          <h4>Automatic toString()</h4>
+          <p>JavaScript automatically converts an array to a comma separated string when a primitive value is expected.
+          </p>
+          <p>This is always the case when you try to output an array.</p>
+          <!--Is this only for DOM output and not for console.log?-->
+          <p>These two example will produce the same result:</p>
+          <h6>Example</h6>
+          <pre><code>
             var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
             console.log(fruits17.toString());
         </code></pre>
-        <script>
-          var fruits17 = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
-          console.log(fruits17.toString());
-        </script>
-        <h6>Example</h6>
-        <pre><code>
+          <script>
+            var fruits17 = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+            console.log(fruits17.toString());
+          </script>
+          <h6>Example</h6>
+          <pre><code>
             var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
             console.log(fruits);
         </code></pre>
 
-        <p id="demo"></p>
+          <p id="demo"></p>
 
-        <script>
-          var fruits18 = ["Banana", "Orange", "Apple", "Mango"];
-          document.getElementById("demo").innerHTML = fruits18;
-        </script>
-        <div class="note">
-          All JavaScript objects have a toString() method.
-        </div>
-        <hr>
-        <h4>Finding Max and Min VAlues in an Array</h4>
-        <p>There are no built-in functions for finding the highest or lowest value in a JavaScript array</p>
-        <p>You will have to learn how to solve this problem in a "Sorting Arrays" tutorial. </p>
+          <script>
+            var fruits18 = ["Banana", "Orange", "Apple", "Mango"];
+            document.getElementById("demo").innerHTML = fruits18;
+          </script>
+          <div class="note">
+            All JavaScript objects have a toString() method.
+          </div>
+          <hr>
+          <h4>Finding Max and Min VAlues in an Array</h4>
+          <p>There are no built-in functions for finding the highest or lowest value in a JavaScript array</p>
+          <p>You will have to learn how to solve this problem in a "Sorting Arrays" tutorial. </p>
 
 
 
-    </div>
+      </div>
 
-    <div class="container">
-      <div class="Loops">
-        <hr>
-        <h4>1. Loops</h4>
-        <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code"
-          target="_blank">
-          <h5>MDN web docs, Looping Code</h5>
-        </a>
-        <hr>
-        <h4>Keep me in the loop</h4>
-        <p>Programming loops are all to do with doing the same thing over and over again - which is termed
-          <strong>iteration</strong> in programming speak.</p>
-        <p>A loop usually has one or more of the following features:</p>
-        <ul>
-          <li>A <strong>counter</strong>, which is initialized with a certain value - this is the starting point of the
-            loop.</li>
-          <li>An <strong>exit condition</strong>, which is the criteria under which the loop stops - usually the counter
-            reaching a certain value.</li>
-          <li>An <strong>iterator</strong>, which is generally increments the counter by a small amount on each
-            successive loop, until it reaches the exit condition.</li>
-        </ul>
-        <p>In <a href="https://developer.mozilla.org/en-US/docs/Glossary/pseudocode" target="_blank">pseudocode</a>,
-          this would look something like the following:</p>
-        <pre><code>
+      <div class="container">
+        <div class="Loops">
+          <hr>
+          <h4>1. Loops</h4>
+          <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code"
+            target="_blank">
+            <h5>MDN web docs, Looping Code</h5>
+          </a>
+          <hr>
+          <h4>Keep me in the loop</h4>
+          <p>Programming loops are all to do with doing the same thing over and over again - which is termed
+            <strong>iteration</strong> in programming speak.</p>
+          <p>A loop usually has one or more of the following features:</p>
+          <ul>
+            <li>A <strong>counter</strong>, which is initialized with a certain value - this is the starting point of
+              the
+              loop.</li>
+            <li>An <strong>exit condition</strong>, which is the criteria under which the loop stops - usually the
+              counter
+              reaching a certain value.</li>
+            <li>An <strong>iterator</strong>, which is generally increments the counter by a small amount on each
+              successive loop, until it reaches the exit condition.</li>
+          </ul>
+          <p>In <a href="https://developer.mozilla.org/en-US/docs/Glossary/pseudocode" target="_blank">pseudocode</a>,
+            this would look something like the following:</p>
+          <pre><code>
           loop(food = 0; foodNeeded = 10) {
             if(food >=foodNeeded) {
               exit loop;
@@ -880,34 +889,35 @@
             }
           }
         </code></pre>
-        <hr>
-        <h4>The standard for loop</h4>
-        <p>Start exploring specific constructs. The first, is the <strong>for loop</strong>:</p>
-        <pre><code>
+          <hr>
+          <h4>The standard for loop</h4>
+          <p>Start exploring specific constructs. The first, is the <strong>for loop</strong>:</p>
+          <pre><code>
           for(initializer; exit-condition; final-expression) {
             // code to run
           }
         </code></pre>
-        <p>Further explained:</p>
-        <ol>
-          <li>The keyword <code>for</code>, followed by some parentheses.</li>
-          <li>Inside the parentheses we have three items, separated by semi-colons:
-            <ol>
-              <li>An <strong>initializer</strong> - this is usually a variable set to a number, which is incremented to
-                count the number of items the loop has run. It is also sometimes referred to as a <strong>counter
-                  variable</strong>.</li>
-              <li>An <strong>exit-condition</strong> - as mentioned before, this defines when the loop should stop
-                looping. This is generally an expression featuring a comparison operator, a test to see if the exit
-                condition has been met.</li>
-              <li>A <strong>final-expression</strong> - this is always evaluated (or run) each time the loop has gone
-                through a full iteration. It usually served to increment (or in some cases decrement) the counter
-                variable, to bring it closer to the exit condition value.</li>
-            </ol>
-          </li>
-          <li>Some curly braces that contain a block of cod - this code will be run each time the loop iterates.</li>
-        </ol>
-        <h6>Example</h6>
-        <pre><code>
+          <p>Further explained:</p>
+          <ol>
+            <li>The keyword <code>for</code>, followed by some parentheses.</li>
+            <li>Inside the parentheses we have three items, separated by semi-colons:
+              <ol>
+                <li>An <strong>initializer</strong> - this is usually a variable set to a number, which is incremented
+                  to
+                  count the number of items the loop has run. It is also sometimes referred to as a <strong>counter
+                    variable</strong>.</li>
+                <li>An <strong>exit-condition</strong> - as mentioned before, this defines when the loop should stop
+                  looping. This is generally an expression featuring a comparison operator, a test to see if the exit
+                  condition has been met.</li>
+                <li>A <strong>final-expression</strong> - this is always evaluated (or run) each time the loop has gone
+                  through a full iteration. It usually served to increment (or in some cases decrement) the counter
+                  variable, to bring it closer to the exit condition value.</li>
+              </ol>
+            </li>
+            <li>Some curly braces that contain a block of cod - this code will be run each time the loop iterates.</li>
+          </ol>
+          <h6>Example</h6>
+          <pre><code>
           const cats = ["Bill", "Jeff", "Pete", "Biggles", "Jasmin"];
           let info = "My cats are called ";
           
@@ -917,77 +927,83 @@
           console.log(info);
           
         </code></pre>
-        <script>
-          const cats = ["Bill", "Jeff", "Pete", "Biggles", "Jasmin"];
-          let info = "My cats are called ";
+          <script>
+            const cats = ["Bill", "Jeff", "Pete", "Biggles", "Jasmin"];
+            let info = "My cats are called ";
 
-          for (let i = 0; i < cats.length; i++) {
-            info += cats[i] + ', ';
-          }
-          console.log(info);
-        </script>
-        <p>This gives us the following output:</p>
-        <pre><code>
+            for (let i = 0; i < cats.length; i++) {
+              info += cats[i] + ', ';
+            }
+            console.log(info);
+          </script>
+          <p>This gives us the following output:</p>
+          <pre><code>
           My cats are called Bill, Jeff, Pete, Biggles, Jasmin,
         </code></pre>
-        <div class="note">
-          <p><strong>Note</strong>: You can find this <a
-              href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for.html"
-              target="_blank"> example code on GitHub</a> too (also <a
-              href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for.html" target="_blank">
-              see it running live</a>).</p>
-        </div>
-        <p>This shows a loop is used to iterate over the items in an array and do something with each of them - a very
-          common pattern in JavaScript. Here:</p>
-        <ol>
-          <li>The counter variable (sometimes known as an initializer or an iteration variable), <code>i</code>, starts
-            at <code>0</code>(<code>let i = 0</code>).</li>
-          <li>The loop as been told to run until <code>i</code> is no longer smaller than the length of the
-            <code>cats</code> array. This is important - the exit condition shows the condition under which the loop
-            will still run. So in this case, while <code>i < cats.length</code> is still true, the loop will still run.
-          </li>
-          <li>Inside the loop, we concatenate the current loop item (<code>cats[i]</code>, which is
-            <code>cats[whatever i is at the time]</code>) along with a comma and space onto the end of <code>info</code>
-            variable. So:
-            <ol>
-              <li>During the first run, <code>i = 0</code>, therefore <code>cats[0] + ', '</code> (which is equal to
-                <code>Bill, </code>) will be concatenated onto <code>info</code>.</li>
-              <li>During the second run, <code>i = 0</code>, so <code>cats[1] + ', '</code> (which is equal to
-                <code>Jeff, </code>) will be concatenated onto <code>info</code>.</li>
-              <li>And so on. After each time the loop has run, 1 will be added to <code>i</code> (<code>i++</code>),
-                then the process will start again.</li>
-            </ol>
-          </li>
-          <li>When code <code>i</code> becomes equal to <code>cats.length</code> (in this case, 5), the loop will stop,
-            and the browser will move on the next bit of code below the loop.</li>
-        </ol>
-        <div class="note">
-          <p>
-            <strong>Note</strong>: We have made the exit condition <code>i < cats.length</code>, not
-            <code>i <= cats.length</code>, because computers count from 0, not 1 - we are starting <code>i</code> at
-            <code>0</code>, and going up to <code>i = 4</code> (the index of the last array item).
-            <code>cats.length</code> returns 5, as there are 5 items in the array, but we don't want to get up to
-            <code>i = 5</code>, as that would return <code>undefined</code> for the last item (there is no array item
-            with an index of 5). So, therefore, we want to go up to 1 less than <code>cats.length</code>
-            (<code>i <</code>), not the same as <code>cats.length</code> (<code>i <=</code>).
-          </p>
-        </div>
-        <div class="note">
-          <p>
-            <strong>Note</strong>: A common mistake with exit conditions is making them use "equal to"
-            (<code>===</code>) rather than say "less than or equal to" (<code><=</code>). If we wanted to run our loop
-            up to <code>i = 5</code>, the exit condition would need to be <code>i <= cats.length</code>. If we set it to
-            <code>i === cats.length</code>, the loop would not run at all because <code>i</code> is not equal to
-            <code>5</code> on the first loop iteration, so it would stop immediately.
-          </p>
-        </div>
-        <p>One small problem, we are left with is that the final output sentence isn't very well-formed:</p>
-        <hr>
-        <h5>My cats are called Bill, Jeff, Pete, Biggles, Jasmin,</h5>
-        <hr>
-        <p>We want to change the concatenation on the final loop so that we do not have a comma on the end of the
-          sentence. We can insert a conditional inside our for loop to handle this special case:</p>
-        <pre><code>
+          <div class="note">
+            <p><strong>Note</strong>: You can find this <a
+                href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for.html"
+                target="_blank"> example code on GitHub</a> too (also <a
+                href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for.html"
+                target="_blank">
+                see it running live</a>).</p>
+          </div>
+          <p>This shows a loop is used to iterate over the items in an array and do something with each of them - a very
+            common pattern in JavaScript. Here:</p>
+          <ol>
+            <li>The counter variable (sometimes known as an initializer or an iteration variable), <code>i</code>,
+              starts
+              at <code>0</code>(<code>let i = 0</code>).</li>
+            <li>The loop as been told to run until <code>i</code> is no longer smaller than the length of the
+              <code>cats</code> array. This is important - the exit condition shows the condition under which the loop
+              will still run. So in this case, while <code>i < cats.length</code> is still true, the loop will still
+              run.
+            </li>
+            <li>Inside the loop, we concatenate the current loop item (<code>cats[i]</code>, which is
+              <code>cats[whatever i is at the time]</code>) along with a comma and space onto the end of
+              <code>info</code>
+              variable. So:
+              <ol>
+                <li>During the first run, <code>i = 0</code>, therefore <code>cats[0] + ', '</code> (which is equal to
+                  <code>Bill, </code>) will be concatenated onto <code>info</code>.</li>
+                <li>During the second run, <code>i = 0</code>, so <code>cats[1] + ', '</code> (which is equal to
+                  <code>Jeff, </code>) will be concatenated onto <code>info</code>.</li>
+                <li>And so on. After each time the loop has run, 1 will be added to <code>i</code> (<code>i++</code>),
+                  then the process will start again.</li>
+              </ol>
+            </li>
+            <li>When code <code>i</code> becomes equal to <code>cats.length</code> (in this case, 5), the loop will
+              stop,
+              and the browser will move on the next bit of code below the loop.</li>
+          </ol>
+          <div class="note">
+            <p>
+              <strong>Note</strong>: We have made the exit condition <code>i < cats.length</code>, not
+              <code>i <= cats.length</code>, because computers count from 0, not 1 - we are starting <code>i</code> at
+              <code>0</code>, and going up to <code>i = 4</code> (the index of the last array item).
+              <code>cats.length</code> returns 5, as there are 5 items in the array, but we don't want to get up to
+              <code>i = 5</code>, as that would return <code>undefined</code> for the last item (there is no array item
+              with an index of 5). So, therefore, we want to go up to 1 less than <code>cats.length</code>
+              (<code>i <</code>), not the same as <code>cats.length</code> (<code>i <=</code>).
+            </p>
+          </div>
+          <div class="note">
+            <p>
+              <strong>Note</strong>: A common mistake with exit conditions is making them use "equal to"
+              (<code>===</code>) rather than say "less than or equal to" (<code><=</code>). If we wanted to run our loop
+              up to <code>i = 5</code>, the exit condition would need to be <code>i <= cats.length</code>. If we set it
+              to
+              <code>i === cats.length</code>, the loop would not run at all because <code>i</code> is not equal to
+              <code>5</code> on the first loop iteration, so it would stop immediately.
+            </p>
+          </div>
+          <p>One small problem, we are left with is that the final output sentence isn't very well-formed:</p>
+          <hr>
+          <h5>My cats are called Bill, Jeff, Pete, Biggles, Jasmin,</h5>
+          <hr>
+          <p>We want to change the concatenation on the final loop so that we do not have a comma on the end of the
+            sentence. We can insert a conditional inside our for loop to handle this special case:</p>
+          <pre><code>
           const cats1 = ["Bill", "Jeff", "Pete", "Biggles", "Jasmin"];
           let info1 = "My cats are called ";
           
@@ -1000,46 +1016,48 @@
           }
           console.log(info1);
         </code></pre>
-        <script>
-          const cats1 = ["Bill", "Jeff", "Pete", "Biggles", "Jasmin"];
-          let info1 = "My cats are called ";
+          <script>
+            const cats1 = ["Bill", "Jeff", "Pete", "Biggles", "Jasmin"];
+            let info1 = "My cats are called ";
 
-          for (let i = 0; i < cats1.length; i++) {
-            if (i === cats1.length - 1) {
-              info1 += 'and ' + cats1[i] + '.';
-            } else {
-              info1 += cats1[i] + ', ';
+            for (let i = 0; i < cats1.length; i++) {
+              if (i === cats1.length - 1) {
+                info1 += 'and ' + cats1[i] + '.';
+              } else {
+                info1 += cats1[i] + ', ';
+              }
             }
-          }
-          console.log(info1);
-        </script>
-        <div class="note">
-          <p><strong>Note</strong>: You can find this <a
-              href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for-improved.html"
-              target="_blank">example code on GitHub</a> too (also see <a
-              href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for-improved.html">see it
-              running live</a>).</p>
-        </div>
-        <div class="noteRed">
-          <p><strong>Important</strong>: With for - as with all loops - you must make sure that the initializer is
-            incremented or, depending on the case, decremented, so that it eventually reaches the exit condition. If
-            not, the loop will go on forever, and either the browser will force it to stop, or it will crash. This is
-            called an <strong>infinite loop</strong>.</p>
-        </div>
-        <h4>Exiting loops with break</h4>
-        <p>If you want to exit a loop before the iterations have been completed, you can use the <a
-            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/break"
-            target="_blank">break</a> statement. Please review <a
-            href="https://www.digitalocean.com/community/tutorials/how-to-use-the-switch-statement-in-javascript"
-            target="_blank">switch statements</a>- the <code>break</code> statement immediately exists the switch
-          statement and moves onto the code after it.</p>
-        <p>It's the same with loops - a <code>break</code> statement will immediately exit the loop and make the
-          browser move on to any code that follows it.</p>
-        <p>Say we wanted to search through an array of contacts and telephone numbers and return just the number we
-          wanted to find? First, some simple HTML - a text <code>&lt;input&gt;</code> allowing us to enter a nme to
-          search for, a <code>&lt;button&gt;</code> element to submit a search, and a <code>&lt;p&gt;</code> element to
-          display the results in:</p>
-        <pre>
+            console.log(info1);
+          </script>
+          <div class="note">
+            <p><strong>Note</strong>: You can find this <a
+                href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for-improved.html"
+                target="_blank">example code on GitHub</a> too (also see <a
+                href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for-improved.html">see
+                it
+                running live</a>).</p>
+          </div>
+          <div class="noteRed">
+            <p><strong>Important</strong>: With for - as with all loops - you must make sure that the initializer is
+              incremented or, depending on the case, decremented, so that it eventually reaches the exit condition. If
+              not, the loop will go on forever, and either the browser will force it to stop, or it will crash. This is
+              called an <strong>infinite loop</strong>.</p>
+          </div>
+          <h4>Exiting loops with break</h4>
+          <p>If you want to exit a loop before the iterations have been completed, you can use the <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/break"
+              target="_blank">break</a> statement. Please review <a
+              href="https://www.digitalocean.com/community/tutorials/how-to-use-the-switch-statement-in-javascript"
+              target="_blank">switch statements</a>- the <code>break</code> statement immediately exists the switch
+            statement and moves onto the code after it.</p>
+          <p>It's the same with loops - a <code>break</code> statement will immediately exit the loop and make the
+            browser move on to any code that follows it.</p>
+          <p>Say we wanted to search through an array of contacts and telephone numbers and return just the number we
+            wanted to find? First, some simple HTML - a text <code>&lt;input&gt;</code> allowing us to enter a nme to
+            search for, a <code>&lt;button&gt;</code> element to submit a search, and a <code>&lt;p&gt;</code> element
+            to
+            display the results in:</p>
+          <pre>
           <code>
             &lt;label for="search"&gt;Search by contact name: &lt;/label&gt;
             &lt;input id="search" type="text"&gt;
@@ -1048,8 +1066,8 @@
             &lt;p&gt;&lt;/p&gt;
           </code>
         </pre>
-        <p>Now on to the JavaScript:</p>
-        <pre>
+          <p>Now on to the JavaScript:</p>
+          <pre>
           <code>
             const contacts = ['Chris:2232322', 'Sarah:3453456', 'Bill:7654322', 'Mary:9998769', 'Dianne:9384975'];
             const para = document.querySelector('p');
@@ -1073,73 +1091,77 @@
           </code>
         </pre>
 
-        <label for="search">Search by contact name: </label>
-        <input id="search" type="text">
-        <button>Search</button>
+          <label for="search">Search by contact name: </label>
+          <input id="search" type="text">
+          <button>Search</button>
 
-        <p class="phone"></p>
-        <script>
-          const contacts = ['Chris:2232322', 'Sarah:3453456', 'Bill:7654322', 'Mary:9998769', 'Dianne:9384975'];
-          const para = document.querySelector('.phone');
-          const input = document.querySelector('input');
-          const btn = document.querySelector('button');
+          <p class="phone"></p>
+          <script>
+            const contacts = ['Chris:2232322', 'Sarah:3453456', 'Bill:7654322', 'Mary:9998769', 'Dianne:9384975'];
+            const para = document.querySelector('.phone');
+            const input = document.querySelector('input');
+            const btn = document.querySelector('button');
 
-          btn.addEventListener('click', function () {
-            let searchName = input.value.toLowerCase();
-            input.value = '';
-            input.focus();
-            for (let i = 0; i < contacts.length; i++) {
-              let splitContact = contacts[i].split(':');
-              if (splitContact[0].toLowerCase() === searchName) {
-                para.textContent = splitContact[0] + '\'s number is ' + splitContact[1] + '.';
-                break;
-              } else {
-                para.textContent = 'Contact not found.';
+            btn.addEventListener('click', function () {
+              let searchName = input.value.toLowerCase();
+              input.value = '';
+              input.focus();
+              for (let i = 0; i < contacts.length; i++) {
+                let splitContact = contacts[i].split(':');
+                if (splitContact[0].toLowerCase() === searchName) {
+                  para.textContent = splitContact[0] + '\'s number is ' + splitContact[1] + '.';
+                  break;
+                } else {
+                  para.textContent = 'Contact not found.';
+                }
               }
-            }
-          });
-        </script>
-        <ol>
-          <li>First of all we have some variable definitions - we have an array of contact information, with each item
-            being a string containing a name and phone number separated bya colon.</li>
-          <li>Next, we attach an event listener to the button (<code>btn</code>), so that when it is pressed, some code
-            is run to perform the each and return the results.</li>
-          <li>We store the value entered into the text input int he variable called <code>searchName</code>, before then
-            emptying the text input and focusing it again, ready for the next search. Note that we also run the
-            <code>toLowerCase()</code> method on the string, so that searches will base-sensitive.</li>
-          <li>Now onto the interesting part, the for loop:
-            <ol>
-              <li>We start the counter at <code>0</code>, run the loop until the counter is no longer less than
-                <code>contacts.length</code>, and increment <code>i</code> by 1 after each iteration of the loop.</li>
-              <li>Inside the loop, we first split the current contact (<code>contacts[i]</code>) at the colon character,
-                and store teh resulting two values in an array called <code>splitContact</code>.</li>
-              <li>We then use the conditional statement to test whether <code>splitContact[0]</code> (the contact's
-                name, again lower-cased with <code>toLowerCase()</code>) is equal to the inputted
-                <code>searchName</code>. If it is, we enter a string into the paragraph to report what the contact's
-                number is and use <code>break</code> to end the loop.</li>
-            </ol>
-          </li>
-          <li>After <code>(contacts.length-1)</code>iterations, if the contact name does not match the entered search,
-            the paragraph text is set to "Contact not found.", and the loop continues iterating.</li>
-        </ol>
-        <div class="note">
-          <p>Note: You can view the <a
-              href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/contact-search.html"
-              target="_blank">full source on GitHub</a> too (also <a
-              href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html"
-              target="_blank">see it running live</a>).</p>
-        </div>
+            });
+          </script>
+          <ol>
+            <li>First of all we have some variable definitions - we have an array of contact information, with each item
+              being a string containing a name and phone number separated bya colon.</li>
+            <li>Next, we attach an event listener to the button (<code>btn</code>), so that when it is pressed, some
+              code
+              is run to perform the each and return the results.</li>
+            <li>We store the value entered into the text input int he variable called <code>searchName</code>, before
+              then
+              emptying the text input and focusing it again, ready for the next search. Note that we also run the
+              <code>toLowerCase()</code> method on the string, so that searches will base-sensitive.</li>
+            <li>Now onto the interesting part, the for loop:
+              <ol>
+                <li>We start the counter at <code>0</code>, run the loop until the counter is no longer less than
+                  <code>contacts.length</code>, and increment <code>i</code> by 1 after each iteration of the loop.</li>
+                <li>Inside the loop, we first split the current contact (<code>contacts[i]</code>) at the colon
+                  character,
+                  and store teh resulting two values in an array called <code>splitContact</code>.</li>
+                <li>We then use the conditional statement to test whether <code>splitContact[0]</code> (the contact's
+                  name, again lower-cased with <code>toLowerCase()</code>) is equal to the inputted
+                  <code>searchName</code>. If it is, we enter a string into the paragraph to report what the contact's
+                  number is and use <code>break</code> to end the loop.</li>
+              </ol>
+            </li>
+            <li>After <code>(contacts.length-1)</code>iterations, if the contact name does not match the entered search,
+              the paragraph text is set to "Contact not found.", and the loop continues iterating.</li>
+          </ol>
+          <div class="note">
+            <p>Note: You can view the <a
+                href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/contact-search.html"
+                target="_blank">full source on GitHub</a> too (also <a
+                href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html"
+                target="_blank">see it running live</a>).</p>
+          </div>
 
-        <hr>
-        <h4>Skipping iterations with continue</h4>
-        <p>The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/continue"
-            target="_blank">continue</a> statement works in a similar manner to <code>break</code>, but instead of
-          breaking out of the loop entirely, it skips to the next iteration of the loop. Let's look at another example
-          that takes a number as an input, and returns only the numbers that are squares of integers (whole numbers).
-        </p>
-        <p>The HTML is basically the same as the last example - a simple text input, and a paragraph for the output. The
-          JavaScript is mostly the same too, although the loop itself is a bit different.:</p>
-        <pre>
+          <hr>
+          <h4>Skipping iterations with continue</h4>
+          <p>The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/continue"
+              target="_blank">continue</a> statement works in a similar manner to <code>break</code>, but instead of
+            breaking out of the loop entirely, it skips to the next iteration of the loop. Let's look at another example
+            that takes a number as an input, and returns only the numbers that are squares of integers (whole numbers).
+          </p>
+          <p>The HTML is basically the same as the last example - a simple text input, and a paragraph for the output.
+            The
+            JavaScript is mostly the same too, although the loop itself is a bit different.:</p>
+          <pre>
           <code>
             let num = input.value;
 
@@ -1153,62 +1175,63 @@
           </code>
         </pre>
 
-        <label for="number">Enter number:</label>
-        <input id="number" type="text">
-        <button id="btnA">Generate Integer Squares</button>
+          <label for="number">Enter number:</label>
+          <input id="number" type="text">
+          <button id="btnA">Generate Integer Squares</button>
 
-        <p id="pp">Output: </p>
+          <p id="pp">Output: </p>
 
-        <script>
-          const para1 = document.querySelector('#pp');
-          const input1 = document.querySelector('#number');
-          const btn1 = document.querySelector('#btnA');
+          <script>
+            const para1 = document.querySelector('#pp');
+            const input1 = document.querySelector('#number');
+            const btn1 = document.querySelector('#btnA');
 
-          btn1.addEventListener('click', function () {
-            para1.textContent = 'Output: ';
-            let num = input1.value;
-            input1.value = '';
-            input1.focus();
-            for (let i = 1; i <= num; i++) {
-              let sqRoot = Math.sqrt(i);
-              if (Math.floor(sqRoot) !== sqRoot) {
-                continue;
+            btn1.addEventListener('click', function () {
+              para1.textContent = 'Output: ';
+              let num = input1.value;
+              input1.value = '';
+              input1.focus();
+              for (let i = 1; i <= num; i++) {
+                let sqRoot = Math.sqrt(i);
+                if (Math.floor(sqRoot) !== sqRoot) {
+                  continue;
+                }
+
+                para1.textContent += i + ' ';
               }
-
-              para1.textContent += i + ' ';
-            }
-          });  
-        </script>
-        <ol>
-          <li>In this case, the input should be a number (<code>num</code>). The <code>for</code> loop is given a
-            counter starting at 1 (as we are not interested in 0 in this case), an exit condition that arrays the loop
-            will stop when the counter becomes bigger than the input <code>num</code>, and an iterator that adds 1 to
-            the counter each time.</li>
-          <li>Inside the loop, we find the square root of each number using <a
-              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt"
-              target="_blank">Math.sqrt(i)</a>, then check whether the square root is an integer by testing whether it
-            is
-            the same as itself when it has been rounded to the nearest integer (this is what <a
-              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor"
-              target="_blank">Math.floor()</a> does to the number it is passed).</li>
-          <li>If the square root and the rounded down square root do not equal one another (<code>!==</code>), it means
-            that the square root is not an integer, so we are not interested in it. In such case, we use the
-            <code>continue</code> statement to skip on the next loop iteration without recording the number anywhere.
-          </li>
-        </ol>
-        <div class="note">
-          <p><strong>Note</strong>: You can view the full <a
-              href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/integer-squares.html"
-              target="_blank">full source code on GitHub</a> too (also see <a
-              href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html"
-              target="_blank">it running live</a>).</p>
-        </div>
-        <hr>
-        <h4>while and do ... while</h4>
-        <p><code>for</code> is not the ony type of loop available in JavaScript.</p>
-        <p>First, the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while"
-            target="_blank">while</a> loop:</p>
-        <pre><code>
+            });  
+          </script>
+          <ol>
+            <li>In this case, the input should be a number (<code>num</code>). The <code>for</code> loop is given a
+              counter starting at 1 (as we are not interested in 0 in this case), an exit condition that arrays the loop
+              will stop when the counter becomes bigger than the input <code>num</code>, and an iterator that adds 1 to
+              the counter each time.</li>
+            <li>Inside the loop, we find the square root of each number using <a
+                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt"
+                target="_blank">Math.sqrt(i)</a>, then check whether the square root is an integer by testing whether it
+              is
+              the same as itself when it has been rounded to the nearest integer (this is what <a
+                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor"
+                target="_blank">Math.floor()</a> does to the number it is passed).</li>
+            <li>If the square root and the rounded down square root do not equal one another (<code>!==</code>), it
+              means
+              that the square root is not an integer, so we are not interested in it. In such case, we use the
+              <code>continue</code> statement to skip on the next loop iteration without recording the number anywhere.
+            </li>
+          </ol>
+          <div class="note">
+            <p><strong>Note</strong>: You can view the full <a
+                href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/integer-squares.html"
+                target="_blank">full source code on GitHub</a> too (also see <a
+                href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html"
+                target="_blank">it running live</a>).</p>
+          </div>
+          <hr>
+          <h4>while and do ... while</h4>
+          <p><code>for</code> is not the ony type of loop available in JavaScript.</p>
+          <p>First, the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while"
+              target="_blank">while</a> loop:</p>
+          <pre><code>
           initializer
           while (exit-condition) {
             // code to running
@@ -1216,19 +1239,21 @@
             final-expression
           }
         </code></pre>
-        <p>This works similar to a for loop, except the initializer variable is set before the loop, and the final
-          expression is included inside the loop to run - rather than these two being inside the parentheses. The
-          exit-condition is included inside the parentheses, which are preceded by the <code>while</code> keyword
-          rather than <code>for</code>.</p>
-        <p>The same three items are still present, and they are still defined in the ame order as they are in the loop -
-          this makes sense, as you still have to have an initializer defined before you can check whether it has reached
-          the exit-condition; the final-condition is then run after the code inside the loop has run (an iteration has
-          ben completed), which will only happen if the exit-condition has still not been reached.</p>
+          <p>This works similar to a for loop, except the initializer variable is set before the loop, and the final
+            expression is included inside the loop to run - rather than these two being inside the parentheses. The
+            exit-condition is included inside the parentheses, which are preceded by the <code>while</code> keyword
+            rather than <code>for</code>.</p>
+          <p>The same three items are still present, and they are still defined in the ame order as they are in the loop
+            -
+            this makes sense, as you still have to have an initializer defined before you can check whether it has
+            reached
+            the exit-condition; the final-condition is then run after the code inside the loop has run (an iteration has
+            ben completed), which will only happen if the exit-condition has still not been reached.</p>
 
 
-        <p>The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/do...while"
-            target="_blank">do...while</a> loop is very similar, but provides a variation on the while structure:</p>
-        <pre><code>
+          <p>The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/do...while"
+              target="_blank">do...while</a> loop is very similar, but provides a variation on the while structure:</p>
+          <pre><code>
           initializer
           do {
             // code to run
@@ -1236,13 +1261,13 @@
             final-expression
           } while (exit-condition)
         </code></pre>
-        <p>In this case, the initializer again comes first, before the loo starts. The keyword directly precedes the
-          curly braces containing the code to run and the final expression.</p>
-        <p>The differentiator here is that the exit-condition comes after everything else, wrapped in the parentheses
-          and preceded by a <code>while</code> keyword. In a <code>do...while</code> loop, hte coe inside the curly
-          braces is always run before the check is made to see if it should be executed again (in while and for, the
-          check comes first, so the code might never be executed).</p>
-        <pre><code>
+          <p>In this case, the initializer again comes first, before the loo starts. The keyword directly precedes the
+            curly braces containing the code to run and the final expression.</p>
+          <p>The differentiator here is that the exit-condition comes after everything else, wrapped in the parentheses
+            and preceded by a <code>while</code> keyword. In a <code>do...while</code> loop, hte coe inside the curly
+            braces is always run before the check is made to see if it should be executed again (in while and for, the
+            check comes first, so the code might never be executed).</p>
+          <pre><code>
           let i = 0;
 
           do {
@@ -1252,183 +1277,186 @@
           }
         </code></pre>
 
-        <script>
-          const cats3 = ['Moana', 'Ariel', 'Snow', 'Cinderella'];
-          var info3 = 'My kittens are ';
-          let b = 0;
-          do {
-            if (b === cats3.length - 1) {
-              info3 += 'and ' + cats3[b] + '.';
-            } else {
-              info3 += cats3[b] + ', ';
-            }
-            b++;
+          <script>
+            const cats3 = ['Moana', 'Ariel', 'Snow', 'Cinderella'];
+            var info3 = 'My kittens are ';
+            let b = 0;
+            do {
+              if (b === cats3.length - 1) {
+                info3 += 'and ' + cats3[b] + '.';
+              } else {
+                info3 += cats3[b] + ', ';
+              }
+              b++;
 
-          } while (b < cats3.length);
-          console.log(info3);
+            } while (b < cats3.length);
+            console.log(info3);
 
-        </script>
-        <div class="note">
-          <p><strong>Note:</strong>Again, this works just the same as expected - have a look at it <a
-              href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html"
-              target="_blank">running live on GitHUb</a> (also view the <a
-              href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/do-while.html">full
-              source code</a>).</p>
-        </div>
-        <div class="noteRed">
-          <p><strong>Important:</strong> With while and do..while - as with all loops - you must make sure that the
-            initializer is incremented or depending on the case, decremented so that it eventually reaches the exit
-            condition. If not, the loop will go on forever, and either the browser will force it to stop, or it will
-            crash. This is called an <strong>infinite loop</strong>.</p>
-        </div>
-        <hr>
-        <hr>
-        <h4>2. Loops</h4>
-        <a href="https://javascript.info/while-fors" target="_blank">
-          <h5>Javascript.info, Loops: while and for</h5>
-        </a>
-        <h5>The "while" loop</h5>
-        <p>The <code>while</code> loop has the following syntax:</p>
-        <pre><code>
+          </script>
+          <div class="note">
+            <p><strong>Note:</strong>Again, this works just the same as expected - have a look at it <a
+                href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html"
+                target="_blank">running live on GitHUb</a> (also view the <a
+                href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/do-while.html">full
+                source code</a>).</p>
+          </div>
+          <div class="noteRed">
+            <p><strong>Important:</strong> With while and do..while - as with all loops - you must make sure that the
+              initializer is incremented or depending on the case, decremented so that it eventually reaches the exit
+              condition. If not, the loop will go on forever, and either the browser will force it to stop, or it will
+              crash. This is called an <strong>infinite loop</strong>.</p>
+          </div>
+          <hr>
+          <h4>2. Loops</h4>
+          <a href="https://javascript.info/while-fors" target="_blank">
+            <h5>Javascript.info, Loops: while and for</h5>
+          </a>
+          <hr>
+          <h5>The "while" loop</h5>
+          <p>The <code>while</code> loop has the following syntax:</p>
+          <pre><code>
           while (condition) {
             // code
             // so-called "loop body"
           }
         </code></pre>
-        <p>While the <code>condition</code> is truthy, the <code>code</code> from the loop body is executed.</p>
-        <p>For, instance, the loo pbelow outputs <code>i</code> while <code>i < 3</code></3>
-          <pre><code>
+          <p>While the <code>condition</code> is truthy, the <code>code</code> from the loop body is executed.</p>
+          <p>For, instance, the loo pbelow outputs <code>i</code> while <code>i < 3</code></3>
+            <pre><code>
             let i = 0;
             while(i < 3) {// shows 0, then 1, then 2
               alert(i);
               i++;
             }
           </code></pre>
-          <script>
-            let i = 0;
-            while (i < 3) {
-              console.log("I can count up to " + i);
-              i++;
-            }
-          </script>
-          <p>A single execution of the loop body is called an iteration</p>
-          <p>If <code>i++</code> was missing from the example above, the loop would repet (in theory) forever.</p>
-          <p>Any expression or vairable can be a loop condition, not just comparisons: the condition is evaluated and
-            coverted to a blooean by <code>while</code>.</p>
-          <p>For instance, a shorter way to write <code>while (i !=0)</code> is <code>while (i)</code>:</p>
-          <pre><code>
+            <script>
+              let i = 0;
+              while (i < 3) {
+                console.log("I can count up to " + i);
+                i++;
+              }
+            </script>
+            <p>A single execution of the loop body is called an iteration</p>
+            <p>If <code>i++</code> was missing from the example above, the loop would repet (in theory) forever.</p>
+            <p>Any expression or vairable can be a loop condition, not just comparisons: the condition is evaluated and
+              coverted to a blooean by <code>while</code>.</p>
+            <p>For instance, a shorter way to write <code>while (i !=0)</code> is <code>while (i)</code>:</p>
+            <pre><code>
             let i = 3;
             while(i);{
               alert(i);
               i--;
             }
           </code></pre>
-          <script>
-            let n = 3;
-            while (n) {
-              console.log("I can count down to " + n);
-              n--;
-            }
-          </script>
-          <div class="card">
-            <p><strong>Curly braces are not required for a single-line body</strong></p>
-            <p>If the loop body has a single statement, we can omit the curly braces <code>{...}</code>:</p>
-            <pre><code>
+            <script>
+              let n = 3;
+              while (n) {
+                console.log("I can count down to " + n);
+                n--;
+              }
+            </script>
+            <div class="card">
+              <p><strong>Curly braces are not required for a single-line body</strong></p>
+              <p>If the loop body has a single statement, we can omit the curly braces <code>{...}</code>:</p>
+              <pre><code>
               let i = 3;
               while(i) alert(i--);
             </code></pre>
-          </div>
-          <script>
-            let a1 = 6;
-            while (a1) console.log("Single line statement countdown without curly braces " + a1--);
-          </script>
-          <hr>
-          <h5>The "do..while" loop</h5>
-          <p>The condition check can be moved <em>below</em> the loop body using the <code>do..while</code> syntax:</p>
-          <pre><code>
+            </div>
+            <script>
+              let a1 = 6;
+              while (a1) console.log("Single line statement countdown without curly braces " + a1--);
+            </script>
+            <hr>
+            <h5>The "do..while" loop</h5>
+            <p>The condition check can be moved <em>below</em> the loop body using the <code>do..while</code> syntax:
+            </p>
+            <pre><code>
             do {
               // loop body
             } while (condition);
           </code></pre>
-          <p>The loop will first execute the body, then check the condition, and, while it's truthy, execute it again
-            and again.</p>
-          <p>For example:</p>
-          <pre><code>
+            <p>The loop will first execute the body, then check the condition, and, while it's truthy, execute it again
+              and again.</p>
+            <p>For example:</p>
+            <pre><code>
             let i = 0;
             do {
               alert(i);
               i++
             } while (i < 3);
           </code></pre>
-          <p></p>
-          <p>This form of syntax should only be one if you want to loop to execute <strong>at least once</strong>
-            regardless of the condition being truthy. Usually, the ther fomr is preferred:
-            <code>while(...) {...}</code>.</p>
-          <hr>
-          <h5>The "for" loop</h5>
-          <p>The <code>for</code> loop is more complex, but it's also the most commonly used loop.</p>
-          <p>It looks like this:</p>
-          <pre><code>
+            <p></p>
+            <p>This form of syntax should only be one if you want to loop to execute <strong>at least once</strong>
+              regardless of the condition being truthy. Usually, the ther fomr is preferred:
+              <code>while(...) {...}</code>.</p>
+            <hr>
+            <h5>The "for" loop</h5>
+            <p>The <code>for</code> loop is more complex, but it's also the most commonly used loop.</p>
+            <p>It looks like this:</p>
+            <pre><code>
             for (begin; condition; step) {
               // ... loop body...
             }            
           </code></pre>
-          <p>Let's learn the meaning of these parts by example. The loop below runs <code>alert(i)</code> fr
-            <code>(i)</code> from <code>(0)</code> up to (but noincluding) <code>3</code>.</p>
-          <pre><code>
+            <p>Let's learn the meaning of these parts by example. The loop below runs <code>alert(i)</code> fr
+              <code>(i)</code> from <code>(0)</code> up to (but noincluding) <code>3</code>.</p>
+            <pre><code>
             for (let i = 0; i < 3; i++) {
               alert(i);
             }
           </code></pre>
-          <script>
-            for (let i2 = 0; i2 < 3; i2++)
-              console.log("My favorite number is " + i2) 
-          </script>
-          <p>Let's examine the <code>for</code> statement part-by-part.</p>
-          <table>
-            <thead>
-              <tr>part</tr>
-              <th></th>
-              <th></th>
-            </thead>
-            <tbody>
-              <tr>
-                <td>begin</td>
-                <td><code>i = 0</code></td>
-                <td>Executes once upo entering the loop.</td>
-              </tr>
-              <tr>
-                <td>condition</td>
-                <td><code>i < 3</code></td>
-                <td>Checked before every loop iteratin. If false, the loop stops.</td>
-              </tr>
-              <tr>
-                <td>body</td>
-                <td><code>alert(i)</code></td>
-                <td>Runs again and again while the condition is truthy.</td>
-              </tr>
-              <tr>
-                <td>step</td>
-                <td><code>i++</code></td>
-                <td>Executes after the body on each iteration.</td>
-              </tr>
-            </tbody>
-          </table>
-          <br>
-          <p>The general loop algorithm works like this:</p>
-          <pre><code>
+            <script>
+              for (let i2 = 0; i2 < 3; i2++)
+                console.log("My favorite number is " + i2) 
+            </script>
+            <p>Let's examine the <code>for</code> statement part-by-part.</p>
+            <table>
+              <thead>
+                <tr>part</tr>
+                <th></th>
+                <th></th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>begin</td>
+                  <td><code>i = 0</code></td>
+                  <td>Executes once upo entering the loop.</td>
+                </tr>
+                <tr>
+                  <td>condition</td>
+                  <td><code>i < 3</code></td>
+                  <td>Checked before every loop iteratin. If false, the loop stops.</td>
+                </tr>
+                <tr>
+                  <td>body</td>
+                  <td><code>alert(i)</code></td>
+                  <td>Runs again and again while the condition is truthy.</td>
+                </tr>
+                <tr>
+                  <td>step</td>
+                  <td><code>i++</code></td>
+                  <td>Executes after the body on each iteration.</td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+            <p>The general loop algorithm works like this:</p>
+            <pre><code>
             Run begin
             ->(if condition -> run body and run step)
             ->(if condition -> run body and run step)
             ->(if condition -> run body and run step)
             ->...
           </code></pre>
-          <p>That is, <code>begin</code> and then it iterates: after each <code>condition</code> test, <code>body</code>
-            and <code>step</code> are executed.</p>
-          <p>If you are new to loops, it could help to go back to the example and reproduce how it runs step-by-step on
-            a pice of paper.</p>
-          <p>Here's excactly what happens in our case:</p>
-          <pre><code>
+            <p>That is, <code>begin</code> and then it iterates: after each <code>condition</code> test,
+              <code>body</code>
+              and <code>step</code> are executed.</p>
+            <p>If you are new to loops, it could help to go back to the example and reproduce how it runs step-by-step
+              on
+              a pice of paper.</p>
+            <p>Here's excactly what happens in our case:</p>
+            <pre><code>
             // for(let i = 0; i < 3; i++) alert(i)
 
             // run begin
@@ -1442,95 +1470,96 @@
             // ...finish, because now i == 3
           </code></pre>
 
-          <div class="card">
-            <p><strong>Inline variable declaration</strong></p>
+            <div class="card">
+              <p><strong>Inline variable declaration</strong></p>
 
-            <p>Here, the "counter" variable <code>i</code> is declared right in the loop. This is called ann "inline"
-              variable declaration. Such variables are visible only inside the loop.</p>
+              <p>Here, the "counter" variable <code>i</code> is declared right in the loop. This is called ann "inline"
+                variable declaration. Such variables are visible only inside the loop.</p>
 
-            <pre><code>              
+              <pre><code>              
             for(i = 0; i < 3; i++) { // use an existing variable
               alert(i); // 0, 1, 2
             }
             alert(i); // error, no such variable
           </code></pre>
 
-            <script>
-              for (let c = 0; c < 3; c++) {
-                console.log("variable defined inside for loop " + c);
-              }
+              <script>
+                for (let c = 0; c < 3; c++) {
+                  console.log("variable defined inside for loop " + c);
+                }
               // console.log("variable defined inside for loop" + c);
-            </script>
+              </script>
 
-            <p>Instead of defining a variable, we could use an existing one;</p>
-            <pre><code>
+              <p>Instead of defining a variable, we could use an existing one;</p>
+              <pre><code>
               let i = 0;
               for (i = 0; i < 3; i++) { use an existing variale
                 alert(i); // 0, 1, 2
               }
               alert(i); // 3, visible, because declared outisde of the loop
             </code></pre>
-            <script>
-              let c1 = 0;
-              for (c1 = 0; c1 < 3; c1++) {
-                //console.log("I am " + c1 + " day(s) away from Hawaii.")
-              }
-              console.log("I am " + c1 + " day(s) away from Hawaii.")
-            </script>
-          </div>
-          <hr>
-          <h5>Skipping parts</h5>
-          <p>Any part of <code>for</code> can be skipped.</p>
-          <p>For example, we can omit <code>begin</code> if we don't need to do anythong at the loop start.</p>
+              <script>
+                let c1 = 0;
+                for (c1 = 0; c1 < 3; c1++) {
+                  //console.log("I am " + c1 + " day(s) away from Hawaii.")
+                }
+                console.log("I am " + c1 + " day(s) away from Hawaii.")
+              </script>
+            </div>
+            <hr>
+            <h5>Skipping parts</h5>
+            <p>Any part of <code>for</code> can be skipped.</p>
+            <p>For example, we can omit <code>begin</code> if we don't need to do anythong at the loop start.</p>
 
-          <pre><code>
+            <pre><code>
             let i = 0; // we have i arealdy declared and assigned
             for(; i < 3; i++) { // no need for "beging"
               alert(i); // 0, 1, 2
             }
           </code></pre>
 
-          <script>
-            let i3 = 0;
-            for (; i3 < 3; i3++) {
-              console.log("I am a loop without initializing " + i3);
-            }
-          </script>
+            <script>
+              let i3 = 0;
+              for (; i3 < 3; i3++) {
+                console.log("I am a loop without initializing " + i3);
+              }
+            </script>
 
-          <p>We can also remove the <code>step</code> part:</p>
+            <p>We can also remove the <code>step</code> part:</p>
 
-          <pre><code>
+            <pre><code>
             let i = 0;
             for(; i < 3;){
               alert(i++);
             }
           </code></pre>
 
-          <script>
-            let i4 = 0;
-            for (; i4 < 3;) {
-              console.log("And now I loop wihtout the step " + i4++);
-            }
-          </script>
-          <p>This makes the loop identical to <code>while(i < 3)</code>.</p>
-          <p>We can remove everthing for an infinite loop.</p>
-          <pre><code>
+            <script>
+              let i4 = 0;
+              for (; i4 < 3;) {
+                console.log("And now I loop wihtout the step " + i4++);
+              }
+            </script>
+            <p>This makes the loop identical to <code>while(i < 3)</code>.</p>
+            <p>We can remove everthing for an infinite loop.</p>
+            <pre><code>
             for(;;) {
               // repeats without limits
             }
           </code></pre>
-          <script>
-            /* Go ahead and give it a try.
-            for(;;) { // need to ;; or i will create a syntax error
-             alert(" You can't close me, I am an infite loop!");
-            }
-            */
-          </script>
-          <h4>Breaking the loop</h4>
-          <p>Normally, a loop exits when its condition becomes falsy.</p>
-          <p>But we can fore the exit at any time using the special <code>break</code> directiv.</p>
-          <p>For example, the oop below asks the user for a siries of numbers, "breaking" when no number is entered:</p>
-          <pre><code>
+            <script>
+              /* Go ahead and give it a try.
+              for(;;) { // need to ;; or i will create a syntax error
+               alert(" You can't close me, I am an infite loop!");
+              }
+              */
+            </script>
+            <h4>Breaking the loop</h4>
+            <p>Normally, a loop exits when its condition becomes falsy.</p>
+            <p>But we can fore the exit at any time using the special <code>break</code> directiv.</p>
+            <p>For example, the oop below asks the user for a siries of numbers, "breaking" when no number is entered:
+            </p>
+            <pre><code>
             let sum = 0
             while(true){
               let value = +prmopt("Enter a number", '');
@@ -1539,44 +1568,160 @@
             }
             alert('Sum: ' + sum);
           </code></pre>
-          <script>
-            /*
-            let sum = 0
-            while (true) {
-              let value = +prompt("Enter a number", '');
-              if (!value) break; // (*)
-              sum += value;
-            }
-            alert('Sum: ' + sum);
-            */
-          </script>
-          <p>The <code>break</code> directive is activated at the line <code>(*)</code> if the user enters an empty line
-            or cancels the input. It stops the loop immediately, passing control tot he first line after the loop.
-            Namely, <code>alert</code>.</p>
-          <p>The combitation "infinite loop + <code>break</code> as needed" is great for situations when a loop's
-            condition must be checked not in the beggining or end of the loop, but in the middle or even in several
-            places of its body.</p>
-          <h4>Continue to the next iteration</h4>
-          <p>The <code>continue</code> directive is a "lighter version of <code>break</code>. It doesn't stop the whole
-            loop. Instead, it stops the current iteration and forces the loop to start a new one (if the condition
-            allows).</p>
-          <p>We can ues it if we're done with the current iteration and woul dlike to move on the the next one.</p>
-          <p>The loop below uses <code>continue</code> to output only odd values:</p>
+            <script>
+              /*
+              let sum = 0
+              while (true) {
+                let value = +prompt("Enter a number", '');
+                if (!value) break; // (*)
+                sum += value;
+              }
+              alert('Sum: ' + sum);
+              */
+            </script>
+            <p>The <code>break</code> directive is activated at the line <code>(*)</code> if the user enters an empty
+              line
+              or cancels the input. It stops the loop immediately, passing control tot he first line after the loop.
+              Namely, <code>alert</code>.</p>
+            <p>The combitation "infinite loop + <code>break</code> as needed" is great for situations when a loop's
+              condition must be checked not in the beggining or end of the loop, but in the middle or even in several
+              places of its body.</p>
+            <div class="card">
+              <h4>Continue to the next iteration</h4>
+              <p>The <code>continue</code> directive is a "lighter version of <code>break</code>. It doesn't stop the
+                whole
+                loop. Instead, it stops the current iteration and forces the loop to start a new one (if the condition
+                allows).</p>
+              <p>We can ues it if we're done with the current iteration and woul dlike to move on the the next one.</p>
+              <p>The loop below uses <code>continue</code> to output only odd values:</p>
 
-          <pre><code>
+              <pre><code>
             for(let i = 0; i < 10; i++){
               // if true, skip the remaning aprt of the body
               if (i % 2 == 0) continue;
               alert(i); // 1, then 3, 5, 7, 9
             }
           </code></pre>
-          <script>
-            for(let d = 0; d < 10; d++) {
-              if (d % 2 == 0) continue;
-              console.log("I am a loop with a continue direcive " + d);
+              <script>
+                for (let d = 0; d < 10; d++) {
+                  if (d % 2 == 0) continue;
+                  console.log("I am a loop with a continue direcive " + d);
+                }
+              </script>
+
+              <p>For even values of <code>i</code> the <code>continue</code> direcrrtive stops executing the body and
+                passes control to the next iteration of <code>for</code> (with the next number). So the
+                <code>alert</code>
+                only called for odd values.</p>
+            </div>
+            <div class="card">
+              <h5><strong>No <code>break/continue</code> to the right side of '?'</strong></h5>
+              <p>Please note that syntax constructs that are not expressions cannot be used with the ternary operator
+                <code>?</code>. In particular, directives such as <code>break/continue</code> aren't allowed there.</p>
+              <pre><code>
+              if (i > 5) {
+                alert(i);
+              }else {
+                continue;
+              }
+            </code></pre>
+
+              <p>... and rewrite it using a question mark:</p>
+              <pre><code>
+              (i > 5) ? alert(i) : continue; // continue isn't allowed here
+            </code></pre>
+              <p>... it stops working: there's a syntax error</p>
+              <p>This is just another reason not to use the question mark operator <code>?</code> instead of
+                <code>if</code>.</p>
+            </div>
+            <hr>
+            <h4>Labels for break/continue</h4>
+            <p>Sometimes we need to break out multiple nested loops at once.</p>
+            <p>For example, in the code below we loop over <code>i</code> and <code>j</code>, prompting for the
+              coordinates <code>(i,j)</code> from <code>(0,0)</code>to <code>(2,2)</code>:</p>
+            <pre><code>
+            for (let i =0; i < 3; i++) {
+              for (j = 0; j < 3; j++) {
+                let input = prompt(`Value at coords (${i},${j})`, '');
+                // what if we want to exit from here to Done (below)?
+              }
             }
-          </script>
-          <p>For even values of <code>i</code> the <code>continue</code> direcrrtive stops executing the body and passes control to the next iteration of <code>for</code> (with the next number). So the <code>alert</code> s only called for odd values.</p>
+            alert('Done');
+          </code></pre>
+            <script>/*
+for (let i5 = 0; i5 < 3; i5++) {
+  for (let j1 = 0; j1 < 3; j1++) {
+    let input = prompt(`Value at coords (${i5},${j1})`, '');
+  }
+}
+alert('Done!'); */
+            </script>
+            <p>We need a way to stop the process if the user cancels in input.</p>
+            <p>The ordinary <code>break</code> after <code>input</code> would only break the inner loop.</p>
+            <p>A <em>label</em> is an identifier with a colon before a loop:</p>
+            <pre><code>
+            labelName: for(...){
+              ...
+            }
+          </code></pre>
+            <p>The <code>break &lt;labelName&gt;</code> statement in the loop below breaks out to the label:</p>
+            <pre><code>
+            outer: for (let i =0; i < 3; i++) {
+              for (let j = 0; j < 3; j++) {
+                let input = prompt('Value at coords (${i},${j})', '');
+                // if an empty string or cancelled, then break out of both loops
+                if (!input) break outer; // (*)
+                //do something with the value
+              }
+            }
+            alert('Done!');
+          </code></pre>
+            <script> /*
+outer: for(let i6=0; i6<3; i6++){
+for(let j2=0; j2<3; j2++){
+  let input2 = prompt('Value at coords (${i6},${j2})', '');
+  if (!input2) break outer;
+}
+}
+alert('Done!'); */
+            </script>
+            <p>In the code above, <code>break outer</code> looks upward for the label named <code>outer</code> and
+              breaks out of that loop.</p>
+            <p>So the control goes straight from <code>(*)</code> to <code>alert('Done!')</code>.</p>
+            <p>We can also move the label onto a separate line:</p>
+            <pre><code>
+            outer:
+            for(let i = 0; i < 3; i++) {...}
+          </code></pre>
+            <p>The <code>continue</code> directive can also be used with a label. In this case, code execution jumps to
+              the next iteration of the labeled loop.</p>
+
+            <div class="card">
+              <h5><strong>Labels do not allow to "jump" anywhere</strong></h5>
+              <p>Labels do not allow us to jump into an arbitrary place in the code</p>
+              <p>For example, it is impossible to do this:</p>
+              <pre><code>
+              break label; // doesn't jump to the label below
+              label: for (...)
+            </code></pre>
+              <p>A call to <code>break/continue</code> is only possible from inside a loop and the label must be
+                somewhere above the directive.</p>
+            </div>
+
+            <h4>Summary</h4>
+            <p>We covered 3 types of loops</p>
+            <ul>
+              <li><code>while</code> - The condition is checked before each iteration.</li>
+              <li><code>do..while</code> - The condition is checked after each iteration.</li>
+              <li><code>for(;;)</code> - The condition is checked before each iteration, additional settings available.
+              </li>
+            </ul>
+            <p>To make an "infinite" loop, usually the <code>while(true)</code> construct is used. Such loop, just like
+              any other, can be stopped with the <code>break</code> directive.</p>
+            <p>If we don't want to do anything in the current iteration and would like to forward to the next one, we
+              can use the <code>continue</code> directive.</p>
+            <p><code>break/continue</code> support labels before the loop. A label is the only way for
+              <code>break/continue</code> to escape a nested loop to go to an outer one.</p>
 
 
 
@@ -1593,17 +1738,20 @@
 
 
 
+
+
+
+        </div>
       </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
