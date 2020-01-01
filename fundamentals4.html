@@ -282,12 +282,12 @@
           <h6>Example</h6>
           <pre>
         <code>
-          var fruits = ["Pepino", "Limon", "Lima", "Kabumsha"];
+          var fruits = ["Pepino", "Limon", "Lima", "Kombucha"];
           fruits.push("Papaya");
         </code>
       </pre>
           <script>
-            var fruits1 = ["Pepino", "Lima", "Limon", "Kambusha"];
+            var fruits1 = ["Pepino", "Lima", "Limon", "Kombucha"];
             fruits1.push("Papaya");
             console.log(fruits1);
           </script>
@@ -1321,7 +1321,7 @@
           }
         </code></pre>
           <p>While the <code>condition</code> is truthy, the <code>code</code> from the loop body is executed.</p>
-          <p>For, instance, the loo pbelow outputs <code>i</code> while <code>i < 3</code></3>
+          <p>For, instance, the loo below outputs <code>i</code> while <code>i < 3</code></3>
             <pre><code>
             let i = 0;
             while(i < 3) {// shows 0, then 1, then 2
@@ -1337,9 +1337,9 @@
               }
             </script>
             <p>A single execution of the loop body is called an iteration</p>
-            <p>If <code>i++</code> was missing from the example above, the loop would repet (in theory) forever.</p>
-            <p>Any expression or vairable can be a loop condition, not just comparisons: the condition is evaluated and
-              coverted to a blooean by <code>while</code>.</p>
+            <p>If <code>i++</code> was missing from the example above, the loop would repeat (in theory) forever.</p>
+            <p>Any expression or variable can be a loop condition, not just comparisons: the condition is evaluated and
+              converted to a boolean by <code>while</code>.</p>
             <p>For instance, a shorter way to write <code>while (i !=0)</code> is <code>while (i)</code>:</p>
             <pre><code>
             let i = 3;
@@ -1388,7 +1388,7 @@
           </code></pre>
             <p></p>
             <p>This form of syntax should only be one if you want to loop to execute <strong>at least once</strong>
-              regardless of the condition being truthy. Usually, the ther fomr is preferred:
+              regardless of the condition being truthy. Usually, the form is preferred:
               <code>while(...) {...}</code>.</p>
             <hr>
             <h5>The "for" loop</h5>
@@ -1400,7 +1400,7 @@
             }            
           </code></pre>
             <p>Let's learn the meaning of these parts by example. The loop below runs <code>alert(i)</code> fr
-              <code>(i)</code> from <code>(0)</code> up to (but noincluding) <code>3</code>.</p>
+              <code>(i)</code> from <code>(0)</code> up to (but not including) <code>3</code>.</p>
             <pre><code>
             for (let i = 0; i < 3; i++) {
               alert(i);
@@ -1426,7 +1426,7 @@
                 <tr>
                   <td>condition</td>
                   <td><code>i < 3</code></td>
-                  <td>Checked before every loop iteratin. If false, the loop stops.</td>
+                  <td>Checked before every loop iteration. If false, the loop stops.</td>
                 </tr>
                 <tr>
                   <td>body</td>
@@ -1455,7 +1455,7 @@
             <p>If you are new to loops, it could help to go back to the example and reproduce how it runs step-by-step
               on
               a pice of paper.</p>
-            <p>Here's excactly what happens in our case:</p>
+            <p>Here's exactly what happens in our case:</p>
             <pre><code>
             // for(let i = 0; i < 3; i++) alert(i)
 
@@ -1493,10 +1493,10 @@
               <p>Instead of defining a variable, we could use an existing one;</p>
               <pre><code>
               let i = 0;
-              for (i = 0; i < 3; i++) { use an existing variale
+              for (i = 0; i < 3; i++) { use an existing variable
                 alert(i); // 0, 1, 2
               }
-              alert(i); // 3, visible, because declared outisde of the loop
+              alert(i); // 3, visible, because declared outside of the loop
             </code></pre>
               <script>
                 let c1 = 0;
@@ -1509,11 +1509,11 @@
             <hr>
             <h5>Skipping parts</h5>
             <p>Any part of <code>for</code> can be skipped.</p>
-            <p>For example, we can omit <code>begin</code> if we don't need to do anythong at the loop start.</p>
+            <p>For example, we can omit <code>begin</code> if we don't need to do anything at the loop start.</p>
 
             <pre><code>
-            let i = 0; // we have i arealdy declared and assigned
-            for(; i < 3; i++) { // no need for "beging"
+            let i = 0; // we have already declared and assigned
+            for(; i < 3; i++) { // no need for "begin"
               alert(i); // 0, 1, 2
             }
           </code></pre>
@@ -1537,11 +1537,11 @@
             <script>
               let i4 = 0;
               for (; i4 < 3;) {
-                console.log("And now I loop wihtout the step " + i4++);
+                console.log("And now I loop without the step " + i4++);
               }
             </script>
             <p>This makes the loop identical to <code>while(i < 3)</code>.</p>
-            <p>We can remove everthing for an infinite loop.</p>
+            <p>We can remove everything for an infinite loop.</p>
             <pre><code>
             for(;;) {
               // repeats without limits
@@ -1550,19 +1550,19 @@
             <script>
               /* Go ahead and give it a try.
               for(;;) { // need to ;; or i will create a syntax error
-               alert(" You can't close me, I am an infite loop!");
+               alert(" You can't close me, I am an infinite loop!");
               }
               */
             </script>
             <h4>Breaking the loop</h4>
             <p>Normally, a loop exits when its condition becomes falsy.</p>
-            <p>But we can fore the exit at any time using the special <code>break</code> directiv.</p>
-            <p>For example, the oop below asks the user for a siries of numbers, "breaking" when no number is entered:
+            <p>But we can fore the exit at any time using the special <code>break</code> directive.</p>
+            <p>For example, the oop below asks the user for a series of numbers, "breaking" when no number is entered:
             </p>
             <pre><code>
             let sum = 0
             while(true){
-              let value = +prmopt("Enter a number", '');
+              let value = +prompt("Enter a number", '');
               if(!value) break; // (*)
               sum += value;
             }
@@ -1583,8 +1583,8 @@
               line
               or cancels the input. It stops the loop immediately, passing control tot he first line after the loop.
               Namely, <code>alert</code>.</p>
-            <p>The combitation "infinite loop + <code>break</code> as needed" is great for situations when a loop's
-              condition must be checked not in the beggining or end of the loop, but in the middle or even in several
+            <p>The combination "infinite loop + <code>break</code> as needed" is great for situations when a loop's
+              condition must be checked not in the beginning or end of the loop, but in the middle or even in several
               places of its body.</p>
             <div class="card">
               <h4>Continue to the next iteration</h4>
@@ -1592,12 +1592,12 @@
                 whole
                 loop. Instead, it stops the current iteration and forces the loop to start a new one (if the condition
                 allows).</p>
-              <p>We can ues it if we're done with the current iteration and woul dlike to move on the the next one.</p>
+              <p>We can ues it if we're done with the current iteration and would like to move on the the next one.</p>
               <p>The loop below uses <code>continue</code> to output only odd values:</p>
 
               <pre><code>
             for(let i = 0; i < 10; i++){
-              // if true, skip the remaning aprt of the body
+              // if true, skip the remaining apart of the body
               if (i % 2 == 0) continue;
               alert(i); // 1, then 3, 5, 7, 9
             }
@@ -1605,11 +1605,11 @@
               <script>
                 for (let d = 0; d < 10; d++) {
                   if (d % 2 == 0) continue;
-                  console.log("I am a loop with a continue direcive " + d);
+                  console.log("I am a loop with a continue directive " + d);
                 }
               </script>
 
-              <p>For even values of <code>i</code> the <code>continue</code> direcrrtive stops executing the body and
+              <p>For even values of <code>i</code> the <code>continue</code> directive stops executing the body and
                 passes control to the next iteration of <code>for</code> (with the next number). So the
                 <code>alert</code>
                 only called for odd values.</p>
