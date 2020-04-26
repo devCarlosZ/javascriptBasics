@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fundamentals Part 4</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <h2 class="title">Web Development 101</h2>
+    <a href="https://www.theodinproject.com/courses/web-development-101/lessons/dom-manipulation" target="_blank">
+        <h4 class="title" style="color: #ce973e;">DOM MANIPULATION</h4>
+    </a>
+    <h6 class="title">*my notes</h6>
+
+    <div class="container">
+        <h4>DOM - Document Object Model</h4>
+        <hr>
+
+        <P>The DOM (or Document Object Model) is a tree-like representation of the contents of a webpage - a
+            tree of "nodes" with different relationships depending on how they're arrange din the HTML
+            document.
+        </P>
+        <pre>  <code>  &lt;div id="container"&gt;
+        &lt;div class="display"&gt;&lt;/div&gt;
+        &lt;div class="controls"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+                    </code></pre>
+
+        <p>In the above example, the <code class="inlineCode">&lt;div class ="display"&gt;&lt;/div&gt;</code> is a
+            "child" of <code class="inlineCode">&lt;div id="container"&gt;&lt;/div&gt;</code> and a sibling to <code
+                class="inlineCode">&lt;div class="controls"&gt;&gt;/div&gt;</code>. Thinjk of it like a
+            family tree. Think of it like a family tree. <code
+                class="inlineCode">&lt;div id="container"&gt;&lt;/div&gt;</code> is a
+            <strong>parent</strong>, with its <strong>children</strong> on the next level, each on their own
+            "branch".
+        </p>
+
+        <h5>Targeting Nodes with Selectors</h5>
+        <p>When working with the DOM, you use "selectors" to target the nodes you want to work with. You can
+            use a combination of CSS-styl selectors and relationship properties to garget the nodes you
+            want. Let's start with CSS-style selectors. In athe above example, you could use the following
+            selectors to refer to <code class="inlineCode">&lt;div class ="display"&gt;&lt;/div&gt;</code>:
+        </p>
+
+        <ul>
+            <li>div.display</li>
+            <li>.display</li>
+            <li>#container>.display</li>
+            <li>div#container>div.display</li>
+        </ul>
+        <br>
+
+        <p>You can also use relational selectors (i.e. <code class="inlineCode">firstElementChild</code> or
+            <code class="inlineCode"> lastElementChild</code> etc.) with special properties owned by the
+            nodes.
+        </p>
+        <pre><code>
+    const container = document.querySelector('#container');
+    <em>// select the #container div (dont' worry about the syntax, we'll get there)</em>
+
+    console.dir(container.firstElementChild);
+    <em>// select the first child of #container => .display</em>
+
+    const controls = document.querySelector('.controls');
+    <em>// select the .controls div</em>
+
+    console.dir(controls.previousElementSibling);
+    <em>// selects the prior sibling => .display</em>
+                    </code></pre>
+
+        <p>So you're identyfying a certain node based on its relationships to the nodes around it.</p>
+
+        <h4>DOM methods</h4>
+
+        <p>When your HTML code is parsed by a web browser, it is converted to the DOM as we mentioned above. One of
+            the primary differences is that that these nodes are objects that have many properties and methods
+            attached to them. These properties and methods are the primary tools we are agoing to use to manipulate
+            our webage with JavaScript. We'll start with the query selectors - those that help you target nodes.
+        </p>
+
+        <h5>Query Selectors</h5>
+        <ul>
+            <li><em>element</em>.querySelector(<em>selector</em>) returns reference to the first mathc of
+                <em>selector</em></li>
+            <li><em>element</em>.querySelectorAll(<em>selectors</em>) returns a "nodelist" containing references to
+                all of the matches of the <em>selectors</em></li>
+        </ul>
+
+        <p><em>*There are several other, more specific queries, that offer potential (marginal) performance
+                benefits, bu we won't be going over them now.</em>
+        </p>
+
+        <p>It's important to note that when using querySelectorAll, the return value is <strong>not</strong> an
+            array. It looks like an array, and it somewhat acts like an array, but it's really a "nodelist". The big
+            disctinction is that several array methods are missing from nodelist. One solution, if problems arise,
+            is to convert the nodelist to an array. You can do this with Array.from() or the <a
+                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax"
+                target="_blank">spread operator</a>.
+        </p>
+
+        <h5>Element Creation</h5>
+        <ul>
+            <li>document.createElement(tagName[,options]) creates a new element of tag type tagName.<code
+                    class="inlineCode">[options]</code> in this case maans you can add osme optional paratemers to
+                the function. *Don't fret yet. </li>
+        </ul>
+        <code>
+                <pre>
+    const div = document.createElement('div');
+                </pre>
+            </code>
+
+        <p>This function does NOT put your new element into the DOM - it simply creates it in memory. This is so you
+            can manipulate the element (by adding styles, classes, ids, text etc.) before placing it on the page.
+            You can place the element into the DOM with one of the following methods:
+        </p>
+
+        <h5>Append Elements</h5>
+        <ul>
+            <li>
+                <em>parentNode</em>.appendChild(<em>childNode</em>) appends (<em>childNode</em>) as the last child
+                of <em>parentNode</em> before <em>referenceNode</em>
+            </li>
+        </ul>
+
+        <h5>Altering Elements</h5>
+        <p>When you have a reference to an element, you can use that reference to alter the element's own
+            proeprties. This allows you to do many useful alterations, like adding/removing and altering atributes,
+            changing classes, adding inline style information and more.
+        </p>
+        <pre>
+                <code>
+    const div = document.createElement('div')
+    <em>// create a new div referenced in the variable 'div'</em>
+                </code>
+            </pre>
+
+        <h5>Adding inline sytle</h5>
+        <pre>
+                <code>
+    div.style.color = 'blue';
+    <em>// adds the indicated style rule</em>
+
+    div.style.cssText = 'color: blue; background: white';
+    <em>// adds several style rules</em>
+
+    div.setAttribute('style', 'color: blue; background: white');
+    <em>// adds several style rules</em>
+                </code>
+            </pre>
+
+        <p>See DOM Enlightnement's <a href="http://domenlightenment.com/#6.2" target="_blank">section on CSS Style
+                rules</a> for more info on inline sytles.</p>
+        <p class="note">Note that if you're accessing a kebab-cased css rule form JS, you'll either need to use
+            camelcase or you'll need to use bracket notation instead of dot notation.</p>
+
+        <pre>
+                <code>
+    div.style.background-color 
+    <em>// doesn't work - attemtps to subract color from div.style.background</em>
+    div.style.backgroundColor 
+    <em>// accesses the divs background-color style</em>
+    div.style['background-color'] 
+    <em>// also works</em>
+    div.style.cssText = "background-color: white" 
+    <em>// ok in a string</em>
+                </code>
+            </pre>
+
+        <h5>Editing Attributes</h5>
+        <pre>
+                <code>
+    div.setAttribute('id', 'theDiv');
+    <em>// if id exists update it to 'theDiv' else create an id</em>
+    <em>// with value "theDiv"</em>
+
+    div.getAttribute('id');
+    <em>// returns value of specified attribute, in this case</em>
+    <em>// the "theDiv"</em>
+
+    div.removeAttribute('id');
+    <em>// removes specifed attribute</em>
+                </code>
+            </pre>
+
+        <p>See MDNs section on <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes"
+                target="_blank">HTML Attributes</a> for more info on available attributes.</p>
+
+        <h5>Working with classes</h5>
+        <pre>
+                <code>
+    div.classList.add('new');
+    <em>// adds class "new" to your new div</em>
+
+    div.classList.remove('new');
+    <em>// removes "new" class from div</em>
+
+    div.classList.toggle('active');
+    <em>// if div doesn't have class "active" then adds it, or if</em>
+    <em>// it does, then removes it</em>
+                </code>
+            </pre>
+
+        <p>It is often standard (and more clean) to toggle a CSS style rather than adding and removing inline CSS.
+        </p>
+
+        <h5>Adding text conent</h5>
+        <pre>
+                <code>
+    div.textContent = "Hello World!";
+    <em>// creates a text node containing "Hello World" and </em>
+    <em>// insters it in div</em>
+                </code>
+            </pre>
+
+        <h5>Adding HTML content</h5>
+        <pre>
+                <code>
+    div.innerHTML = '<span>Hello World!</span>';
+    <em>// renders the html inside div</em>
+                </code>
+            </pre>
+        <p class="note">*Note that textConent is preferable for adding text, and innerHTML should be used sparingly
+            as it can create securty risk if misused.
+        </p>
+
+        <h4>Review</h4>
+        <pre>
+                <code>
+    <em>&lt;!-- your html file: --&gt;</em>
+    &lt;body&gt;
+      &lt;h1&gt;
+        THE TITLE OF YOUR WEBPAGE
+      &lt;/h1&gt;
+      &lt;div id="container"&gt;&lt;/div&gt;
+    &lt;/body&gt;
+                </code>
+            </pre>
+
+        <pre>
+                <code>
+    <em>// your javascript file</em>
+    const container = document.querySelector('#container');
+
+    const conent = document.createElement('div');
+    conent.classList.add('content');
+    content.textContent = 'This is the glorious text-conent!';
+
+    container.appendChild(conent);
+                </code>
+            </pre>
+
+        <p>In the JavaScriptfile, first we get a reference to the <code class="inlineCode">container</code> div that
+            already exists in our HTML. Then we create a new div and store it in a variable <code>content</code>. We
+            add a class and some text toot he <code>content</code> div and finally append that div to
+            <code>container</code>. All ina ll it's a simple process. After the JavaScript code is run, our DOM tree
+            looks like this:
+        </p>
+
+        <pre>
+                <code>
+    <em>&lt;!-- your html file: --&gt;</em>
+    &lt;body&gt;
+      &lt;h1&gt;
+        THE TITLE OF YOUR WEBPAGE
+      &lt;/h1&gt;
+      &lt;div id="container"&gt;
+        &lt;div class="content"&gt;
+          This is glorious text-content!
+        &lt;/div&gt;
+       &lt;/div&gt;
+    &lt;/body&gt;
+                </code>
+            </pre>
+
+        <p>
+            Keep in mind that JavaScript does <em>not</em> alter your HTML, but the DOM - your HTML fill will look
+            the same, but the JavaScript changes what the browser renders.
+        </p>
+
+        <p>
+            <strong>Important note:</strong> Your JavaScript, for the most part, is run wheever the JS file is run,
+            or when the script tag is encountered int he HTML. If you are including your JavaScript at the top of
+            your file, many of these DOM manipulation methods will not work because the JS code iw being run
+            <em>before</em> the nodes are created in teh DOM. The simplest way to fix this is to include your
+            JavaScript at the bottom of your HTML file so that it gets run after the DOM nodes are parsed and
+            created.
+        </p>
+        <hr>
+
+        <h4>Excercise</h4>
+        <p>
+            Copy the example above into files on your own computer. To make it work you'll need to supply the rest
+            of the HTML skeleton and either link your javascript file, or put the javascript into a script tag on
+            the page. Make sure every is working before moving on.
+        </p>
+        <p>
+            Add the following elements to the container using ONLY javascript - do not add any HTML or CSS code.
+        </p>
+
+        <ol>
+            <li>a &lt;p&gt; with red text that says “Hey I’m red!”</li>
+            <li>an &lt;h3&gt; with blue text that says “I’m a blue h3!”</li>
+            <li>a &lt;div&gt; with a black border and pink background color with the following elements inside of
+                it:
+                <ol>
+                    <li>another &lt;h1&gt; that says "I'm in a div"</li>
+                    <li>a &lt;p&gt; thta says "ME TOO!"</li>
+                    <li>Hint for this one: after creating the div with createElement, append the &lt;h1&gt; and
+                        &lt;p&gt; to it before adding it to the container.</li>
+                </ol>
+            </li>
+        </ol>
+
+
+        <a href="domExcercise.html" target="_blank">The DOM Excercise</a>
+        <br><br>
+
+        <h4>Events</h4>
+        <p>
+            Now that we have a handle on manipulating the Dom with JavaScript, the next step is learning how to make
+            that happen dynamically, or on demand! Events are how you make that magic happen on your pages. Events
+            are
+            actions that occur on your webpage usch as a mouse-cliks or keypresses, and using JavaScriptwe can make
+            our
+            webpage listen and ract to these events.
+        </p>
+        <p>
+            There are three primary ways to go about this: you can attach function attributes directly on your HTML
+            elements, you can set the "on_event" property on the DOM object in your JavaScript, or you can attach
+            event listeners to the nodes in your JavaScript. Event listeners are definily the preferred method, but
+            you will regularly see the others in use, so we're gong to cover all three.
+        </p>
+        <p>We're going to create 3 buttons that alert "BUTTON" when clicked. Try them all using your own HTML File,
+            or using something like <a href="https://codepen.io/" target="_blank">CodePen</a>.</p>
+
+        <h5>method 1</h5>
+        <pre>
+                <code>
+    &lt;button onclick="alert('Hello World')"&gt;Click Me&lt;/button&gt;
+                </code>
+            </pre>
+        <p>
+            This solution is less than ideal because we're cluttering our HTML with JavaScript. Also, we can only
+            have 1 "onclick" event per element.
+        </p>
+
+        <h5>method 2</h5>
+        <pre>
+                <code>
+    &lt;!-- the html file --&gt;
+    &lt;button id="btn"&gt;Click Me&lt;/button&gt;
+                </code>
+            </pre>
+        <pre>
+                <code>
+    <em>// the JavaScript file</em>
+    const btn = document.querySelector('#btn');
+    btn.onClick = () => alert("Hello World");
+                </code>
+            </pre>
+        <h5>(need to review arrow functions? <strong><a href="http://javascript.info/arrow-functions-basics"
+                    target="_blank">LINK</a>)</strong></h5>
+        <p>
+            This is a little better. We've moved the JS out of the HTML and into a JS file, but we still have the
+            problem that a DOM element can only have 1 "onclick" property.
+        </p>
+
+        <h5>mehtod 3</h5>
+        <pre>
+                <code>
+    &lt;!-- the html file --&gt;
+    &lt;button id="btn"&gt;Click Me Too&lt;/button&gt;
+                </code>
+            </pre>
+        <pre>
+                <code>
+    <em>// the JavaScript file</em>
+    const btn = document.querySelector('#btn');
+    btn.addEventListener('click', () => {
+        alert("Hello World");
+      });
+                </code>
+            </pre>
+
+        <p>Now, we maintain sepaeration of concersn, and we also allow multiple event listeners if need arise.
+            Method 3 is much more fexible and powerful, thought it is a bit more complext to set up.
+        </p>
+        <p>
+            Note that all 3 of these methods can be used with named funcitions like so:
+        </p>
+
+        <pre>
+                <code>
+    &lt;!-- the html file --&gt;
+    &lt;!-- METHOD 1 --&gt;
+    &lt;button onclick="alertFunction()"&gt;CLICK ME BABY&lt;/button&gt;
+                </code>
+            </pre>
+        <pre>
+                <code>
+    &lt;!-- the javascript file --&gt;
+
+    function alertFunction() {
+        alert("YAY! YOU DID IT!");
+    }
+    // METHOD 2 
+    btn.onlcick = alertFunction;
+
+    // METHOD 3
+    btn.addEventListener('click', alertFunction);
+                </code>
+            </pre>
+
+        <p>
+            Using named functions cna clean up your code considerably, and is a really good idea if the function is
+            something that you are going to want o do in multiple places.
+        </p>
+        <p>
+            With all three methods we can access more information about the event by passing a prameter to the
+            function that we are calling. Try this out on your own machine:
+        </p>
+        <a href="domExcercise.html" target="_blank">DOM Excercises Buttons</a>
+        <br><br>
+        <pre>
+                <code>
+    btn.addEventListener('click', function(e) {
+        console.log(e)
+    });
+                </code>
+            </pre>
+        <p>
+            The <code>e</code> in that funciton is an object that referecnes the event itself. Within that object
+            you have access to many useful properties and functions such as which mouse button or key was pressed,
+            or information about the event's <strong>target</strong> - the DOM node that was clicked.
+        </p>
+        <p>
+            Try this:
+        </p>
+        <pre>
+                <code>
+    btn.addEventListener('click', function(e) {
+        console.log(e.target);
+    });
+                </code>
+            </pre>
+        <p>
+            and now this:
+        </p>
+        <pre>
+                <code>
+    btn.addEventListner('click', function (e) {
+        e.target.style.background = 'blue';
+    });
+                </code>
+            </pre>
+        <p>
+            pretty cool eh?
+        </p>
+
+        <h4>Attaching listeners to group of nodes</h4>
+        <p>
+            This might seem like a lot of codei you're attaching lots of similar event listeners to many elements.
+            There's a few ways to go about doing that mroe efficientlly. We learned above that we can get nodelist
+            of all of the itmes matching a specifi selcetor with <code>querySelectorAll('selector')</code>. In order
+            to add a listner to each of them we simply need to iterate through the whole list like so:
+        </p>
+
+        <pre>
+                <code>
+    &lt;div id="container"&gt;
+        &lt;button id="1"&gt;Click Me&lt;/button&gt;            
+        &lt;button id="2"&lt;Click Me&lt;/button&gt;
+        &lt;button id="3"&gt;Click Me&lt;/button&gt;
+    &lt;/div&gt;
+                </code>
+            </pre>
+        <pre>
+                <code>
+    // buttons is a node list. It looks and acts much like an array.
+    const buttons = document.querySelectorAll('buton');
+
+    // we use the .forEach method ot iterate through each button
+    buttons.forEach((button) => {
+
+        // and for each one we add a 'click' lisntener
+        button.addEventListener('click', (e) => {
+        alert(buton.id);
+        });
+    });
+                </code>
+            </pre>
+        <a href="domExcercise.html" target="_blank">DOM Excercises Buttons</a>
+        <br>
+        <br>
+
+        <p>
+            This is just the tip of the iceberg when it comes to DOM manipulation and event handling, but it's
+            enough to get started with some excersies. In our examples so far we have been using the 'click' event
+            exclusively, but there are <em>many</em> more available.
+        </p>
+        <p>
+            Some useful events include:
+            <ul>
+                <li>click</li>
+                <li>dblclick</li>
+                <li>keypress</li>
+                <li>keydown</li>
+                <li>keyup</li>
+            </ul>
+        </p>
+        <p>
+            You can find a more complete list with explanations of each event on <a
+                href="https://www.w3schools.com/jsref/dom_obj_event.asp" target="_blank">this page</a>.
+        </p>
+
+    </div>
+    <div class="container">
+        <h2 id="excercises">
+            DOM Excercises
+        </h2>
+        <!--JS will only be used to create elements-->
+        <div id="container"></div>
+        <hr>
+        <!--JS will only be used to give button functionalities-->
+        <div id="btn1"></div>
+        <hr>
+
+        <h3>Events</h3>
+        <div id="btn2"></div>
+        <br>
+        <div id="btn3"></div>
+        <br>
+        <div id="btn4"></div>
+        <hr>
+
+        <h3>Attatching listeners to group of nodes</h3>
+        <div id="container1">
+            <button id="1">Click Me</button>
+            <button id="2">Click Me</button>
+            <button id="3">Click Me</button>
+        </div>
+
+
+        <script src="domExcerciseJS.js"></script>
+    </div>
+    <div class="container">
+        <h2>
+            Practice
+        </h2>
+        <p>
+            Manipulating web pages is the primary benefit of the JavaScript language! These techniques are things that you are likely to be messing with <em>every day</em> as a front-end developer.
+        </p>
+        <ol>
+            <li>Do the first excercise in Wes Bos's Javascript30 program by cloning the repo at <a href="https://github.com/wesbos/JavaScript30">Wes's GitHub Link</a>. Check out the <a href="https://www.youtube.com/watch?v=VuN8qwZoego">Video Tutorial</a> for instructions on the project.</li>
+        </ol>
+
+    </div>
+
+</body>
+
+</html>
